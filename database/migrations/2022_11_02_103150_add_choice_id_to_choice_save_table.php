@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('choice_save', function (Blueprint $table) {
-            $table->foreignId('choice_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('choice_id')->after('id')->constrained()->cascadeOnDelete();
         });
     }
 
