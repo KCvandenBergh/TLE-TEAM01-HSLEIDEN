@@ -25,6 +25,9 @@ class DatabaseSeeder extends Seeder
             StorySeeder::class,
             ScenarioSeeder::class,
             ChoiceSeeder::class,
+            ChoiceScenarioSeeder::class,
+            ChoiceRelationSeeder::class,
+            StoryRelationSeeder::class,
         ]);
     }
 }
