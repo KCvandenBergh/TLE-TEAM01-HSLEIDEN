@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Save extends Model
 {
     use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function story()
+    {
+        return $this->hasOne(Story::class);
+    }
+
+    public function choices()
+    {
+        return $this->hasMany(Choice::class);
+    }
 }
