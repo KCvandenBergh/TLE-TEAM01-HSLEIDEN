@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('cases', function (Blueprint $table) {
-            $table->foreignId('scenario_id')->nullable()->after('id')->constrained()->nullOnDelete();
+        Schema::table('saves', function (Blueprint $table) {
+            $table->foreignId('story_id')->nullable()->after('id')->constrained()->nullOnDelete();
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('cases', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('scenario_id');
+        Schema::table('saves', function (Blueprint $table) {
+            $table->dropConstrainedForeignId('story_id');
         });
     }
 };

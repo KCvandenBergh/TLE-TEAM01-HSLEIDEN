@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cases', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->text('description');
-            $table->boolean('is_visible');
-            $table->timestamps();
+        Schema::table('stories', function (Blueprint $table) {
+            $table->foreignId('scenario_id')->nullable()->after('id')->constrained()->nullOnDelete();
         });
     }
 
@@ -29,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cases');
+        Schema::table('stories', function (Blueprint $table) {
+            $table->dropConstrainedForeignId('scenario_id');
+        });
     }
 };
