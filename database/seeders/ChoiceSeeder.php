@@ -19,7 +19,12 @@ class ChoiceSeeder extends Seeder
         // add the entries here, without foreign keys.
         $data = [
             [
-                'name' => 'Naam Hier',
+                'name' => 'Download gemaakte keuzes',
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'name' => 'Terug naar startscherm',
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
