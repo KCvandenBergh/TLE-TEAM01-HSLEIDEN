@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             StorySeeder::class,
-
-
+            ScenarioSeeder::class,
+            ChoiceSeeder::class,
         ]);
     }
 }
