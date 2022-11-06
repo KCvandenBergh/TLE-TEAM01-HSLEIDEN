@@ -11,16 +11,20 @@ class Choice extends Model
 
     public function saves()
     {
-        $this->belongsToMany(Save::class);
+        /*Choices can be saved to saves*/
+       return $this->belongsToMany(Save::class);
     }
 
     public function scenarios()
     {
-        $this->belongsToMany(Scenario::class);
+        /*Choices need to appear in their respective Scenarios*/
+       return $this->hasMany(Scenario::class);
     }
 
-    public function links_to()
+    public function next_scenario()
     {
-        $this->hasOne(Scenario::class);
+        /*Choices link to a following Scenario*/
+        /*Use {{ $choice->scenario_id }} instead*/
+        return $this->belongsTo(Scenario::class);
     }
 }
