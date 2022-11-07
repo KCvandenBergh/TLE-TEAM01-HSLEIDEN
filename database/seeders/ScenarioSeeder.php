@@ -21,7 +21,7 @@ class ScenarioSeeder extends Seeder
             [
                 'dialogue' => "Casus:
 Ik ben opgegroeid in een klein gezin, ik ben van Indonesische afkomst. Ik woon samen met mijn broer, zus en mijn moeder. Toen ik twee was heeft mijn vader ons verlaten. Mijn moeder is ongeveer zes keer getrouwd geweest. Thuis was het hectisch en onveilig. Mijn moeder was verslaafd aan alcohol en een prostituee. Ze nam geregeld vrouwen mee. Tegen betaling liet zij mij misbruiken.
-Toen ik 14 was ben ik gestopt met school, een jaar later ging ik het huis uit. Ik ging bij Ruben wonen een goede vriend.  Ik ben nu 16 en heb een relatie met Kim, zij is in verwachting van ons kind.
+Toen ik 14 was ben ik gestopt met school, een jaar later ging ik het huis uit. Ik ging bij Ruben wonen een goede vriend. Ik ben nu 16 en heb een relatie met Kim, zij is in verwachting van ons kind.
 ",
                 'story_id' => 1,
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
@@ -52,7 +52,7 @@ Toen ik 14 was ben ik gestopt met school, een jaar later ging ik het huis uit. I
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
-                'dialogue' => "Ruben trekt zich niks van me aan en gaat gewoon door waar hij mee bezig was.  Hij roept naar Kim: “Is dit alles wat je vriendje voor je over heeft?”",
+                'dialogue' => "Ruben trekt zich niks van me aan en gaat gewoon door waar hij mee bezig was. Hij roept naar Kim: “Is dit alles wat je vriendje voor je over heeft?”",
                 'story_id' => 1,
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
@@ -100,13 +100,13 @@ Toen ik 14 was ben ik gestopt met school, een jaar later ging ik het huis uit. I
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
-                'dialogue' => "Ik loop weg, Ik heb geen vrienden meer, geen vriendin, en geen familie. Ik ben eenzaam.  Ik ben zelf ‘goed’ uit de situatie gekomen.   Ik heb het pad van een ‘LOSER’ gekozen",
+                'dialogue' => "Ik loop weg, Ik heb geen vrienden meer, geen vriendin, en geen familie. Ik ben eenzaam. Ik ben zelf ‘goed’ uit de situatie gekomen. Ik heb het pad van een ‘LOSER’ gekozen",
                 'story_id' => 1,
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
-                'dialogue' => "Ik kijk hoe het is met Ruben.  Ruben is dood, maar Kim is veilig. Ik word een paar uur later opgepakt, en word veroordeeld voor moord.  Ik kwam op voor Kim, maar Kim kreeg een miskraam. Ze wil me niet meer zien.  Ik heb het pad van een ‘’ gekozen    ",
+                'dialogue' => "Ik kijk hoe het is met Ruben. Ruben is dood, maar Kim is veilig. Ik word een paar uur later opgepakt, en word veroordeeld voor moord. Ik kwam op voor Kim, maar Kim kreeg een miskraam. Ze wil me niet meer zien. Ik heb het pad van een ‘’ gekozen ",
                 'story_id' => 1,
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
@@ -118,13 +118,13 @@ Toen ik 14 was ben ik gestopt met school, een jaar later ging ik het huis uit. I
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
-                'dialogue' => "Ik sla ruben een gebroken neus en kaak, waardoor hij weet dat hij van Kim af moet blijven. We zijn geen vrienden meer.  Ik kwam op voor Kim en we zijn nog steeds gelukkig samen.   Ik heb het pad van een ‘’ gekozen.",
+                'dialogue' => "Ik sla ruben een gebroken neus en kaak, waardoor hij weet dat hij van Kim af moet blijven. We zijn geen vrienden meer. Ik kwam op voor Kim en we zijn nog steeds gelukkig samen. Ik heb het pad van een ‘’ gekozen.",
                 'story_id' => 1,
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
-                'dialogue' => "Ik word boos en scheld Ruben uit. Dit lijkt hem niks te doen, en zorgt er al helemaal niet voor dat hij stopt.  Kim kan mij niet vergeven, en geeft mij tot op de dag van vandaag nog steeds ,gedeeltelijk, de schuld van haar miskraam. Ze wil mij nooit meer zien.   Ik heb het pad van een ‘LOSER’ gekozen ",
+                'dialogue' => "Ik word boos en scheld Ruben uit. Dit lijkt hem niks te doen, en zorgt er al helemaal niet voor dat hij stopt. Kim kan mij niet vergeven, en geeft mij tot op de dag van vandaag nog steeds ,gedeeltelijk, de schuld van haar miskraam. Ze wil mij nooit meer zien. Ik heb het pad van een ‘LOSER’ gekozen ",
                 'story_id' => 1,
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
