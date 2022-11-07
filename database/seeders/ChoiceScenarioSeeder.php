@@ -16,6 +16,7 @@ class ChoiceScenarioSeeder extends Seeder
      */
     public function run()
     {
+        /*Seeds the choice_scenario table: Links choices to the Scenario's they should appear in*/
         $data = [
             [
                 'choice_id' => 1,

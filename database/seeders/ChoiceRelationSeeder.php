@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\App;
 
 class ChoiceRelationSeeder extends Seeder
 {
+    /*function to link an existing choice to the existing scenario it should link to when clicked*/
     public function linkChoiceScenario($choice_id, $scenario_id)
     {
         $choice = Choice::where('id', $choice_id)->first();
@@ -23,6 +24,7 @@ class ChoiceRelationSeeder extends Seeder
      */
     public function run()
     {
+        /*function call (choice_id, scenario_id)*/
         $this->linkChoiceScenario(3, 2);
         $this->linkChoiceScenario(4, 3);
         $this->linkChoiceScenario(5, 4);
@@ -58,9 +60,5 @@ class ChoiceRelationSeeder extends Seeder
         $this->linkChoiceScenario(35, 17);
         $this->linkChoiceScenario(36, 14);
         $this->linkChoiceScenario(37, 18);
-
-
     }
-
-
 }
