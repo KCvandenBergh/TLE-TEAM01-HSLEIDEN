@@ -9,7 +9,7 @@
         </div>
         <div class="card-body">
             <h2 class="card-title"> {{$scenario->id}}</h2>
-            <p class="card-text"> {{$scenario->dialogue}}</p>
+            <p class="card-text">{{$scenario->dialogue}}</p>
         </div>
         {{-- card for each choice --}}
         <ul class="list-group list-group-flush">
