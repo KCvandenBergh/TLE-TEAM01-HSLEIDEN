@@ -10,9 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Scenario extends Model
 {
     use HasFactory;
-    protected $table = 'scenarios';
-    protected $primaryKey = 'id';
-    protected $fillable = ['dialogue', 'choice_id'];
+    protected $fillable = ['dialogue'];
 
     public function story(): BelongsTo
     {

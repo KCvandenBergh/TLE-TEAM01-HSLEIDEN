@@ -11,8 +11,6 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Story extends Model
 {
     use HasFactory;
-    protected $table = 'stories';
-    protected $primaryKey = 'id';
     protected $fillable = ['title', 'description'];
 
     public function saves(): BelongsToMany

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChoiceController;
 use App\Http\Controllers\ScenarioController;
 use App\Http\Controllers\StoryController;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,5 @@ Route::get('/', function () {
 
 Route::resource('scenarios', ScenarioController::class);
 Route::resource('stories', StoryController::class);
+Route::resource('choices', ChoiceController::class);
+
