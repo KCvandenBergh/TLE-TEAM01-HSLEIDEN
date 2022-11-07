@@ -62,11 +62,10 @@ class ScenarioController extends Controller
         //
     }
 
-    public function edit(Scenario $scenario)
+    public function edit($id)
     {
-        $scenarios = Scenario::get();
-
-        return view('scenarios.edit', compact('scenarios'));
+        $scenario = Scenario::find($id);
+        return view('scenarios.edit', compact('scenario'));
     }
 
     /**
@@ -83,7 +82,7 @@ class ScenarioController extends Controller
         ]);
 
         $scenario->update($request->all());
-        return redirect(route('scenarios.show'));
+        return redirect(route('scenarios.index'));
     }
 
     /**

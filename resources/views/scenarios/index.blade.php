@@ -17,7 +17,7 @@
                                 <tr>
                                     <td>{{ $scenario->dialogue }}</td>
                                     <td>
-                                        <a href="{{ url('/scenarios/' . $scenario->id . '/edit') }}"
+                                        <a href="{{ route('scenarios.edit', $scenario->id) }}"
                                            title="edit scenario">
                                             <button class="btn btn-primary btn-sm"><i
                                                     class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
@@ -28,7 +28,7 @@
                             @endforeach
                             </tbody>
                         </table>
-{{--                                                    {{ $scenarios->links('pagination::bootstrap-4')  }}--}}
+{{--                    {{ $scenarios->links('pagination::bootstrap-4')  }}--}}
                     </div>
                 </div>
             </div>
