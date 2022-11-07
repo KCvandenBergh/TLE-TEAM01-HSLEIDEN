@@ -9,12 +9,12 @@
                 @method("PATCH")
                 <input type="hidden" id="id" value="{{ $story->id }}"/>
                 <label>Title</label>
-                <input type="text" name="dialogue" id="dialogue" value="{{ $story->title }}" class="form-control"/>
+                <input type="text" name="title" id="title" value="{{ $story->title }}" class="form-control"/>
                 @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <label>Description</label>
-                <input type="text" name="dialogue" id="dialogue" value="{{ $story->description }}" class="form-control"/>
+                <input type="text" name="description" id="description" value="{{ $story->description }}" class="form-control"/>
                 @error('description')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
