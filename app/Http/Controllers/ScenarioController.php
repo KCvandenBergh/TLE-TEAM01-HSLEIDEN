@@ -64,7 +64,7 @@ class ScenarioController extends Controller
 
     public function edit(Scenario $scenario)
     {
-        $scenarios = Scenario::all();
+        $scenarios = Scenario::get();
 
         return view('scenarios.edit', compact('scenarios'));
     }
