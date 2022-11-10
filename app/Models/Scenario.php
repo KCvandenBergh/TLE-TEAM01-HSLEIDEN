@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Scenario extends Model
@@ -17,9 +18,9 @@ class Scenario extends Model
         return $this->belongsTo(Story::class);
     }
 
-    public function choices(): HasMany
+    public function choices(): BelongsToMany
     {
-        return $this->hasMany(Choice::class);
+        return $this->belongsToMany(Choice::class);
     }
 
 }

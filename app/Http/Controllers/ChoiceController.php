@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Choice;
+use App\Models\Scenario;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -44,7 +45,8 @@ class ChoiceController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'scenario_id' => 'required'
         ]);
 
         Choice::create($data);
@@ -64,8 +66,9 @@ class ChoiceController extends Controller
 
     public function edit($id)
     {
-        $choice = Choice::find($id);
-        return view('choices.edit', compact('choice'));
+        $choices = Choice::find($id);
+        $scenarios = Scenario::all();
+        return view('choices.edit', compact('choices', 'scenarios'));
     }
 
     /**
@@ -78,7 +81,8 @@ class ChoiceController extends Controller
     public function update(Request $request, Choice $choice)
     {
         $request->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'scenario_id' => 'required'
         ]);
 
         $choice->update($request->all());
