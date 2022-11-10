@@ -18,8 +18,8 @@ class StoryController extends Controller
      */
     public function index()
     {
-        $story = Story::all();
-        return view('cases.index', compact('story'));
+        $stories = Story::all();
+        return view('cases.index', compact('stories'));
     }
 
     /**
@@ -52,8 +52,8 @@ class StoryController extends Controller
     public function show( $id)
     {
 
-        $story = Story::find($id);
-        return view('cases.show', compact('story'));
+        $stories = Story::find($id);
+        return view('stories.show', compact('stories'));
     }
 
     /**

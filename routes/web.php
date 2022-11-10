@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('cases', \App\Http\Controllers\StoryController::class);
+Route::resource('stories', \App\Http\Controllers\StoryController::class);
 
 Route::get('/', function () {
     return view('welcome');
