@@ -13,7 +13,7 @@
                 <td>{{$story->title}}</td>
                 <td>{{$story->description}}</td>
                 <td>
-                    <a href="{{route('cases.show',$story->id)}}">View</a>
+                    <a href="{{route('stories.show',$story->id)}}">View</a>
                 </td>
             </tr>
 
