@@ -48,3 +48,4 @@
         crossorigin="anonymous"></script>
 </script>
 </html>
+<?php /**PATH C:\xampp\htdocs\TLE-TEAM01-HSLEIDEN\resources\views/auth/registration.blade.php ENDPATH**/ ?>

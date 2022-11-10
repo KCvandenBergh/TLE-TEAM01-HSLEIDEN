@@ -48,3 +48,4 @@
 
 
 <?php
+ ?><?php /**PATH C:\xampp\htdocs\TLE-TEAM01-HSLEIDEN\resources\views/auth/login.blade.php ENDPATH**/ ?>
