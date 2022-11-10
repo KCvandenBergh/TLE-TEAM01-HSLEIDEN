@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <h1>{{$stories->title}}</h1>
-    <h2>{{$stories->id}}</h2>
-    <p>{{$stories->description}}</p>
+    <h1>{{$story->title}}</h1>
+    <h2>{{$story->id}}</h2>
+    <p>{{$story->description}}</p>
 
 @endsection
