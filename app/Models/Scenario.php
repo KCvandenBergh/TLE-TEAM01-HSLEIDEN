@@ -16,7 +16,7 @@ class Scenario extends Model
 
     public function choices()
     {
-        return $this->hasMany(Choice::class);
+        return $this->belongsToMany(Choice::class);
     }
 
 }

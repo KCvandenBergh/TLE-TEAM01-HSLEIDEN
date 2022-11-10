@@ -17,9 +17,9 @@ class AdminController extends Controller
 
     public function story($id){
         $scenarios = Scenario::all();
-        $choices = Choice::all();
+//        $choices = Choice::all();
         $story = Story::find($id);
 
-        return view('admin.story', compact('scenarios', 'choices', 'story'));
+        return view('admin.story', compact('scenarios', 'story'));
     }
 }

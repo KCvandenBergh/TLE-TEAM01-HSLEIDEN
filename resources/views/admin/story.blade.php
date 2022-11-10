@@ -16,12 +16,11 @@
     @foreach($scenarios as $scenario)
         <tr>
             <td>{{$scenario->dialogue}}</td>
-        </tr>
-    @endforeach
-    @foreach($choices as $choice)
-        <tr>
-            <td></td>
-            <td>{{$choice->name}}</td>
+
+            @foreach($scenario->choices as $choice)
+                <td>{{$choice->name}}</td>
+            @endforeach
+
         </tr>
     @endforeach
 </table>
