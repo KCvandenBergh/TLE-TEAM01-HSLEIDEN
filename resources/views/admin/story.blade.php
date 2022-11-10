@@ -20,7 +20,8 @@
             @foreach($scenario->choices as $choice)
                 <td>{{$choice->name}}</td>
             @endforeach
-
+            <td><a href="scenarios.edit">Scenario aanpassen</a></td>
+            <td><a href="choices.edit">Keuzes aanpassen</a></td>
         </tr>
     @endforeach
 </table>

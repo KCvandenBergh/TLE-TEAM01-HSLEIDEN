@@ -14,7 +14,7 @@
                 <td>{{$story->title}}</td>
                 <td>{{$story->description}}</td>
                 <td><a href="{{route('story', $story->id)}}">Scenario's</a></td>
-                <td><a href="edit">Aanpassen</a></td>
+                <td><a href="stories.edit">Casus informatie aanpassen</a></td>
                 <td><a href="delete">Verwijderen</a></td>
             </tr>
         @endforeach
