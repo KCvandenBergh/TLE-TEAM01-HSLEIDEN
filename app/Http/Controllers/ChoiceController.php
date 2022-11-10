@@ -66,9 +66,9 @@ class ChoiceController extends Controller
 
     public function edit($id)
     {
-        $choices = Choice::find($id);
+        $choice = Choice::find($id);
         $scenarios = Scenario::all();
-        return view('choices.edit', compact('choices', 'scenarios'));
+        return view('choices.edit', compact('choice', 'scenarios'));
     }
 
     /**
