@@ -33,7 +33,8 @@ class ChoiceController extends Controller
      */
     public function create()
     {
-        return \view('choices.create');
+        $scenarios = Scenario::all();
+        return \view('choices.create', compact('scenarios'));
 
     }
 
