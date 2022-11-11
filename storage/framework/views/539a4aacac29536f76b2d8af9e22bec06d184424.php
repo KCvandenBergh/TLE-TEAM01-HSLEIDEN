@@ -17,21 +17,46 @@
                 <div class="col-md-4 col-md-offset-4" style="margin-top: 20px;">
                     <h4>Registratie</h4>
                     <hr>
-                    <form>
+                    <form action="<?php echo e(route('register-user')); ?>" method="post">
+                        <?php echo csrf_field(); ?>
                         <div class="form-group">
                             <label for="name">Volledige naam</label>
                             <input type="text" class="form-control" placeholder="Vul je volledige naam in"
-                            name="naam" value="">
+                            name="name" value="<?php echo e(old('name')); ?>">
+                            <span class="text-danger"><?php $__errorArgs = ['name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> <?php echo e($message); ?> <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></span>
                         </div>
                         <div class="form-group">
                             <label for="email">email adres</label>
                             <input type="text" class="form-control" placeholder="Vul je email adres in"
-                                   name="email" value="">
+                                   name="email" value="<?php echo e(old('email')); ?>">
+                            <span class="text-danger"><?php $__errorArgs = ['email'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> <?php echo e($message); ?> <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></span>
                         </div>
                         <div class="form-group">
                             <label for="password">Wachtwoord</label>
                             <input type="password" class="form-control" placeholder="Vul een wachtwoord in"
-                                   name="password" value="">
+                                   name="password" value="<?php echo e(old('password')); ?>">
+                            <span class="text-danger"><?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> <?php echo e($message); ?> <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></span>
                         </div>
                         <div class="form-group">
                            <button class="btn btn block btn-primary" type="submit">Registreer</button>

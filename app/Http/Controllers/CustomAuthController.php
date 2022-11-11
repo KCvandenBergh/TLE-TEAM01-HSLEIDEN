@@ -12,4 +12,11 @@ class CustomAuthController extends Controller
     public function registration(){
         return view("auth.registration");
     }
+    public function registerUser(Request $request){
+        $request->validate([
+            'name'=> 'required',
+            'email'=> 'required|email|unique:users',
+            'password'=>'required|min:5|max:12'
+        ]);
+    }
 }

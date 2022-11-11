@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 Route::get('/login',[CustomAuthController::class,'login']);
 Route::get('/registration',[CustomAuthController::class,'registration']);
+Route::post('/register-user', [CustomAuthController::class,'registerUser'])->name('register-user');
+
