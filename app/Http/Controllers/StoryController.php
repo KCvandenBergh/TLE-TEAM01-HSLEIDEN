@@ -28,11 +28,11 @@ class StoryController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return Application|Factory|View
      */
     public function create()
     {
-        //
+        return view('stories.create');
     }
 
     /**
@@ -45,7 +45,8 @@ class StoryController extends Controller
     {
         $data = $request->validate([
             'title' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'is_visible' => 'required'
         ]);
 
         Story::create($data);
