@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="card">
-        <div class="card-header">Edit Story</div>
+        <div class="card-header">Create Story</div>
         <div class="card-body">
             <form action="{{ route('stories.store') }}" method="post">
                 @csrf
