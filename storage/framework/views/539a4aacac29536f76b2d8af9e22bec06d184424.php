@@ -18,7 +18,6 @@
                     <h4>Registratie</h4>
                     <hr>
                     <form action="<?php echo e(route('register-user')); ?>" method="post">
-                        <?php echo csrf_field(); ?>
                         <div class="form-group">
                             <label for="name">Volledige naam</label>
                             <input type="text" class="form-control" placeholder="Vul je volledige naam in"
