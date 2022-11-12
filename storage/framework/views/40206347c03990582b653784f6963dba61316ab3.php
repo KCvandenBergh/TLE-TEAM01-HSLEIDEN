@@ -14,7 +14,7 @@
                 <td><?php echo e($story->title); ?></td>
                 <td><?php echo e($story->description); ?></td>
                 <td><a href="<?php echo e(route('story', $story->id)); ?>">Scenario's</a></td>
-                <td><a href="edit">Aanpassen</a></td>
+                <td><a href="stories.edit">Casus informatie aanpassen</a></td>
                 <td><a href="delete">Verwijderen</a></td>
             </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

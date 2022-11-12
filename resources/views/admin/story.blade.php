@@ -1,10 +1,5 @@
 {{--@extends('layouts.app')--}}
 {{--@section('content')--}}
-@php
-    /**
-     * @var \App\Models\Drawing[] $drawings
-     */
-@endphp
 
     <h1>Scenario's - {{$story->title}}</h1>
 
@@ -20,8 +15,8 @@
             @foreach($scenario->choices as $choice)
                 <td>{{$choice->name}}</td>
             @endforeach
-            <td><a href="scenarios.edit">Scenario aanpassen</a></td>
-            <td><a href="choices.edit">Keuzes aanpassen</a></td>
+            <td><a href="scenarios.edit">Scenario aanpassen</a></td> <!-- placeholder link -->
+            <td><a href="choices.edit">Keuzes aanpassen</a></td> <!-- placeholder link -->
         </tr>
     @endforeach
 </table>

@@ -20,8 +20,8 @@
             <?php $__currentLoopData = $scenario->choices; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $choice): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <td><?php echo e($choice->name); ?></td>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            <td><a href="edit">Scenario aanpassen</a></td>
-            <td><a href="edit">Keuzes aanpassen</a></td>
+            <td><a href="scenarios.edit">Scenario aanpassen</a></td>
+            <td><a href="choices.edit">Keuzes aanpassen</a></td>
         </tr>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </table>

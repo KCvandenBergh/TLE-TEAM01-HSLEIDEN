@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [AdminController::class, 'index'])->name('index');
+Route::get('admin/index', [AdminController::class, 'index'])->name('index');
 
-Route::get('story/{id}', [AdminController::class, 'story'])->name('story');
+Route::get('admin/story/{story}', [AdminController::class, 'story'])->name('story');
