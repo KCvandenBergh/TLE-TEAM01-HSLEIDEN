@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-
+use Session;
 class CustomAuthController extends Controller
 {
     public function login()
@@ -37,6 +37,23 @@ class CustomAuthController extends Controller
         }
     }
     public function loginUser(Request $request){
-        
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:5|max:12'
+        ]);
+        $user = user::where('email','=', $request->email)->first();
+        if ($user){
+            if(hash::check($request->password,$user->password)){
+                $request-> session()->put('loginId',$user->id);
+                return redirect('dashboard');
+            }else{
+                return back()->with('fail', 'onjuist wachtwoord.');
+            }
+        }else{
+            return back()->with('fail', 'email is niet geregistreerd.');
+        }
+    }
+    public function dashboard(){
+        return "Welkom op je dashboard";
     }
 }
