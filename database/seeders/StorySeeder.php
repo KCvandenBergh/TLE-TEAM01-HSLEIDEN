@@ -19,8 +19,8 @@ class StorySeeder extends Seeder
         // add the entries here, without foreign keys.
         $data = [
             [
-                'title' => 'Test Verhaal',
-                'description' => 'Dit is het test verhaal, uit ons prototype.',
+                'title' => 'Prototype: Kim/Ruben',
+                'description' => 'Dit is het verhaal uit ons Prototype.',
                 'is_visible' => 1,
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")

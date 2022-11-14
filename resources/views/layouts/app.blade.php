@@ -30,12 +30,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <li>
+                            <a class="nav-link" href="{{route('stories.index')}}">Verhalen</a>
+                            </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
+                        </li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -66,6 +71,9 @@
                                     </form>
                                 </div>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
+                            </li>
                         @endguest
                     </ul>
                 </div>
@@ -73,7 +81,9 @@
         </nav>
 
         <main class="py-4">
+            <div class="container">
             @yield('content')
+            </div>
         </main>
     </div>
 </body>

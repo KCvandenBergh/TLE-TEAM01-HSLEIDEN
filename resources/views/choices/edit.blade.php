@@ -1,6 +1,6 @@
-@extends('choices.layout')
+@extends('layouts.app')
 @section('content')
-
+<div class="container">
     <div class="card">
         <div class="card-header">Edit Choice</div>
         <div class="card-body">
@@ -8,12 +8,12 @@
                 @csrf
                 @method("PUT")
                 <input type="hidden" id="id" value="{{ $choice->id }}"/>
-                <label>Title</label>
+                <label>Keuze</label>
                 <input type="text" name="name" id="name" value="{{ $choice->name }}" class="form-control"/>
                 @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
-                <label>Scenario</label><br>
+                <label>Vervolg scenario</label><br>
                 <select name="scenario_id" id="scenario_id" class="form-select">
                     @foreach($scenarios as $scenario)
                         @if($choice->scenario_id === $scenario->id)
@@ -32,4 +32,5 @@
             </form>
         </div>
     </div>
+</div>
 @endsection

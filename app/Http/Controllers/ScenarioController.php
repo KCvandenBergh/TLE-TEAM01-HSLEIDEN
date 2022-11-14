@@ -56,7 +56,7 @@ class ScenarioController extends Controller
 
     public function show(?User $user, Story $story, Scenario $scenario)
     {
-        return view('scenario.view', compact('scenario'));
+        return view('scenarios.show', compact('scenario'));
     }
 
 

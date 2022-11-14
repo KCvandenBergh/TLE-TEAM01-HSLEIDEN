@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('admin/index', [AdminController::class, 'index'])->name('index');
+Route::get('/', [StoryController::class, 'index'])->name('home');
+Route::get('admin/index', [AdminController::class, 'index'])->name('admin.index');
 
-Route::get('admin/story/{story}', [AdminController::class, 'story'])->name('story');
+Route::get('admin/stories/{story}', [AdminController::class, 'story'])->name('admin.stories.show');
 
 Route::resource('scenarios', ScenarioController::class);
 Route::resource('stories', StoryController::class);

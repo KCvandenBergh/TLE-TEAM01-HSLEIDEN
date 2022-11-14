@@ -1,10 +1,11 @@
-{{--@extends('layouts.app')--}}
-{{--@section('content')--}}
-    <a href="create" class="button">Maak een nieuwe casus</a> <!-- placeholder link -->
+@extends('layouts.app')
+@section('content')
+    <div class="container">
+
     <table class="table">
         <tr>
-            <th>Naam casus</th>
-            <th>Description casus</th>
+            <th>Title</th>
+            <th>Description</th>
             <th>Scenario's</th>
             <th>Aanpassen</th>
             <th>Verwijderen</th>
@@ -13,10 +14,12 @@
             <tr>
                 <td>{{$story->title}}</td>
                 <td>{{$story->description}}</td>
-                <td><a href="{{route('story', $story->id)}}">Scenario's</a></td>
-                <td><a href="stories.edit">Casus informatie aanpassen</a></td> <!-- placeholder link -->
+                <td><a href="{{route('admin.stories.show', $story->id)}}">Scenario's</a></td>
+                <td><a href="{{route('stories.edit', $story->id)}}">Casus informatie aanpassen</a></td>
                 <td><a href="delete">Verwijderen</a></td> <!-- placeholder link -->
             </tr>
         @endforeach
     </table>
-{{--@endsection--}}
+        <a href="create" class="button">Maak een nieuwe casus</a> <!-- placeholder link -->
+    </div>
+@endsection
