@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use Session;
+use Illuminate\Support\Facades\Session;
+
 class CustomAuthController extends Controller
 {
     public function login()
@@ -43,7 +44,7 @@ class CustomAuthController extends Controller
         ]);
         $user = user::where('email','=', $request->email)->first();
         if ($user){
-            if(hash::check($request->password,$user->password)){
+            if(hash::check($request->password,$user->wachtwoord)){
                 $request-> session()->put('loginId',$user->id);
                 return redirect('dashboard');
             }else{
@@ -54,11 +55,12 @@ class CustomAuthController extends Controller
         }
     }
     public function dashboard(){
-        if (session::has('loginId')){
+//        dd("dashboard");
+//        if (session::has('loginId')){
             $data = user::where('id','=',session::get('loginId'))->first();
             return view('dashboard', compact('data'));
-        }
-        abort(404);
+//        }
+//        abort(404);
     }
     public function logout(){
         if (session::has('loginId')){

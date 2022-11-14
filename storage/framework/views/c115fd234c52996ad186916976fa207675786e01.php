@@ -25,7 +25,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><?php echo e($data['naam']); ?></td>
+                    <td><?php echo e($data -> naam); ?></td>
                     <td><?php echo e($data -> email); ?></td>
                     <td><a href="logout">Logout</a></td>
                 </tr>
