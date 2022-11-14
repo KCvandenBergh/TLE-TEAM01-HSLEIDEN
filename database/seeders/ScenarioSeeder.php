@@ -19,8 +19,7 @@ class ScenarioSeeder extends Seeder
         // add the entries here, without foreign keys.
         $data = [
             [
-                'dialogue' => "Casus:
-Ik ben opgegroeid in een klein gezin, ik ben van Indonesische afkomst. Ik woon samen met mijn broer, zus en mijn moeder. Toen ik twee was heeft mijn vader ons verlaten. Mijn moeder is ongeveer zes keer getrouwd geweest. Thuis was het hectisch en onveilig. Mijn moeder was verslaafd aan alcohol en een prostituee. Ze nam geregeld vrouwen mee. Tegen betaling liet zij mij misbruiken.
+                'dialogue' => "Ik ben opgegroeid in een klein gezin, ik ben van Indonesische afkomst. Ik woon samen met mijn broer, zus en mijn moeder. Toen ik twee was heeft mijn vader ons verlaten. Mijn moeder is ongeveer zes keer getrouwd geweest. Thuis was het hectisch en onveilig. Mijn moeder was verslaafd aan alcohol en een prostituee. Ze nam geregeld vrouwen mee. Tegen betaling liet zij mij misbruiken.
 Toen ik 14 was ben ik gestopt met school, een jaar later ging ik het huis uit. Ik ging bij Ruben wonen een goede vriend. Ik ben nu 16 en heb een relatie met Kim, zij is in verwachting van ons kind.
 ",
                 'story_id' => 1,

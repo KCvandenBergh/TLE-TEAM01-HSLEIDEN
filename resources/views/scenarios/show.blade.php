@@ -1,13 +1,13 @@
 {{-- Add the layout from the user login setup here. --}}
-{{--@extends('layouts.app')--}}
+@extends('layouts.app')
 
-{{--@section('content')--}}
+@section('content')
     {{-- container to contain the scenario --}}
     <div class="container">
         {{-- card for scenario --}}
         <div class="card">
             <div class="card-header">
-                <h2 class="card-title">Casus: {{$scenario->story->title}}</h2>
+                <h2 class="card-title">{{$scenario->story->title}}</h2>
             </div>
             <div class="card-body">
                 <p class="card-text">{{$scenario->dialogue}}</p>
@@ -24,7 +24,7 @@
                             @elseif($choice->id === 2)
                                 {{--  if choice is to go back to the start menu --}}
                                 {{-- currently links back to start scenario, needs to be linked to stories overview --}}
-                                <a href="{{route('scenario.show', [$scenario->story->id, $scenario->story->start_scenario->id])}}">{{$choice->name}}</a>
+                                <a href="{{route('stories.index')}}">{{$choice->name}}</a>
                             @else
                                 <a href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id])}}">{{$choice->name}}</a>
                             @endif
@@ -32,8 +32,6 @@
                     </li>
                 @endforeach
             </ul>
-
-
         </div>
     </div>
-{{--@endsection--}}
+@endsection
