@@ -25,8 +25,8 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>{{$data -> naam}}</td>
-                    <td>{{$data -> email}}</td>
+                    <td><?php echo e($data['naam']); ?></td>
+                    <td><?php echo e($data -> email); ?></td>
                     <td><a href="logout">Logout</a></td>
                 </tr>
                 </tbody>
@@ -45,3 +45,4 @@
 
 
 <?php
+ ?><?php /**PATH C:\xampp\htdocs\TLE-TEAM01-HSLEIDEN\resources\views/dashboard.blade.php ENDPATH**/ ?>
