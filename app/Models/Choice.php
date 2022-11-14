@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Choice extends Model
 {
     use HasFactory;
+    protected $fillable = ['name', 'scenario_id'];
 
     public function saves()
     {
