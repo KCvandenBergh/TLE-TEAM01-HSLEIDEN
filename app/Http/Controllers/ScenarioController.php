@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Scenario;
+use App\Models\Story;
+use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -51,16 +53,12 @@ class ScenarioController extends Controller
         return redirect(route('scenarios.index'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function show($id)
+
+    public function show(?User $user, Story $story, Scenario $scenario)
     {
-        //
+        return view('scenario.view', compact('scenario'));
     }
+
 
     public function edit($id)
     {

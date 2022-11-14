@@ -25,3 +25,5 @@ Route::resource('scenarios', ScenarioController::class);
 Route::resource('stories', StoryController::class);
 Route::resource('choices', ChoiceController::class);
 
+
+Route::get('/stories/{story}/scenarios/{scenario}', [ScenarioController::class, 'show'])->name('scenario.show');

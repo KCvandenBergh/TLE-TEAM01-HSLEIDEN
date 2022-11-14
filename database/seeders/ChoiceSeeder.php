@@ -44,7 +44,7 @@ class ChoiceSeeder extends Seeder
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
-                'name' => 'Ik roep: “What the fuck?!?” En geef Ruben een duw.',
+                'name' => 'Ik roep: “What the fuck?!?” En geef Ruben een duw.',
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
