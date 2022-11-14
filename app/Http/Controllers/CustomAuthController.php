@@ -54,6 +54,16 @@ class CustomAuthController extends Controller
         }
     }
     public function dashboard(){
-        return view('dashboard');
+        $data = array();
+        if (session::has('loginId')){
+            $data = user::where('id','=',session::get('loginId'))->first();
+        }
+        return view('dashboard', compact('data'));
+    }
+    public function logout(){
+        if (session::has('loginId')){
+            session::pull('loginId');
+            return redirect('login');
+        }
     }
 }
