@@ -56,12 +56,14 @@ class StoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
-     * @return Response
+     * @param  \App\Models\Story  $story
+     * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show( $id)
     {
-        //
+
+        $story = Story::find($id);
+        return view('stories.show', compact('story'));
     }
 
     public function edit($id)
