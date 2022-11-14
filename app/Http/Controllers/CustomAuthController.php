@@ -54,6 +54,6 @@ class CustomAuthController extends Controller
         }
     }
     public function dashboard(){
-        return "Welkom op je dashboard";
+        return view('dashboard');
     }
 }
