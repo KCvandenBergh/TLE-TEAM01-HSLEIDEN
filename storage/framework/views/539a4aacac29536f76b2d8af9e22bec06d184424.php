@@ -18,6 +18,13 @@
                     <h4>Registratie</h4>
                     <hr>
                     <form action="<?php echo e(route('register-user')); ?>" method="post">
+                        <?php echo csrf_field(); ?>
+                        <?php if(session('success')): ?>
+                            <div class="alert alert-success"><?php echo e(session('success')); ?></div>
+                        <?php endif; ?>
+                            <?php if(session('fail')): ?>
+                                <div class="alert alert-danger"><?php echo e(session('Oei, er ging iets mis...')); ?></div>
+                            <?php endif; ?>
                         <div class="form-group">
                             <label for="name">Volledige naam</label>
                             <input type="text" class="form-control" placeholder="Vul je volledige naam in"

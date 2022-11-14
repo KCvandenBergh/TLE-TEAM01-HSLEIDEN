@@ -17,7 +17,8 @@
         <div class="col-md-4 col-md-offset-4" style="margin-top: 20px;">
             <h4>Log in</h4>
             <hr>
-            <form>
+            <form action="<?php echo e(route('login-user')); ?>" method="post">
+                <?php echo csrf_field(); ?>
                 <div class="form-group">
                     <label for="email">email adres</label>
                     <input type="text" class="form-control" placeholder="Vul je email adres in"

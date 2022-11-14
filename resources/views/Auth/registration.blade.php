@@ -18,11 +18,12 @@
                     <h4>Registratie</h4>
                     <hr>
                     <form action="{{route('register-user')}}" method="post">
-                        @if(session::has('Gelukt!'))
-                            <div class="alert alert-success ">{{session::get('Gelukt!')}}</div>
+                        @csrf
+                        @if(session('success'))
+                            <div class="alert alert-success">{{session('success')}}</div>
                         @endif
-                            @if(session::has('Oei, er ging iets mis...'))
-                                <div class="alert alert-danger">{{session::get('Oei, er ging iets mis...')}}</div>
+                            @if(session('fail'))
+                                <div class="alert alert-danger">{{session('Oei, er ging iets mis...')}}</div>
                             @endif
                         <div class="form-group">
                             <label for="name">Volledige naam</label>
