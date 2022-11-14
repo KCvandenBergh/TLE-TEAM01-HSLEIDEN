@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Story extends Model
 {
     use HasFactory;
+    protected $fillable = ['id','name', 'description'];
 
     public function saves()
     {
