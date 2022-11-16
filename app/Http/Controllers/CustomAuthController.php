@@ -27,9 +27,9 @@ class CustomAuthController extends Controller
             'password' => 'required|min:5|max:12'
         ]);
         $user = new User();
-        $user->naam = $request->name;
+        $user->name = $request->name;
         $user->email = $request->email;
-        $user->wachtwoord = Hash::make($request->password);
+        $user->password = Hash::make($request->password);
         $res = $user->save();
         if ($res) {
             return back()->with('success', 'Gelukt!');
@@ -44,7 +44,7 @@ class CustomAuthController extends Controller
         ]);
         $user = user::where('email','=', $request->email)->first();
         if ($user){
-            if(hash::check($request->password,$user->wachtwoord)){
+            if(hash::check($request->password,$user->password)){
                 $request-> session()->put('loginId',$user->id);
                 return redirect('dashboard');
             }else{
@@ -55,12 +55,10 @@ class CustomAuthController extends Controller
         }
     }
     public function dashboard(){
-//        dd("dashboard");
-//        if (session::has('loginId')){
+
             $data = user::where('id','=',session::get('loginId'))->first();
             return view('dashboard', compact('data'));
-//        }
-//        abort(404);
+
     }
     public function logout(){
         if (session::has('loginId')){

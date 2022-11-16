@@ -25,9 +25,9 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>{{$data -> naam}}</td>
+                    <td>{{$data -> name}}</td>
                     <td>{{$data -> email}}</td>
-                    <td><a href="logout">Logout</a></td>
+                    <td><a href={{route('logout')}}>Logout</a></td>
                 </tr>
                 </tbody>
             </table>
@@ -44,4 +44,4 @@
 
 
 
-<?php
+

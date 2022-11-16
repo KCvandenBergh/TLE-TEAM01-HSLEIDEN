@@ -32,7 +32,7 @@
                             <span class="text-danger">@error('name') {{$message}} @enderror</span>
                         </div>
                         <div class="form-group">
-                            <label for="email">email adres</label>
+                            <label for="email">Email adres</label>
                             <input type="text" class="form-control" placeholder="Vul je email adres in"
                                    name="email" value="{{old('email')}}">
                             <span class="text-danger">@error('email') {{$message}} @enderror</span>
@@ -47,7 +47,7 @@
                            <button class="btn btn block btn-primary" type="submit">Registreer</button>
                         </div>
                         <br>
-                        <a href="login">Heb je al een account? Log hier in</a>
+                        <a href="{{route('login-user')}}">Heb je al een account? Log hier in</a>
                     </form>
                 </div>
             </div>

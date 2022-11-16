@@ -26,7 +26,7 @@
                     <div class="alert alert-danger">{{session('fail')}}</div>
                 @endif
                 <div class="form-group">
-                    <label for="email">email adres</label>
+                    <label for="email">Email adres</label>
                     <input type="text" class="form-control" placeholder="Vul je email adres in"
                            name="email" value="{{old('email')}}">
                     <span class="text-danger">@error('email') {{$message}} @enderror</span>
@@ -41,7 +41,7 @@
                     <button class="btn btn block btn-primary" type="submit">Log in</button>
                 </div>
                 <br>
-                <a href="registration">Ik ben nieuw hier</a>
+                <a href="{{route('registration')}}">Ik ben nieuw hier</a>
             </form>
         </div>
     </div>
@@ -56,4 +56,4 @@
 
 
 
-<?php
+
