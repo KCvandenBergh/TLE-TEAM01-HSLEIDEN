@@ -29,11 +29,13 @@ class ChoiceController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return Application|Factory|View
      */
     public function create()
     {
-        //
+        $scenarios = Scenario::all();
+        return \view('choices.create', compact('scenarios'));
+
     }
 
     /**
