@@ -1,24 +1,23 @@
 @extends('layouts.app')
-
 @section('content')
+
     <div class="container">
-
-    <table class="table">
-        <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th></th>
-        </tr>
-        @foreach($stories as $story)
+        <table class="table">
             <tr>
-                <td>{{$story->title}}</td>
-                <td>{{$story->description}}</td>
-                <td>
-                    <a href="{{route('stories.show',$story->id)}}">View</a>
-                </td>
+                <th>Title</th>
+                <th>Description</th>
+                <th></th>
             </tr>
+            @foreach($stories as $story)
+                <tr>
+                    <td>{{$story->title}}</td>
+                    <td>{{$story->description}}</td>
+                    <td>
+                        <a href="{{route('stories.show',$story->id)}}">View</a>
+                    </td>
+                </tr>
 
-        @endforeach
-    </table>
+            @endforeach
+        </table>
     </div>
 @endsection

@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [StoryController::class, 'index'])->name('home');
 
 // login routes.
-Route::get('/login',[CustomAuthController::class,'login'])->middleware('alreadyLoggedIn');
-Route::get('/registration',[CustomAuthController::class,'registration'])->middleware('alreadyLoggedIn')->name('registration');
+Route::get('/login',[CustomAuthController::class,'login'])->middleware('alreadyLoggedIn') ->name('login');
+Route::get('/registration',[CustomAuthController::class,'registration'])->middleware('alreadyLoggedIn')->name('register');
 Route::post('/register-user', [CustomAuthController::class,'registerUser'])->name('register-user');
 Route::post('login-user',[CustomAuthController::class,'loginUser'])->name('login-user');
 Route::get('/dashboard',[CustomAuthController::class,'dashboard'])->middleware('isLoggedIn');

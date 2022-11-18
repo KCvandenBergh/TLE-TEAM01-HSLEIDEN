@@ -1,4 +1,4 @@
-@extends('stories.layout')
+@extends('layouts.app')
 @section('content')
 
     <div class="card">
@@ -7,7 +7,7 @@
             <form action="{{ route('stories.store') }}" method="post">
                 @csrf
                 <label>Title</label>
-                <input type="text" name="title" id="title"class="form-control"/>
+                <input type="text" name="title" id="title" class="form-control"/>
                 @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
