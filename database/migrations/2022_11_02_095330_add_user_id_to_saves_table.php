@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->timestamps();
+        Schema::table('saves', function (Blueprint $table) {
+            $table->foreignId('user_id')->nullable()->after('id')->constrained()->nullOnDelete();
         });
     }
 
@@ -29,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::table('saves', function (Blueprint $table) {
+            $table->dropConstrainedForeignId('user_id');
+        });
     }
 };
