@@ -4,8 +4,8 @@ use App\Http\Controllers\ChoiceController;
 use App\Http\Controllers\ScenarioController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CustomAuthController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,13 +18,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [StoryController::class, 'index'])->name('home');
-Route::get('admin/index', [AdminController::class, 'index'])->name('admin.index');
 
+// login routes.
+Route::get('/login',[CustomAuthController::class,'login'])->middleware('alreadyLoggedIn');
+Route::get('/registration',[CustomAuthController::class,'registration'])->middleware('alreadyLoggedIn')->name('registration');
+Route::post('/register-user', [CustomAuthController::class,'registerUser'])->name('register-user');
+Route::post('login-user',[CustomAuthController::class,'loginUser'])->name('login-user');
+Route::get('/dashboard',[CustomAuthController::class,'dashboard'])->middleware('isLoggedIn');
+Route::get('/logout',[CustomAuthController::class,'logout'])->name('logout');
+
+// admin routes.
+Route::get('admin/index', [AdminController::class, 'index'])->name('admin.index');
 Route::get('admin/stories/{story}', [AdminController::class, 'story'])->name('admin.stories.show');
 
+// resource routes.
 Route::resource('scenarios', ScenarioController::class);
 Route::resource('stories', StoryController::class);
 Route::resource('choices', ChoiceController::class);
 
-
+//View scenario route.
 Route::get('/stories/{story}/scenarios/{scenario}', [ScenarioController::class, 'show'])->name('scenario.show');
+
