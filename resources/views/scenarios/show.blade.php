@@ -1,7 +1,7 @@
 {{-- Add the layout from the user login setup here. --}}
 @extends('layouts.app')
-
 @section('content')
+
     {{-- container to contain the scenario --}}
     <div class="container">
         {{-- card for scenario --}}
