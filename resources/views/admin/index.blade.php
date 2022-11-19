@@ -12,7 +12,7 @@
             </tr>
             @foreach($stories as $story)
                 <tr>
-                    <td>{{$story->title}}</td>
+                    <td>{{$story->title}}</a></td>
                     <td>{{$story->description}}</td>
                     <td><a href="{{route('admin.stories.show', $story->id)}}">Scenario's</a></td>
                     <td><a href="{{route('stories.edit', $story->id)}}">Casus informatie aanpassen</a></td>
