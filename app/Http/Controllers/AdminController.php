@@ -13,15 +13,14 @@ class AdminController extends Controller
 {
 
     public function index(User $user) {
-        dd($user);
-        $this->authorize('viewAny', Story::class);
+        $this->authorize('create', Story::class);
         $stories = Story::all();
 
         return view('admin.index', compact('stories'));
     }
 
     public function story(User $user, Story $story){
-        $this->authorize('viewAny', Story::class);
+        $this->authorize('create', Story::class);
         $scenarios = Scenario::all();
 //      $choices = Choice::all();
 //      $story = Story::find($id);

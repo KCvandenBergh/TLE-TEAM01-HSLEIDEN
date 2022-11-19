@@ -38,9 +38,6 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
-                        </li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -60,6 +57,16 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('dashboard')}}">
+                                        Profiel
+                                    </a>
+                                    @if(Auth::user()->is_admin)
+                                        <a class="dropdown-item" href="{{ route('admin.index') }}">
+                                            Adminportaal
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                    @endif
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -70,9 +77,6 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
                             </li>
                         @endguest
                     </ul>

@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col">
             <h4>Welkom op je dashboard</h4>
             <hr>
             <table class="table">
@@ -16,7 +16,15 @@
                 <tr>
                     <td>{{$data -> name}}</td>
                     <td>{{$data -> email}}</td>
-                    <td><a href={{route('logout')}}>Logout</a></td>
+                    <td><a href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form></td>
                 </tr>
                 </tbody>
             </table>
