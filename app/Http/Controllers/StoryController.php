@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Story;
+use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -13,6 +14,12 @@ use Illuminate\Routing\Redirector;
 
 class StoryController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->authorizeResource(Story::class, 'story');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -57,19 +64,20 @@ class StoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Story  $story
-     * @return \Illuminate\Http\Response
+     * @param User|null $user
+     * @param Story $story
+     * @return Application|Factory|View
      */
-    public function show( $id)
+    public function show(?User $user, Story $story)
     {
 
-        $story = Story::find($id);
+        /*$story = Story::find($id);*/
         return view('stories.show', compact('story'));
     }
 
-    public function edit($id)
+    public function edit(User $user, Story $story)
     {
-        $story = Story::find($id);
+       /* $story = Story::find($id);*/
         return view('stories.edit', compact('story'));
     }
 
@@ -77,7 +85,7 @@ class StoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param int $id
+     * @param Story $story
      * @return Application|RedirectResponse|Redirector
      */
     public function update(Request $request, Story $story)
@@ -94,10 +102,11 @@ class StoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
+     * @param User $user
+     * @param Story $story
      * @return Response
      */
-    public function destroy($id)
+    public function destroy(User $user, Story $story)
     {
         //
     }

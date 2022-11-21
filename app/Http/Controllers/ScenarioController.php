@@ -15,6 +15,12 @@ use Illuminate\Routing\Redirector;
 
 class ScenarioController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->authorizeResource(Scenario::class, 'scenario');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -54,16 +60,31 @@ class ScenarioController extends Controller
         return redirect(route('scenarios.index'));
     }
 
-
+    /**
+     * Display the specified resource from storage.
+     * @param User|null $user
+     * @param Story $story
+     * @param Scenario $scenario
+     * @return Application|Redirector|RedirectResponse
+     */
     public function show(?User $user, Story $story, Scenario $scenario)
     {
-        return view('scenarios.show', compact('scenario'));
+        if($scenario->story->id === $story->id) {
+            return view('scenarios.show', compact('scenario'));
+        } else {
+            abort(404);
+        }
     }
 
-
-    public function edit($id)
+    /**
+     * edit the specified resource from storage.
+     *@param User $user
+     * @param Scenario $scenario
+     * @return Application|Redirector|RedirectResponse
+     */
+    public function edit(User $user, Scenario $scenario)
     {
-        $scenario = Scenario::find($id);
+        /*$scenario = Scenario::find($id);*/
         return view('scenarios.edit', compact('scenario'));
     }
 
@@ -71,7 +92,7 @@ class ScenarioController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param int $id
+     * @param Scenario $scenario
      * @return Application|RedirectResponse|Redirector
      */
     public function update(Request $request, Scenario $scenario)
@@ -86,11 +107,11 @@ class ScenarioController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return Response
+     *@param User $user
+     * @param Scenario $scenario
+     * @return Application|Redirector|RedirectResponse
      */
-    public function destroy($id)
+    public function destroy(User $user, Scenario $scenario)
     {
         //
     }

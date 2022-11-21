@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
@@ -46,6 +47,7 @@ class CustomAuthController extends Controller
         if ($user){
             if(hash::check($request->password,$user->password)){
                 $request-> session()->put('loginId',$user->id);
+                Auth::login($user);
                 return redirect('dashboard');
             }else{
                 return back()->with('fail', 'onjuist wachtwoord.');
@@ -63,6 +65,7 @@ class CustomAuthController extends Controller
     public function logout(){
         if (session::has('loginId')){
             session::pull('loginId');
+            Auth::logout();
             return redirect('login');
         }
     }

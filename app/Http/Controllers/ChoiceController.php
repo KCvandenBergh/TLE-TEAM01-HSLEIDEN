@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Choice;
 use App\Models\Scenario;
+use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -14,6 +15,12 @@ use Illuminate\Routing\Redirector;
 
 class ChoiceController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->authorizeResource(Choice::class, 'choice');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -58,17 +65,18 @@ class ChoiceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param User|null $user
+     * @param Choice $choice
      * @return Response
      */
-    public function show($id)
+    public function show(?User $user, Choice $choice)
     {
         //
     }
 
-    public function edit($id)
+    public function edit(?User $user, Choice $choice)
     {
-        $choice = Choice::find($id);
+       /* $choice = Choice::find($id);*/
         $scenarios = Scenario::all();
         return view('choices.edit', compact('choice', 'scenarios'));
     }
@@ -77,7 +85,7 @@ class ChoiceController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param int $id
+     * @param Choice $choice
      * @return Application|RedirectResponse|Redirector
      */
     public function update(Request $request, Choice $choice)
@@ -94,10 +102,11 @@ class ChoiceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
+     * @param User|null $user
+     * @param Choice $choice
      * @return Response
      */
-    public function destroy($id)
+    public function destroy(?User $user, Choice $choice)
     {
         //
     }
