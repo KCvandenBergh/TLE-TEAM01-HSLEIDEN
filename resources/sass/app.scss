@@ -8,9 +8,14 @@
 @import 'bootstrap/scss/bootstrap';
 
 .container {
-    border: 1px solid red;
-    color: red;
-    text-align: center;
+    //border: 1px solid red;
+    //color: red;
+    //text-align: center;
+}
+
+.card{
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 a.choices {
@@ -29,4 +34,29 @@ a.choices {
 a.choices:hover {
     background-color: #23114c;
     color: white;
+}
+
+a.play {
+    background-color: lightgrey;
+    display: inline-block;
+    width: 15%;
+    padding: 0.6em 1.5em;
+    margin: 0 0.1em 0.1em 0;
+    border-radius: 0.6em;
+    text-decoration: none;
+    color: #000000;
+    float: right;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.play:hover {
+    background-color: #23114c;
+    color: white;
+}
+
+#searchBar{
+    text-align: left;
+    padding-bottom: 1em;
 }
