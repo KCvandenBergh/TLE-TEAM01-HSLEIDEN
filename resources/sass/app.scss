@@ -6,3 +6,27 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+.container {
+    border: 1px solid red;
+    color: red;
+    text-align: center;
+}
+
+a.choices {
+    background-color: lightgrey;
+    display: inline-block;
+    padding: 0.6em 1.5em;
+    margin: 0 0.1em 0.1em 0;
+    border-radius: 0.6em;
+    text-decoration: none;
+    color: #000000;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.choices:hover {
+    background-color: #23114c;
+    color: white;
+}

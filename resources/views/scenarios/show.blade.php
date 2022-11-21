@@ -24,9 +24,9 @@
                             @elseif($choice->id === 2)
                                 {{--  if choice is to go back to the start menu --}}
                                 {{-- currently links back to start scenario, needs to be linked to stories overview --}}
-                                <a href="{{route('stories.index')}}">{{$choice->name}}</a>
+                                <a href="{{route('stories.index')}}" class="choices">{{$choice->name}}</a>
                             @else
-                                <a href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id])}}">{{$choice->name}}</a>
+                                <a href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id])}}" class="choices">{{$choice->name}}</a>
                             @endif
                         </div>
                     </li>

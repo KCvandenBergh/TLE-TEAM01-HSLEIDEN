@@ -4,6 +4,6 @@
     <div class="container">
         <h1>{{$story->title}}</h1>
         <p>{{$story->description}}</p>
-        <a href="{{route('scenario.show', [$story->id, $story->start_scenario])}}"> Story Starten</a>
+        <a href="{{route('scenario.show', [$story->id, $story->start_scenario])}}" class="choices"> Story Starten</a>
     </div>
 @endsection
