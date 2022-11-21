@@ -7,9 +7,12 @@
         </div>
         @foreach($stories as $story)
             <div class="card">
-
-                <h1>{{$story->title}}</h1>
-                <p>{{$story->description}}</p>
+                <div class="card-header">
+                    <h1>{{$story->title}}</h1>
+                </div>
+                <div class="card-body">
+                    <p>{{$story->description}}</p>
+                </div>
                 <a href="{{route('stories.show',$story->id)}}" class="play">Speel</a>
             </div>
         @endforeach
