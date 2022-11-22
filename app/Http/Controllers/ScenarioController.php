@@ -113,6 +113,9 @@ class ScenarioController extends Controller
      */
     public function destroy(User $user, Scenario $scenario)
     {
-        //
+        $scenario->delete();
+
+        return redirect()->route('scenarios.index')
+            ->with('success', 'Scenario deleted successfully');
     }
 }
