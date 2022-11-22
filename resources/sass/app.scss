@@ -8,21 +8,40 @@
 @import 'bootstrap/scss/bootstrap';
 
 .container {
-    //border: 1px solid red;
-    //color: red;
-    //text-align: center;
+    max-width: 80vw;
 }
 
 .card{
+    margin: 0 auto;
+    float: none;
     padding: 10px;
-    margin-bottom: 10px;
-    max-width: 80vw;
     position: center;
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
+.card-img{
+    overflow: hidden;
+}
+
+.card-header{
+    background-color: rgb(220,220,220, 0.8);
+    padding: 10px;
+    color: black;
+    text-align: center;
+    border-radius: 0.6em;
+}
+
+.card-text{
+    background-color: rgb(220,220,220, 0.8);
+    padding: 10px;
+    color: black;
+    border-radius: 0.6em;
 }
 
 a.choices {
+    width: 20vw;
     background-color: lightgrey;
-    //display: inline-block;
     padding: 0.6em 1.5em;
     margin: 0 0.1em 0.1em 0;
     border-radius: 0.6em;

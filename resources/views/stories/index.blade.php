@@ -2,8 +2,10 @@
 @section('content')
 
     <div class="container">
-        <div id="searchBar">
-            <input type="text" placeholder="Search..">
+        <div class="card">
+            <div id="searchBar">
+                <input type="text" placeholder="Search..">
+            </div>
         </div>
         @foreach($stories as $story)
             <div class="card">
