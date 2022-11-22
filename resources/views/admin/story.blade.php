@@ -12,6 +12,13 @@
                 <tr>
                     <td>{{$scenario->dialogue}} <br>
                         <a href="{{route('scenarios.edit', $scenario->id)}}">Scenario aanpassen</a>
+                        <form action="{{ route('scenarios.destroy', $scenario->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit"
+                                    onclick="return confirm('Are you sure you want to delete?')">Delete
+                            </button>
+                        </form>
                     </td>
                     @foreach($scenario->choices as $choice)
                         <td>{{$choice->name}}<br>
