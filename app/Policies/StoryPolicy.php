@@ -20,10 +20,10 @@ class StoryPolicy
     /**
      * Determine whether the user can view any models.
      *
-     * @param User $user
+     * @param User|null $user
      * @return Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(?User $user)
     {
         return Response::allow();
     }
@@ -31,11 +31,11 @@ class StoryPolicy
     /**
      * Determine whether the user can view the model.
      *
-     * @param User $user
+     * @param User|null $user
      * @param Story $story
      * @return Response|bool
      */
-    public function view(User $user, Story $story)
+    public function view(?User $user, Story $story)
     {
         return Response::allow();
     }
