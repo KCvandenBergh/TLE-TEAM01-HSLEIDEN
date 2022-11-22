@@ -7,7 +7,12 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
-class ChoiceScenarioSeeder extends Seeder
+class
+
+
+
+
+ChoiceScenarioSeeder extends Seeder
 {
     /**
      * Run the database seeds.
