@@ -23,7 +23,7 @@ class ScenarioPolicy
      * @param User $user
      * @return Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(?User $user)
     {
         return Response::allow();
     }
@@ -35,7 +35,7 @@ class ScenarioPolicy
      * @param Scenario $scenario
      * @return Response|bool
      */
-    public function view(User $user, Scenario $scenario)
+    public function view(?User $user, Scenario $scenario)
     {
         return Response::allow();
     }
