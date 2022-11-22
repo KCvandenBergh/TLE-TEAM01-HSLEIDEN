@@ -16,7 +16,15 @@
                     <td>{{$story->description}}</td>
                     <td><a href="{{route('admin.stories.show', $story->id)}}">Scenario's</a></td>
                     <td><a href="{{route('stories.edit', $story->id)}}">Casus informatie aanpassen</a></td>
-                    <td><a href="{{route('stories.destroy', $story->id)}}">Verwijderen</a></td> <!-- placeholder link -->
+                    <td>
+                        <form action="{{ route('stories.destroy', $story->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit"
+                                    onclick="return confirm('Are you sure you want to delete?')">Delete
+                            </button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </table>
