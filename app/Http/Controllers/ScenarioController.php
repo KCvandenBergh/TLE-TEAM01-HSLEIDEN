@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Choice;
+use App\Models\Save;
 use App\Models\Scenario;
 use App\Models\Story;
 use App\Models\User;
@@ -12,6 +14,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Auth;
 
 class ScenarioController extends Controller
 {
@@ -63,12 +66,31 @@ class ScenarioController extends Controller
     /**
      * Display the specified resource from storage.
      * @param User|null $user
+     * @param Request $req
      * @param Story $story
      * @param Scenario $scenario
-     * @return Application|Redirector|RedirectResponse
+     * @param Choice|null $choice
+     * @return Application
      */
-    public function show(?User $user, Story $story, Scenario $scenario)
+    public function show(?User $user, Request $req, Story $story, Scenario $scenario, ?Choice $choice)
     {
+        // check to see if there is a save already
+        if(session()->has('save')){
+            $save = unserialize(session('save'));
+            if(isset($choice)){
+                dd($save);
+            }
+        } else {
+            $save = new Save;
+                $save->story_id = $story->id;
+            if(Auth::check()){
+                $save->user_id = Auth::id();
+                $save->save();
+            }
+            session(['save' => serialize($save)]);
+        }
+
+        // check if the given scenario belongs to the given story
         if($scenario->story->id === $story->id) {
             return view('scenarios.show', compact('scenario'));
         } else {
@@ -80,7 +102,7 @@ class ScenarioController extends Controller
      * edit the specified resource from storage.
      *@param User $user
      * @param Scenario $scenario
-     * @return Application|Redirector|RedirectResponse
+     * @return Application
      */
     public function edit(User $user, Scenario $scenario)
     {

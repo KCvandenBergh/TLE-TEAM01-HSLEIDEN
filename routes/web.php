@@ -5,6 +5,7 @@ use App\Http\Controllers\ScenarioController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -37,5 +38,7 @@ Route::resource('stories', StoryController::class);
 Route::resource('choices', ChoiceController::class);
 
 //View scenario route.
-Route::get('/stories/{story}/scenarios/{scenario}', [ScenarioController::class, 'show'])->name('scenario.show');
+Route::get('/stories/{story}/scenarios/{scenario}/{madeChoice?}', [ScenarioController::class, 'show'])->name('scenario.show');
 
+//DEBUG ROUTES DELETE THESE
+Route::get('debug/regensession', [TestController::class, 'regensession'])->name('test.regensession');

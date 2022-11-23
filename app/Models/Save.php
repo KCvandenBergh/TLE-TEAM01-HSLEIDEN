@@ -9,6 +9,8 @@ class Save extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['story_id', 'user_id', 'choices'];
+
     public function user()
     {
         return $this->belongsTo(User::class);

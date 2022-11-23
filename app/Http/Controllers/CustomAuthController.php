@@ -66,6 +66,8 @@ class CustomAuthController extends Controller
         if (session::has('loginId')){
             session::pull('loginId');
             Auth::logout();
+            session()->invalidate();
+            session()->regenerate();
             return redirect('login');
         }
     }

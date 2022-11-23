@@ -26,7 +26,7 @@
                                 {{-- currently links back to start scenario, needs to be linked to stories overview --}}
                                 <a href="{{route('stories.index')}}">{{$choice->name}}</a>
                             @else
-                                <a href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id])}}">{{$choice->name}}</a>
+                                <a href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id, $choice->id])}}">{{$choice->name}}</a>
                             @endif
                         </div>
                     </li>
