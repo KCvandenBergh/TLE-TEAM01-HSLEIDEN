@@ -6,7 +6,7 @@
             <div id="searchBar">
                 <input type="text" placeholder="Search..">
             </div>
-        </div>
+        </div><br>
         @foreach($stories as $story)
             <div class="card">
                 <div class="card-header">

@@ -15,24 +15,28 @@
                 <div class="card-body">
                     <p class="card-text">{{$scenario->dialogue}}</p>
                 </div>
+
                 {{-- card for each choice --}}
                 <ul class="list-group list-group-flush">
                     @foreach($scenario->choices as $choice)
-                            <div class="card">
-                                @if($choice->id === 1)
-                                    {{--  if choice is to download made choices --}}
-                                    {{$choice->name}}
+                        {{--                            <div class="card">--}}
+                        @if($choice->id === 1)
+                            {{--  if choice is to download made choices --}}
+
+                                <a href="#" class="choices">{{$choice->name}}
                                     <bold> [WIP]</bold>
-                                @elseif($choice->id === 2)
-                                    {{--  if choice is to go back to the start menu --}}
-                                    {{-- currently links back to start scenario, needs to be linked to stories overview --}}
-                                    <a href="{{route('stories.index')}}" class="choices">{{$choice->name}}</a>
-                                @else
-                                    <a href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id])}}"
-                                       class="choices">{{$choice->name}}</a>
-                                @endif
-                            </div>
-{{--                        </li>--}}
+                                </a><br>
+
+                        @elseif($choice->id === 2)
+                            {{--  if choice is to go back to the start menu --}}
+                            {{-- currently links back to start scenario, needs to be linked to stories overview --}}
+                            <a href="{{route('stories.index')}}" class="choices">{{$choice->name}}</a>
+                        @else
+                            <a href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id])}}"
+                               class="choices">{{$choice->name}}</a><br>
+                        @endif
+                        {{--                            </div>--}}
+                        {{--                        </li>--}}
                     @endforeach
                 </ul>
             </div>

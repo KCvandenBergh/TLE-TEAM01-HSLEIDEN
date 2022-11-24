@@ -17,7 +17,6 @@
     padding: 10px;
     position: center;
     max-width: 50vw;
-    max-height: 50vh;
 }
 
 .card-img{
@@ -43,12 +42,12 @@ a.choices {
     width: 20vw;
     background-color: lightgrey;
     padding: 0.6em 1.5em;
-    margin: 0 0.1em 0.1em 0;
     border-radius: 0.6em;
     text-decoration: none;
     color: #000000;
     text-align: center;
     transition: all 0.2s;
+    margin: auto;
 }
 
 a.choices:hover {
@@ -85,5 +84,13 @@ a.play:hover {
 @media only screen and (max-width: 768px) {
     a.play{
         width: 100%;
+    }
+
+    a.choices{
+        width: 100%;
+    }
+
+    .card{
+        height: 100%;
     }
 }
