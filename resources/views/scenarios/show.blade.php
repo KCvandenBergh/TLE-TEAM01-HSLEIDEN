@@ -14,23 +14,37 @@
             </div>
             {{-- card for each choice --}}
             <ul class="list-group list-group-flush">
-                @foreach($scenario->choices as $choice)
-                    <li class="list-group-item">
-                        <div class="card">
-                            @if($choice->id === 1)
-                                {{--  if choice is to download made choices --}}
-                                {{$choice->name}}
+                @if($scenario->is_end)
+                    @if(Auth::check())
+                        <li class="list-group-item">
+                            <div class="text-center">
+                                <a href="{{ route('saves.create') }}" class="stretched-link page-link">Sla mijn keuzes op</a>
                                 <bold> [WIP]</bold>
-                            @elseif($choice->id === 2)
-                                {{--  if choice is to go back to the start menu --}}
-                                {{-- currently links back to start scenario, needs to be linked to stories overview --}}
-                                <a href="{{route('stories.index')}}">{{$choice->name}}</a>
-                            @else
-                                <a href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id, $choice->id])}}">{{$choice->name}}</a>
-                            @endif
+                            </div>
+                        </li>
+                    @endif
+
+                    <li class="list-group-item">
+                        <div class="text-center">
+                            <a href="" class="stretched-link page-link">Overzicht Keuzes</a>
+                            <bold> [WIP]</bold>
                         </div>
                     </li>
-                @endforeach
+
+                    <li class="list-group-item">
+                        <div class="text-center">
+                            <a href="{{route('stories.index')}}" class="stretched-link page-link">Terug naar Start</a>
+                        </div>
+                    </li>
+                @else
+                    @foreach($scenario->choices as $choice)
+                        <li class="list-group-item">
+                            <div class="text-center">
+                                <a href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id, $choice->id])}}" class="stretched-link page-link">{{$choice->name}}</a>
+                            </div>
+                        </li>
+                    @endforeach
+                @endif
             </ul>
         </div>
     </div>

@@ -69,29 +69,38 @@ class ScenarioController extends Controller
      * @param Request $req
      * @param Story $story
      * @param Scenario $scenario
-     * @param Choice|null $choice
+     * @param Choice|null $madeChoice
      * @return Application
      */
-    public function show(?User $user, Request $req, Story $story, Scenario $scenario, ?Choice $choice)
+    public function show(?User $user, Request $req, Story $story, Scenario $scenario, Choice $madeChoice = null)
     {
-        // check to see if there is a save already
-        if(session()->has('save')){
-            $save = unserialize(session('save'));
-            if(isset($choice)){
-                dd($save);
-            }
-        } else {
-            $save = new Save;
-                $save->story_id = $story->id;
-            if(Auth::check()){
-                $save->user_id = Auth::id();
-                $save->save();
-            }
-            session(['save' => serialize($save)]);
-        }
-
         // check if the given scenario belongs to the given story
-        if($scenario->story->id === $story->id) {
+        if ($scenario->story->id === $story->id) {
+            // check to see if there's been a choice made.
+            if (isset($madeChoice)) {
+                // check if there's a story id saved in session
+                if (session()->exists('story_id')) {
+                    // add made choice to saved choices
+                    $choices = session('choices');
+                    $choices[] = $madeChoice->id;
+                    session(['choices' => $choices]);
+                    session()->save();
+                // otherwise redirect to starting scenario of the given story
+                } else {
+                    return redirect(route('scenario.show', [$story, $story->start_scenario]));
+                }
+                // else check if it's the starting scenario of the given story
+            } elseif ($story->start_scenario->id === $scenario->id) {
+                $choices = [];
+                session([
+                    'story_id' => $story->id,
+                    'choices' => $choices,
+                ]);
+                session()->save();
+            } else {
+                return redirect(route('scenario.show', [$story, $story->start_scenario]));
+            }
+
             return view('scenarios.show', compact('scenario'));
         } else {
             abort(404);
@@ -100,7 +109,7 @@ class ScenarioController extends Controller
 
     /**
      * edit the specified resource from storage.
-     *@param User $user
+     * @param User $user
      * @param Scenario $scenario
      * @return Application
      */
@@ -129,7 +138,7 @@ class ScenarioController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *@param User $user
+     * @param User $user
      * @param Scenario $scenario
      * @return Application|Redirector|RedirectResponse
      */

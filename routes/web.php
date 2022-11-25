@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChoiceController;
+use App\Http\Controllers\SaveController;
 use App\Http\Controllers\ScenarioController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\AdminController;
@@ -36,6 +37,7 @@ Route::get('admin/stories/{story}', [AdminController::class, 'story'])->name('ad
 Route::resource('scenarios', ScenarioController::class);
 Route::resource('stories', StoryController::class);
 Route::resource('choices', ChoiceController::class);
+Route::resource('saves', SaveController::class);
 
 //View scenario route.
 Route::get('/stories/{story}/scenarios/{scenario}/{madeChoice?}', [ScenarioController::class, 'show'])->name('scenario.show');
