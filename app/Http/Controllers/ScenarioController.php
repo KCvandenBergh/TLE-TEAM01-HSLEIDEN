@@ -82,9 +82,12 @@ class ScenarioController extends Controller
                 if (session()->exists('story_id')) {
                     // add made choice to saved choices
                     $choices = session('choices');
-                    $choices[] = $madeChoice->id;
-                    session(['choices' => $choices]);
-                    session()->save();
+                    // check if the given choice is the same as the last made choice
+                    if(!(count($choices) > 0 && $choices[count($choices)-1] === $madeChoice->id)){
+                        $choices[] = $madeChoice->id;
+                        session(['choices' => $choices]);
+                        session()->save();
+                    }
                 // otherwise redirect to starting scenario of the given story
                 } else {
                     return redirect(route('scenario.show', [$story, $story->start_scenario]));
