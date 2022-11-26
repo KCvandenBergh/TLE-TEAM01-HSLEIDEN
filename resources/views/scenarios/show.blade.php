@@ -26,7 +26,7 @@
 
                     <li class="list-group-item">
                         <div class="text-center">
-                            <a href="" class="stretched-link page-link">Overzicht Keuzes</a>
+                            <a href="{{ route('stories.results', $scenario->story->id) }}" class="stretched-link page-link">Overzicht Keuzes</a>
                             <bold> [WIP]</bold>
                         </div>
                     </li>

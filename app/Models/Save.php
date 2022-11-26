@@ -18,7 +18,7 @@ class Save extends Model
 
     public function story()
     {
-        return $this->hasOne(Story::class);
+        return $this->belongsTo(Story::class);
     }
 
     public function choices()

@@ -39,6 +39,9 @@ Route::resource('stories', StoryController::class);
 Route::resource('choices', ChoiceController::class);
 Route::resource('saves', SaveController::class);
 
+//view results without saving to db, or as guest
+Route::get('/stories/{story}/results', [StoryController::class, 'result'])->name('stories.results');
+
 //View scenario route.
 Route::get('/stories/{story}/scenarios/{scenario}/{madeChoice?}', [ScenarioController::class, 'show'])->name('scenario.show');
 

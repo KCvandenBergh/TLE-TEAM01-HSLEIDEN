@@ -30,6 +30,7 @@
             </table>
         </div>
     </div>
+    @include('partials._savesoverview')
 </div>
 @endsection
 

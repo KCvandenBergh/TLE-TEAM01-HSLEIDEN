@@ -19,5 +19,8 @@
 
             @endforeach
         </table>
+        @if(Auth::check())
+            @include('partials._savesoverview')
+        @endif
     </div>
 @endsection

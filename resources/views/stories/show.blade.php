@@ -5,5 +5,8 @@
         <h1>{{$story->title}}</h1>
         <p>{{$story->description}}</p>
         <a href="{{route('scenario.show', [$story->id, $story->start_scenario])}}"> Story Starten</a>
+        @if(Auth::check() && $saves->count() > 0)
+            @include('partials._savesoverview')
+        @endif
     </div>
 @endsection

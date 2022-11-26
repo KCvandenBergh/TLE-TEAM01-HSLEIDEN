@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Save;
+use App\Models\Scenario;
+use App\Models\Story;
 use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -16,10 +18,10 @@ use Illuminate\Support\Facades\Auth;
 class SaveController extends Controller
 {
 
-    /*public function __construct()
+    public function __construct()
     {
-        $this->authorizeResource(Save::class, 'saves');
-    }*/
+        $this->authorizeResource(Save::class, 'save');
+    }
 
     /**
      * Display a listing of the resource.
@@ -73,7 +75,17 @@ class SaveController extends Controller
     public
     function show(User $user, Save $save)
     {
-        return view('saves.show', compact('save'));
+        // find relevant story
+        $story = Story::find($save->story_id);
+        // collect the relevant scenarios
+        $scenarios[] = Scenario::find($story->start_scenario->id);
+        foreach ($save->choices as $choice) {
+            $scenarios[] = Scenario::find($choice->scenario_id);
+        }
+        // create an author
+        $author = User::select('name')->where('id', $save->user_id)->get()->first();
+
+        return view('saves.show', compact('save', 'story', 'scenarios', 'author'));
     }
 
     /**
@@ -104,13 +116,15 @@ class SaveController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param Request $request
+     * @param User $user
      * @param Save $save
      * @return RedirectResponse
      */
     public
-    function destroy(Save $save)
+    function destroy(Request $request, User $user, Save $save)
     {
         $save->delete();
-        return back();
+        return redirect(route('dashboard'));
     }
 }
