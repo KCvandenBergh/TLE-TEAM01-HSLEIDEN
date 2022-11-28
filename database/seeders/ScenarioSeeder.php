@@ -181,7 +181,7 @@ class ScenarioSeeder extends Seeder
                             ],
                     //scenario 23
                             [
-                                'dialogue' => "De agenten pakken me op als verdachte om me te verhoren. Ik kan nog maar 2 kanten op nu…",
+                                'dialogue' => "De agenten houden me aan als verdachte om me te verhoren. Ik kan nog maar 2 kanten op nu…",
                                 'story_id' => 2,
                                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
