@@ -195,7 +195,7 @@ class ScenarioSeeder extends Seeder
                             ],
                     //scenario 25
                             [
-                                'dialogue' => "Ik word “geholpen” door jeugdzorg. Ze lopen elke dag rond in mijn wijk.",
+                                'dialogue' => "Ik word 'geholpen' door jongerenwerkers in de wijk. Ze lopen elke dag rond in mijn wijk.",
                                 'story_id' => 2,
                                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
