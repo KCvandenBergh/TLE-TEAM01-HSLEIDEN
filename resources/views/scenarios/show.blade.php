@@ -3,7 +3,7 @@
 @section('content')
 
     {{-- container to contain the scenario --}}
-    <div class="container">
+    <div class="container-fluid">
         {{-- card for scenario --}}
         <div class="card">
             <img src="https://i.pinimg.com/originals/2b/93/e0/2b93e0b6ded8310c25c131bd8146409a.jpg" class="card-img"
@@ -17,15 +17,15 @@
                 </div>
 
                 {{-- card for each choice --}}
-                <ul class="list-group list-group-flush">
+                <ul class="list-group">
                     @foreach($scenario->choices as $choice)
                         {{--                            <div class="card">--}}
                         @if($choice->id === 1)
                             {{--  if choice is to download made choices --}}
 
-                                <a href="#" class="choices">{{$choice->name}}
-                                    <bold> [WIP]</bold>
-                                </a><br>
+                            <a href="#" class="choices">{{$choice->name}}
+                                <bold> [WIP]</bold>
+                            </a><br>
 
                         @elseif($choice->id === 2)
                             {{--  if choice is to go back to the start menu --}}
