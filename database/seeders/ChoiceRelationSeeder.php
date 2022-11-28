@@ -61,8 +61,28 @@ class ChoiceRelationSeeder extends Seeder
             $this->linkChoiceScenario(37, 18);
 
         //story 2
-
-
+            $this->linkChoiceScenario(38, 26);
+            $this->linkChoiceScenario(39, 22);
+            $this->linkChoiceScenario(40, 29);
+            $this->linkChoiceScenario(41, 28);
+            $this->linkChoiceScenario(42, 27);
+            $this->linkChoiceScenario(43, 28);
+            $this->linkChoiceScenario(44, 27);
+            $this->linkChoiceScenario(45, 23);
+            $this->linkChoiceScenario(46, 28);
+            $this->linkChoiceScenario(47, 27);
+            $this->linkChoiceScenario(48, 28);
+            $this->linkChoiceScenario(49, 30);
+            $this->linkChoiceScenario(50, 31);
+            $this->linkChoiceScenario(51, 32);
+            $this->linkChoiceScenario(52, 33);
+            $this->linkChoiceScenario(53, 34);
+            $this->linkChoiceScenario(54, 33);
+            $this->linkChoiceScenario(55, 20);
+            $this->linkChoiceScenario(56, 21);
+            $this->linkChoiceScenario(57, 23);
+            $this->linkChoiceScenario(58, 25);
+            $this->linkChoiceScenario(59, 24);
     }
 
 
