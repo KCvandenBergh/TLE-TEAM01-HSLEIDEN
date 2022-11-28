@@ -7,9 +7,6 @@
                     <th>Title</th>
                     <th>Description</th>
                     <th>Acties</th>
-{{--                    <th>Scenario's</th>--}}
-{{--                    <th>Aanpassen</th>--}}
-{{--                    <th>Verwijderen</th>--}}
                 </tr>
                 @foreach($stories as $story)
                     <tr>
@@ -19,10 +16,9 @@
                             <a href="{{route('stories.edit', $story->id)}}">Casus informatie aanpassen</a><br>
                             <a href="{{route('stories.destroy', $story->id)}}">Verwijderen</a>
                         </td>
-                        <!-- placeholder link -->
                     </tr>
                 @endforeach
             </table>
-            <a href="{{route('stories.create')}}" class="button">Maak een nieuwe casus</a> <!-- placeholder link -->
+            <a href="{{route('stories.create')}}" class="button">Maak een nieuwe casus</a>
         </div>
 @endsection
