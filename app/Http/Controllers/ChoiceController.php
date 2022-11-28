@@ -104,10 +104,13 @@ class ChoiceController extends Controller
      *
      * @param User|null $user
      * @param Choice $choice
-     * @return Response
+     * @return RedirectResponse
      */
     public function destroy(?User $user, Choice $choice)
     {
-        //
+        $choice->delete();
+
+        return redirect()->route('choices.index')
+            ->with('success', 'Scenario deleted successfully');
     }
 }
