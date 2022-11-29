@@ -1,3 +1,4 @@
+@if(Auth::check() && $saves->count() > 0)
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">Opgeslagen resultaten</h3>
@@ -34,4 +35,5 @@
         </table>
     </div>
 </div>
+@endif
 

@@ -26,29 +26,13 @@
                 <ul class="list-group">
                     @if($scenario->is_end)
                         @if(Auth::check())
-                            <li class="list-group-item">
-                                <div class="text-center">
-                                    <a href="{{ route('saves.create') }}" class="stretched-link page-link">Sla mijn
-                                        keuzes op</a>
-                                    <bold> [WIP]</bold>
-                                </div>
-                            </li>
+                                    <a href="{{ route('saves.create') }}" class="choices">Sla mijn
+                                        keuzes op</a><br>
                         @endif
-
-                        <li class="list-group-item">
-                            <div class="text-center">
-                                <a href="{{ route('stories.results', $scenario->story->id) }}"
-                                   class="stretched-link page-link">Overzicht Keuzes</a>
-                                <bold> [WIP]</bold>
-                            </div>
-                        </li>
-
-                        <li class="list-group-item">
-                            <div class="text-center">
-                                <a href="{{route('stories.index')}}" class="stretched-link page-link">Terug naar
-                                    Start</a>
-                            </div>
-                        </li>
+                        <a href="{{ route('stories.results', $scenario->story->id) }}"
+                           class="choices">Overzicht Keuzes</a><br>
+                            <a href="{{route('stories.index')}}" class="choices">Terug naar
+                            Start</a><br>
                     @else
                         @foreach($scenario->choices as $choice)
                             @switch($scenario->id)
@@ -93,7 +77,6 @@
                             <a onclick="playSound();"
                                href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id, $choice->id])}}"
                                class="choices">{{$choice->name}}</a><br>
-                            @endif
                         @endforeach
                     @endif
                 </ul>

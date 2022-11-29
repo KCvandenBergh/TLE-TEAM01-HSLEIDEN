@@ -79,11 +79,6 @@
                                 </div>
                             </li>
                         @endguest
-
-                        <li class="nav-item btn btn-sm btn-outline-danger">
-                            <a class="nav-link" href="{{ route('test.regensession') }}"> Regen Session</a>
-                        </li>
-
                     </ul>
                 </div>
             </div>

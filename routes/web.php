@@ -45,5 +45,3 @@ Route::get('/stories/{story}/results', [StoryController::class, 'result'])->name
 //View scenario route.
 Route::get('/stories/{story}/scenarios/{scenario}/{madeChoice?}', [ScenarioController::class, 'show'])->name('scenario.show');
 
-//DEBUG ROUTES DELETE THESE
-Route::get('debug/regensession', [TestController::class, 'regensession'])->name('test.regensession');
