@@ -104,10 +104,13 @@ class StoryController extends Controller
      *
      * @param User $user
      * @param Story $story
-     * @return Response
+     * @return RedirectResponse
      */
     public function destroy(User $user, Story $story)
     {
-        //
+        $story->delete();
+
+        return redirect()->route('admin.index')
+            ->with('success', 'Story deleted successfully');
     }
 }

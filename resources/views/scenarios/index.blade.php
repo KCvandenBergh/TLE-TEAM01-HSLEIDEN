@@ -25,6 +25,15 @@
                                                 </button>
                                             </a>
                                         </td>
+                                        <td>
+                                            <form action="{{ route('scenarios.destroy', $scenario->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger" type="submit"
+                                                        onclick="return confirm('Are you sure you want to delete?')">Delete
+                                                </button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
