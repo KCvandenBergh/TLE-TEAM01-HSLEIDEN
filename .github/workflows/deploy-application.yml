@@ -139,7 +139,7 @@ jobs:
             ln -s -f ${BASE_PATH}/.env $RELEASE_PATH
             ln -s -f $STORAGE_PATH $RELEASE_PATH
             ln -s -n -f $RELEASE_PATH $ACTIVE_RELEASE_PATH
-            service php8.1-fpm reload
+            service php8.0-fpm reload
   run-after-hooks:
     name: "${{ matrix.server.name }}: After hook"
     runs-on: ubuntu-latest
