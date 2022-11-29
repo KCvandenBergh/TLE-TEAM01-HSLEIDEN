@@ -24,53 +24,78 @@
 
                 {{-- card for each choice --}}
                 <ul class="list-group">
-                    @foreach($scenario->choices as $choice)
-                        @switch($scenario->id)
-                            @case("3")
-                                <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/1727" autoplay="false" ></audio>
-                                @break
-                            @case("4")
-                                <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/7541" autoplay="false" ></audio>
-                                @break
-                            @case("6")
-                                <audio id="audio" src="https://www.youtube.com/watch?v=9zw7A9gpTiE&ab_channel=EccentricSounds" autoplay="false"></audio>
-                                @break
-                            @case("7")
-                                <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/7151" autoplay="false" ></audio>
-                                @break
-                            @case("9")
-                                <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/5674" autoplay="false" ></audio>
-                                @break
-                            @case("10")
-                                <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/4002" autoplay="false" ></audio>
-                                @break
-                                //Werkt niet
-                                {{--                                @case("13")--}}
-                                {{--                                    <audio id="audio" src="public/audio/man-stop.mp3" type="audio/mpeg" autoplay="false" ></audio>--}}
-                                {{--                                @break--}}
-                            @case("14")
-                                <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/6526" autoplay="false" ></audio>
-                                @break
-                            @case("17")
-                                <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/2399" autoplay="false" ></audio>
-                                @break
-                        @endswitch
-                        @if($choice->id === 1)
-                            {{--  if choice is to download made choices --}}
-
-                            <a href="#" class="choices">{{$choice->name}}
-                                <bold> [WIP]</bold>
-                            </a><br>
-
-                        @elseif($choice->id === 2)
-                            {{--  if choice is to go back to the start menu --}}
-                            {{-- currently links back to start scenario, needs to be linked to stories overview --}}
-                            <a href="{{route('stories.index')}}" class="choices">{{$choice->name}}</a>
-                        @else
-                            <a onclick="playSound();"  href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id])}}"
-                               class="choices">{{$choice->name}}</a><br>
+                    @if($scenario->is_end)
+                        @if(Auth::check())
+                            <li class="list-group-item">
+                                <div class="text-center">
+                                    <a href="{{ route('saves.create') }}" class="stretched-link page-link">Sla mijn
+                                        keuzes op</a>
+                                    <bold> [WIP]</bold>
+                                </div>
+                            </li>
                         @endif
-                    @endforeach
+
+                        <li class="list-group-item">
+                            <div class="text-center">
+                                <a href="{{ route('stories.results', $scenario->story->id) }}"
+                                   class="stretched-link page-link">Overzicht Keuzes</a>
+                                <bold> [WIP]</bold>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="text-center">
+                                <a href="{{route('stories.index')}}" class="stretched-link page-link">Terug naar
+                                    Start</a>
+                            </div>
+                        </li>
+                    @else
+                        @foreach($scenario->choices as $choice)
+                            @switch($scenario->id)
+                                @case("3")
+                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/1727"
+                                           autoplay="false"></audio>
+                                    @break
+                                @case("4")
+                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/7541"
+                                           autoplay="false"></audio>
+                                    @break
+                                @case("6")
+                                    <audio id="audio"
+                                           src="https://www.youtube.com/watch?v=9zw7A9gpTiE&ab_channel=EccentricSounds"
+                                           autoplay="false"></audio>
+                                    @break
+                                @case("7")
+                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/7151"
+                                           autoplay="false"></audio>
+                                    @break
+                                @case("9")
+                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/5674"
+                                           autoplay="false"></audio>
+                                    @break
+                                @case("10")
+                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/4002"
+                                           autoplay="false"></audio>
+                                    @break
+                                    //Werkt niet
+                                    {{--                                @case("13")--}}
+                                    {{--                                    <audio id="audio" src="public/audio/man-stop.mp3" type="audio/mpeg" autoplay="false" ></audio>--}}
+                                    {{--                                @break--}}
+                                @case("14")
+                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/6526"
+                                           autoplay="false"></audio>
+                                    @break
+                                @case("17")
+                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/2399"
+                                           autoplay="false"></audio>
+                                    @break
+                            @endswitch
+                            <a onclick="playSound();"
+                               href="{{route('scenario.show', [$scenario->story->id, $choice->scenario_id, $choice->id])}}"
+                               class="choices">{{$choice->name}}</a><br>
+                            @endif
+                        @endforeach
+                    @endif
                 </ul>
             </div>
         </div>

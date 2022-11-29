@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\ChoiceController;
+use App\Http\Controllers\SaveController;
 use App\Http\Controllers\ScenarioController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +37,13 @@ Route::get('admin/stories/{story}', [AdminController::class, 'story'])->name('ad
 Route::resource('scenarios', ScenarioController::class);
 Route::resource('stories', StoryController::class);
 Route::resource('choices', ChoiceController::class);
+Route::resource('saves', SaveController::class);
+
+//view results without saving to db, or as guest
+Route::get('/stories/{story}/results', [StoryController::class, 'result'])->name('stories.results');
 
 //View scenario route.
-Route::get('/stories/{story}/scenarios/{scenario}', [ScenarioController::class, 'show'])->name('scenario.show');
+Route::get('/stories/{story}/scenarios/{scenario}/{madeChoice?}', [ScenarioController::class, 'show'])->name('scenario.show');
 
+//DEBUG ROUTES DELETE THESE
+Route::get('debug/regensession', [TestController::class, 'regensession'])->name('test.regensession');

@@ -32,7 +32,7 @@
                     </table>
                 </div>
             </div>
-        </div>
+        @include('partials._savesoverview')</div>
     </div>
 @endsection
 

@@ -18,5 +18,8 @@
                 <a href="{{route('stories.show',$story->id)}}" class="play">Speel</a>
             </div>
         @endforeach
+        @if(Auth::check())
+            @include('partials._savesoverview')
+        @endif
     </div>
 @endsection

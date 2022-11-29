@@ -13,7 +13,7 @@ class Story extends Model
     public function saves()
     {
         /*Saves will be linked to individual Stories*/
-        return $this->belongsToMany(Save::class);
+        return $this->hasMany(Save::class);
     }
 
     public function scenarios()
