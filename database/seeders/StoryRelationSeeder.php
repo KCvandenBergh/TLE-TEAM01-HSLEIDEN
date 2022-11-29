@@ -24,5 +24,7 @@ class StoryRelationSeeder extends Seeder
     {
         /*function call (story_id, scenario_id)*/
         $this->linkStoryScenario(1, 1);
+
+        $this->linkStoryScenario(2, 19);
     }
 }
