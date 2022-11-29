@@ -6,3 +6,113 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+.container {
+    max-width: 80vw;
+}
+
+.card{
+    margin: 0 auto;
+    float: none;
+    padding: 10px;
+    position: center;
+    max-width: 50vw;
+}
+
+.card-img{
+    overflow: hidden;
+}
+
+.card-header{
+    background-color: rgb(220,220,220, 0.9);
+    padding: 10px;
+    color: black;
+    text-align: center;
+    border-radius: 0.6em;
+}
+
+.card-text{
+    background-color: rgb(220,220,220, 0.9);
+    padding: 10px;
+    color: black;
+    border-radius: 0.6em;
+}
+
+a.choices {
+    width: 20vw;
+    background-color: lightgrey;
+    padding: 0.6em 1.5em;
+    border-radius: 0.6em;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    transition: all 0.2s;
+    margin: auto;
+}
+
+a.choices:hover {
+    background-color: #23114c;
+    color: white;
+}
+
+a.play {
+    background-color: lightgrey;
+    display: inline-block;
+    width: 15%;
+    padding: 0.6em 1.5em;
+    margin: 0 0.1em 0.1em 0;
+    border-radius: 0.6em;
+    text-decoration: none;
+    color: #000000;
+    float: right;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.play:hover {
+    background-color: #23114c;
+    color: white;
+}
+
+#searchBar{
+    text-align: left;
+    padding-bottom: 1em;
+}
+
+ul.list-group{
+    margin-top: 20%;
+}
+
+// Responsive for mobile
+@media only screen and (max-width: 768px) {
+
+    .container-fluid{
+        height: 80vh;
+    }
+
+    .card{
+        height: 100%;
+        margin: auto;
+        overflow: auto;
+        float: none;
+        padding: 10px;
+        position: center;
+        max-width: 100vw;
+        content-visibility: auto;
+    }
+
+    .card-img{
+        height: 100vh;
+        object-fit: cover;
+        overflow-x: hidden;
+    }
+
+    a.play{
+        width: 100%;
+    }
+
+    a.choices{
+        width: 100%;
+    }
+}
