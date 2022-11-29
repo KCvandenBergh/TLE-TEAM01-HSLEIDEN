@@ -9,7 +9,7 @@
             <div class="card-body">
                 <p>{{$story->description}}</p>
             </div>
-            <a href="{{route('scenario.show', [$story->id, $story->start_scenario])}}" class="choices"> Story
+            <a href="{{route('scenario.show', [$story->id, $story->start_scenario])}}" class="play"> Story
                 Starten</a>
         </div>
 

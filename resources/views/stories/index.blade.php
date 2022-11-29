@@ -4,9 +4,11 @@
     <div class="container">
         <div class="card">
             <div id="searchBar">
-                <input type="text" placeholder="Search..">
+                <label>
+                    <input type="text" placeholder="Search..">
+                </label>
             </div>
-        </div><br>
+        </div>
         @foreach($stories as $story)
             <div class="card">
                 <div class="card-header">
