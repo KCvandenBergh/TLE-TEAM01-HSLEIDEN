@@ -2,22 +2,26 @@
 @section('content')
 
     <div class="container">
-        <table class="table">
-            <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th></th>
-            </tr>
-            @foreach($stories as $story)
-                <tr>
-                    <td>{{$story->title}}</td>
-                    <td>{{$story->description}}</td>
-                    <td>
-                        <a href="{{route('stories.show',$story->id)}}">View</a>
-                    </td>
-                </tr>
-
-            @endforeach
-        </table>
+        <div class="card">
+            <div id="searchBar">
+                <label>
+                    <input type="text" placeholder="Search..">
+                </label>
+            </div>
+        </div>
+        @foreach($stories as $story)
+            <div class="card">
+                <div class="card-header">
+                    <h1>{{$story->title}}</h1>
+                </div>
+                <div class="card-body">
+                    <p>{{$story->description}}</p>
+                </div>
+                <a href="{{route('stories.show',$story->id)}}" class="play">Speel</a>
+            </div>
+        @endforeach
+        @if(Auth::check())
+            @include('partials._savesoverview')
+        @endif
     </div>
 @endsection

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Save;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -59,13 +60,16 @@ class CustomAuthController extends Controller
     public function dashboard(){
 
             $data = user::where('id','=',session::get('loginId'))->first();
-            return view('dashboard', compact('data'));
+            $saves = Auth::user()->saves;
+            return view('dashboard', compact('data', 'saves'));
 
     }
     public function logout(){
         if (session::has('loginId')){
             session::pull('loginId');
             Auth::logout();
+            session()->invalidate();
+            session()->regenerate();
             return redirect('login');
         }
     }

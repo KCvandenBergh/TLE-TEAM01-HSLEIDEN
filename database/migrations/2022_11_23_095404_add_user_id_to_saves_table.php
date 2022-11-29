@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('stories', function (Blueprint $table) {
-            $table->foreignId('scenario_id')->nullable()->after('id')->constrained()->cascadeOnDelete();
+        Schema::table('saves', function (Blueprint $table) {
+            $table->foreignId('user_id')->nullable()->after('id')->constrained()->cascadeOnDelete();
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('stories', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('scenario_id');
+        Schema::table('saves', function (Blueprint $table) {
+            $table->dropConstrainedForeignId('user_id');
         });
     }
 };

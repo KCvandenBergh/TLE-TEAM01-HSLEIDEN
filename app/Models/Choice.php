@@ -13,7 +13,7 @@ class Choice extends Model
     public function saves()
     {
         /*Choices can be saved to saves*/
-       return $this->belongsToMany(Save::class);
+       return $this->hasMany(Save::class);
     }
 
     public function scenarios()

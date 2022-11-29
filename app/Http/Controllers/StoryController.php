@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Choice;
+use App\Models\Save;
+use App\Models\Scenario;
 use App\Models\Story;
 use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
@@ -11,6 +14,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Expr\Cast\Object_;
 
 class StoryController extends Controller
 {
@@ -28,8 +33,12 @@ class StoryController extends Controller
     public function index(?User $user)
     {
         $stories = Story::all();
+        $saves = null;
+        if(\Auth::check()){
+            $saves = Auth::user()->saves;
+        }
 
-        return view('stories.index', compact('stories'));
+        return view('stories.index', compact('stories', 'saves'));
     }
 
     /**
@@ -70,9 +79,54 @@ class StoryController extends Controller
      */
     public function show(?User $user, Story $story)
     {
+        $saves = null;
+        if(Auth::check()){
+            $saves = Auth::user()->saves->where('story_id', $story->id);
+        }
 
-        /*$story = Story::find($id);*/
-        return view('stories.show', compact('story'));
+        return view('stories.show', compact('story', 'saves'));
+    }
+
+    /**
+     * Display the local results, not saved to db.
+     *
+     * @param User|null $user
+     * @param Story $story
+     * @return Application|Factory|View
+     */
+    public function result(?User $user, Story $story)
+    {
+        if(session()->has('choices')) {
+            // get choices from session
+            $sessionChoices = session('choices');
+            // turn those id to actual choices
+            foreach ($sessionChoices as $sessionChoice) {
+                $choices[] = Choice::find($sessionChoice);
+            }
+            $choices = collect($choices);
+            // collect the relevant scenarios
+            $scenarios[] = Scenario::find($story->start_scenario->id);
+            foreach ($choices as $choice) {
+                $scenarios[] = Scenario::find($choice->scenario_id);
+            }
+            // create an author
+            $author = new class {};
+            if(\Auth::check()){
+                $author->name = \Auth::user()->name;
+            } else {
+                $author->name = 'GAST';
+            }
+            // create a local save instance
+            $save = Save::newModelInstance();
+            $save->story_id = $story->id;
+            $save->choices = $choices;
+            $save->updateTimestamps();
+
+            /*dd($save);*/
+            return view('stories.results', compact('save', 'story', 'scenarios', 'author'));
+        } else {
+            return abort(404);
+        }
     }
 
     public function edit(User $user, Story $story)
@@ -104,10 +158,13 @@ class StoryController extends Controller
      *
      * @param User $user
      * @param Story $story
-     * @return Response
+     * @return RedirectResponse
      */
     public function destroy(User $user, Story $story)
     {
-        //
+        $story->delete();
+
+        return redirect()->route('admin.index')
+            ->with('success', 'Story deleted successfully');
     }
 }
