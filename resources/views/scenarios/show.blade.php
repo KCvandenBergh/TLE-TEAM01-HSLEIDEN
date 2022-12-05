@@ -7,6 +7,7 @@
 </script>
 @extends('layouts.app')
 @section('scripts')
+    @routes
     <script>
         let scenarioJson = {{ \Illuminate\Support\Js::from($scenario) }}
     </script>
