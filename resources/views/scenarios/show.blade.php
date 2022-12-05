@@ -6,6 +6,12 @@
     }
 </script>
 @extends('layouts.app')
+@section('scripts')
+    <script>
+        let scenarioJson = {{ \Illuminate\Support\Js::from($scenario) }}
+    </script>
+    @vite('resources/js/timer.js')
+@endsection
 @section('content')
 
     {{-- container to contain the scenario --}}
@@ -19,6 +25,8 @@
                     <h2 class="card-title">{{$scenario->story->title}}</h2>
                 </div>
                 <div class="card-body">
+                    <p class="hidden" id="timer">
+                    </p> <br>
                     <p class="card-text">{{$scenario->dialogue}}</p>
                 </div>
 
@@ -37,11 +45,13 @@
                         @foreach($scenario->choices as $choice)
                             @switch($scenario->id)
                                 @case("3")
-                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/1727"
+                                    <audio id="audio"
+                                           src="https://www.fesliyanstudios.com/play-mp3/1727"
                                            autoplay="false"></audio>
                                     @break
                                 @case("4")
-                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/7541"
+                                    <audio id="audio"
+                                           src="https://www.fesliyanstudios.com/play-mp3/7541"
                                            autoplay="false"></audio>
                                     @break
                                 @case("6")
@@ -50,15 +60,18 @@
                                            autoplay="false"></audio>
                                     @break
                                 @case("7")
-                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/7151"
+                                    <audio id="audio"
+                                           src="https://www.fesliyanstudios.com/play-mp3/7151"
                                            autoplay="false"></audio>
                                     @break
                                 @case("9")
-                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/5674"
+                                    <audio id="audio"
+                                           src="https://www.fesliyanstudios.com/play-mp3/5674"
                                            autoplay="false"></audio>
                                     @break
                                 @case("10")
-                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/4002"
+                                    <audio id="audio"
+                                           src="https://www.fesliyanstudios.com/play-mp3/4002"
                                            autoplay="false"></audio>
                                     @break
                                     //Werkt niet
@@ -66,11 +79,13 @@
                                     {{--                                    <audio id="audio" src="public/audio/man-stop.mp3" type="audio/mpeg" autoplay="false" ></audio>--}}
                                     {{--                                @break--}}
                                 @case("14")
-                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/6526"
+                                    <audio id="audio"
+                                           src="https://www.fesliyanstudios.com/play-mp3/6526"
                                            autoplay="false"></audio>
                                     @break
                                 @case("17")
-                                    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/2399"
+                                    <audio id="audio"
+                                           src="https://www.fesliyanstudios.com/play-mp3/2399"
                                            autoplay="false"></audio>
                                     @break
                             @endswitch
