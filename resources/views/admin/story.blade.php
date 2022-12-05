@@ -29,6 +29,7 @@
                     </tr>
                 @endforeach
             </table>
+            {{ $scenarios->links('pagination::bootstrap-4')  }}
         </div>
     </div>
 @endsection

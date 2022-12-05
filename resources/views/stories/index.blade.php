@@ -3,10 +3,11 @@
 
     <div class="container">
         <div class="card">
-            <div id="searchBar">
-                <label>
-                    <input type="text" placeholder="Search..">
-                </label>
+            <div class="input-group rounded">
+                <div class="input-group">
+                    <input type="search" class="form-control rounded" placeholder="Zoeken..." aria-label="Search" aria-describedby="search-addon" />
+                    <button type="button" class="btn btn-outline-primary">Zoek</button>
+                </div>
             </div>
         </div>
         @foreach($stories as $story)

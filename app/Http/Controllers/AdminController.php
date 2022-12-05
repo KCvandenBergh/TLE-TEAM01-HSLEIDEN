@@ -21,7 +21,7 @@ class AdminController extends Controller
 
     public function story(User $user, Story $story){
         $this->authorize('create', Story::class);
-        $scenarios = Scenario::all();
+        $scenarios = Scenario::paginate(4);
 //      $choices = Choice::all();
 //      $story = Story::find($id);
 
