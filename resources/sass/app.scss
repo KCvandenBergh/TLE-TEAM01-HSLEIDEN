@@ -21,8 +21,8 @@ body{
     background-size: cover;
 }
 
-.container {
-    max-width: 80vw;
+.container-fluid#nav{
+    max-width: 60vw;
 }
 
 .card{
@@ -103,10 +103,11 @@ ul.list-group{
 
     body{
         background-size: cover;
+        background-repeat: inherit;
     }
 
-    .container-fluid{
-        height: 80vh;
+    .container-fluid#nav{
+        max-width: 100vw;
     }
 
     .card{
@@ -139,25 +140,23 @@ ul.list-group{
         background-repeat: inherit;
     }
 
-    main.py-4{
-        width: 100vw;
-    }
-
     .container-fluid{
-        height: 100%;
-        width: 100%;
-
+        height: 90%;
+        width: 100vw;
     }
 
     .card{
         height: 100%;
-        margin: 0 auto 20px;
         overflow: auto;
         float: none;
-        padding: 10px;
         position: center;
-        max-width: 100vw;
         content-visibility: auto;
+    }
+
+    .container{
+        margin-left: 0;
+        padding-left: 2px;
+        padding-right: 2px;
     }
 
     .card-img{

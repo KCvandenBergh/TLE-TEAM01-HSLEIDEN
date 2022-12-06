@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
         <div class="card">
             <div class="input-group rounded">
                 <div class="input-group">
@@ -24,5 +23,4 @@
         @if(Auth::check())
             @include('partials._savesoverview')
         @endif
-    </div>
 @endsection

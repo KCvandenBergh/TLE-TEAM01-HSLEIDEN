@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
         <div class="card">
             <h1>Scenario's - {{$story->title}}</h1>
             <table class="table">
@@ -31,5 +30,4 @@
             </table>
             {{ $scenarios->links('pagination::bootstrap-4')  }}
         </div>
-    </div>
 @endsection
