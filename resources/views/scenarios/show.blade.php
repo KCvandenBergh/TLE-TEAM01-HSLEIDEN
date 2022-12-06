@@ -7,9 +7,10 @@
 </script>
 @extends('layouts.app')
 @section('scripts')
-    @routes
+@routes
     <script>
-        let scenarioJson = {{ \Illuminate\Support\Js::from($scenario) }}
+        let scenarioJson = {{ \Illuminate\Support\Js::from($scenario) }};
+        let defaultChoice = {{ \Illuminate\Support\Js::from($defaultChoice) }};
     </script>
     @vite('resources/js/timer.js')
 @endsection

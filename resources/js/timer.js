@@ -2,6 +2,7 @@ window.onload = function () {
     // select the timer element
     let timer = document.getElementById('timer');
     timer.className = 'hidden';
+    console.log(scenarioJson, defaultChoice)
 
     //select the choices elements
     let choices = document.getElementsByClassName('choices');
@@ -38,22 +39,20 @@ window.onload = function () {
 
     // click the given default choice
     function clickDefaultChoice(choices) {
-        // TODO: implement a default choice on scenario's with time pressure.
         // see if there is a given default choice, then set up the route for it
-        if (scenarioJson.default_choice !== null) {
+        if (scenarioJson.default_choice !== null && defaultChoice !== null) {
             let a = document.createElement("a");
             a.href = route('scenario.show', {
-                story: '', //story id,
-                scenario:'',// next scenario id,
-                madeChoice:'' // default choice id
+                story: scenarioJson.story_id, //story id,
+                scenario: defaultChoice.scenario_id,// next scenario id,
+                madeChoice: defaultChoice.id // default choice id
             });
 
-            console.log(a); // sanity check generated url => DELETE on production.
             // click the created link
             a.click();
 
         } else {
-            // TEMP: picks first choice on screen as default
+            // if there is time but no default choice given, pick first choice
             choices[0].click();
         }
     }
