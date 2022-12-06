@@ -19,6 +19,7 @@ body{
     background-image: url("../bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: 12pt;
 }
 
 .container-fluid#nav{
@@ -72,7 +73,7 @@ a.choices:hover {
 a.play {
     background-color: lightgrey;
     display: inline-block;
-    width: 15%;
+    width: 25%;
     padding: 0.6em 1.5em;
     margin: 0 0.1em 0.1em 0;
     border-radius: 0.6em;
@@ -99,7 +100,11 @@ ul.list-group{
     margin-top: 20%;
 }
 
-@media only screen and (max-width: 1759px){
+a.dropdown-item:hover{
+    background-color: #23114c;
+}
+
+@media only screen and (max-width: 1190px){
 
     body{
         background-size: cover;
@@ -151,12 +156,7 @@ ul.list-group{
         float: none;
         position: center;
         content-visibility: auto;
-    }
-
-    .container{
-        margin-left: 0;
-        padding-left: 2px;
-        padding-right: 2px;
+        overflow-x: hidden;
     }
 
     .card-img{
@@ -179,5 +179,9 @@ ul.list-group{
 
     a.choices{
         width: 100%;
+    }
+
+    a.nav-link{
+        text-align: right;
     }
 }
