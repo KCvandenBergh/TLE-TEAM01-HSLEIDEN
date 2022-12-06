@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Story;
 use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
@@ -77,7 +78,7 @@ class StoryController extends Controller
 
     public function edit(User $user, Story $story)
     {
-       /* $story = Story::find($id);*/
+        /* $story = Story::find($id);*/
         return view('stories.edit', compact('story'));
     }
 
@@ -99,15 +100,32 @@ class StoryController extends Controller
         return redirect(route('stories.index'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param User $user
-     * @param Story $story
-     * @return Response
-     */
-    public function destroy(User $user, Story $story)
+    public function search()
     {
-        //
+        $categories = Category::all();
+        $stories = Story::latest();
+        if (request('search')) {
+            $stories->where('title', 'like', '%' . \request('search') . '%')
+            ->orwhere('body', 'like', '%' . \request('search') . '%');
+
+
     }
+        return view('stories.index', compact('stories','categories')
+        );
+    }
+
+
+        /**
+         * Remove the specified resource from storage.
+         *
+         * @param User $user
+         * @param Story $story
+         * @return Response
+         */
+        public
+        function destroy(User $user, Story $story)
+        {
+            //
+        }
+
 }

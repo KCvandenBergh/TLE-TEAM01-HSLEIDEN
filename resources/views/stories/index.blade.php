@@ -1,17 +1,16 @@
 @extends('layouts.app')
 @section('content')
 
-    <form class="form-check-inline" action="">
-        <label for="category_filter">Filter &nbsp;</label>
-        <select class="form-control" id="category_filter" name="category">
-            <option value="">Select Category</option>
-        </select>
-        <label for="keyword">&nbsp;&nbsp;</label>
-        <input type="text" class="form-control" name="keyword" placeholder="enter keyword" id="keyword">
-       <span>&nbsp;&nbsp;</span>
-
-        <button type="button" class="btn btn-primary">Search</button>
-        <a class="btn btn-success" href="">Clear</a>
+    <form action="/search" method="GET" role="search">
+        {{ csrf_field() }}
+        <div class="input-group">
+            <input type="text" class="form-control" name="q"
+                   placeholder="search stories"> <span class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+        </div>
     </form>
 
 
