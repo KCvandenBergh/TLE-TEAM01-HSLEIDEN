@@ -2,27 +2,45 @@ window.onload = function () {
     // select the timer element
     let timer = document.getElementById('timer');
     timer.className = 'hidden';
-    console.log(scenarioJson, defaultChoice)
+    timer.style.width = "100%";
+    timer.style.backgroundColor = "green";
+
+    let full = parseInt(scenarioJson.time);
 
     //select the choices elements
     let choices = document.getElementsByClassName('choices');
 
     // set i value
     let i = null;
-    if(scenarioJson.time !== null){
-        i = parseInt(scenarioJson.time);
+    if (scenarioJson.time !== null) {
+        i = parseInt(scenarioJson.time)
     }
-
     // if i isn't null run the timer
-    if( i !== null) {
+    if (i !== null) {
         // add value of i into page and make visible
         timer.innerText = i.toString();
         timer.className = 'card-text';
+
+        let percentage = 100;
+
 
         // function to update every second
         let intervalID = setInterval(function () {
             i--;
             timer.innerText = i.toString();
+            percentage = (i / full) * 100;
+            /*timer.style.width = `${percentage}%`*/
+
+
+            /*if (percentage < 10) {
+                timer.style.backgroundColor = 'red';
+            } else if (percentage < 40) {
+                timer.style.backgroundColor = "orange";
+            } else if (percentage < 70) {
+                timer.style.backgroundColor = "yellow";
+            } else {
+                timer.style.backgroundColor = "green";
+            }*/
 
             // if i hits zero > stop timer > click default choice
             if (i <= 0) {
@@ -31,9 +49,20 @@ window.onload = function () {
             }
         }, 1000);
     }
-
+    timer.animate([{
+        transform: 'translateX(0%)',
+        backgroundColor: 'green'
+    },
+        {
+            transform: 'translateX(50%)',
+            backgroundColor: 'yellow'
+        },
+        {
+            transform: `translateX(100%)`,
+            backgroundColor: 'red'
+        }], {duration: full*1000})
     // stop interval timer
-    function stopTimer(intervalID){
+    function stopTimer(intervalID) {
         clearInterval(intervalID);
     }
 
