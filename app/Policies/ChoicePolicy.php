@@ -25,7 +25,7 @@ class ChoicePolicy
      */
     public function viewAny(?User $user)
     {
-        return Response::allow();
+        return Response::denyAsNotFound();
     }
 
     /**
@@ -37,7 +37,7 @@ class ChoicePolicy
      */
     public function view(?User $user, Choice $choice)
     {
-        return Response::allow();
+        return Response::denyAsNotFound();
     }
 
     /**
