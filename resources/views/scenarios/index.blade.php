@@ -2,14 +2,16 @@
 @section('content')
 
         <div class="row">
-            <div class="col-md-9">
-                <div class="card">
+            <div class="card">
+            <div class="col">
+
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
                                 <tr>
-                                    <th>Dialogue</th>
+                                    <th>Scenario</th>
+                                    <th>Actie</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -37,7 +39,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                            {{--                    {{ $scenarios->links('pagination::bootstrap-4')  }}--}}
+                                                {{ $scenarios->links('pagination::bootstrap-4')  }}
                         </div>
                     </div>
                 </div>
