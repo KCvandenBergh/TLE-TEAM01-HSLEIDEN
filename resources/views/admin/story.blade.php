@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-        <div class="card">
+    <div class="card">
+        <div class="overview">
             <h1>Scenario's - {{$story->title}}</h1>
             <table class="table">
                 <tr>
@@ -11,11 +12,11 @@
                 @foreach($scenarios as $scenario)
                     <tr>
                         <td>{{$scenario->dialogue}} <br>
-                            <a href="{{route('scenarios.edit', $scenario->id)}}">Scenario aanpassen</a>
+                            <a href="{{route('scenarios.edit', $scenario->id)}}">Scenario Aanpassen</a>
                             <form action="{{ route('scenarios.destroy', $scenario->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-danger" type="submit"
+                                <button class="btn btn-danger btn-sm" type="submit"
                                         onclick="return confirm('Are you sure you want to delete?')">Delete
                                 </button>
                             </form>
@@ -28,6 +29,8 @@
                     </tr>
                 @endforeach
             </table>
+            <br>
             {{ $scenarios->links('pagination::bootstrap-4')  }}
         </div>
+    </div>
 @endsection

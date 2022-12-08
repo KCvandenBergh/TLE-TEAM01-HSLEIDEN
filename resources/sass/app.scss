@@ -35,6 +35,10 @@ body{
     padding: 5px;
 }
 
+.overview{
+    height: 85vh;
+}
+
 .card-img{
     overflow: hidden;
 }
@@ -53,6 +57,28 @@ body{
     color: black;
     border-radius: 0.6em;
 }
+
+.pagination{
+    position: absolute;
+    bottom: 0;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    padding-top: 10px;
+    color: #23114c;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: #23114c;
+    border-color: #23114c;
+}
+
 
 a.choices {
     width: 20vw;
@@ -105,7 +131,7 @@ a.dropdown-item:hover{
     background-color: #23114c;
 }
 
-@media only screen and (max-width: 1190px){
+@media only screen and (max-width: 1642px){
 
     body{
         background-size: cover;
@@ -139,7 +165,7 @@ a.dropdown-item:hover{
 }
 
 // Responsive for mobile
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 841px) {
 
     body{
         background-size: cover;
@@ -163,6 +189,14 @@ a.dropdown-item:hover{
         height: 100vh;
         object-fit: cover;
         overflow-x: hidden;
+    }
+
+    .overview{
+        height: 100%;
+    }
+
+    .pagination{
+        width: 100%;
     }
 
     td{

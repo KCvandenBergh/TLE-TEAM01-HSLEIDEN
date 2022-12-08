@@ -28,7 +28,7 @@ class ChoiceController extends Controller
      */
     public function index()
     {
-        $choices = Choice::paginate(8);
+        $choices = Choice::paginate(11);
 
         return view('choices.index', compact('choices'));
     }

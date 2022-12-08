@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('content')
 
-        <div class="row">
-            <div class="card">
-            <div class="col">
+    <div class="row">
+        <div class="card">
+            <div class="overview">
+                <div class="col">
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -31,7 +32,8 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="btn btn-danger" type="submit"
-                                                        onclick="return confirm('Are you sure you want to delete?')">Delete
+                                                        onclick="return confirm('Are you sure you want to delete?')">
+                                                    Delete
                                                 </button>
                                             </form>
                                         </td>
@@ -39,11 +41,13 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                                                {{ $scenarios->links('pagination::bootstrap-4')  }}
+                            <br>
+                            {{ $scenarios->links('pagination::bootstrap-4')  }}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 @endsection
 
