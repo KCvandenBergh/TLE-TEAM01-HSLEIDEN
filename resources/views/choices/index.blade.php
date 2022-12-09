@@ -31,7 +31,7 @@
                                             <form action="{{ route('choices.destroy', $choice->id)}}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button class="btn btn-danger" type="submit"
+                                                <button class="btn btn-danger btn-sm" type="submit"
                                                         onclick="return confirm('Are you sure you want to delete?')">
                                                     Delete
                                                 </button>
