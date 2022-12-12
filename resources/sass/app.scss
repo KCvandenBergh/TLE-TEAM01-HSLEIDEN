@@ -33,6 +33,7 @@ body{
     max-width: 50vw;
     overflow-x: hidden;
     padding: 5px;
+    max-height: 87vh;
 }
 
 .overview{
@@ -196,7 +197,17 @@ a.dropdown-item:hover{
     }
 
     .pagination{
-        width: 100%;
+        position: relative;
+        bottom: 0;
+        flex-wrap: wrap;
+    }
+
+    .pagination .page-item:nth-child(n+5):nth-last-child(n+5) {
+        display:none;
+    }
+
+    .pagination .page-item:nth-child(4):after {
+        display:block;
     }
 
     td{

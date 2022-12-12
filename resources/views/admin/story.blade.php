@@ -11,8 +11,8 @@
                 </tr>
                 @foreach($scenarios as $scenario)
                     <tr>
-                        <td>{{$scenario->dialogue}} <br>
-                            <a href="{{route('scenarios.edit', $scenario->id)}}">Scenario Aanpassen</a>
+                        <td>{{$scenario->dialogue}}
+                            <a href="{{route('scenarios.edit', $scenario->id)}}"><i class="bi bi-pen"></i></a>
                             <form action="{{ route('scenarios.destroy', $scenario->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
@@ -22,15 +22,15 @@
                             </form>
                         </td>
                         @foreach($scenario->choices as $choice)
-                            <td>{{$choice->name}}<br>
-                                <a href="{{route('choices.edit', $choice->id)}}">Keuzes aanpassen</a>
+                            <td>{{$choice->name}}
+                                <a href="{{route('choices.edit', $choice->id)}}"><i class="bi bi-pen"></i></a>
                             </td>
                         @endforeach
                     </tr>
                 @endforeach
             </table>
             <br>
-            {{ $scenarios->links('pagination::bootstrap-4')  }}
+            {{ $scenarios->links()  }}
         </div>
     </div>
 @endsection

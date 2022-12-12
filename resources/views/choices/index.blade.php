@@ -42,7 +42,7 @@
                                 </tbody>
                             </table>
                             <br>
-                            {{ $choices->links('pagination::bootstrap-4')  }}
+                            {{ $choices->links()  }}
                         </div>
                     </div>
                 </div>

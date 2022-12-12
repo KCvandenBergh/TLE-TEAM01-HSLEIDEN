@@ -22,8 +22,7 @@
                                         <td>
                                             <a href="{{ route('scenarios.edit', $scenario->id) }}"
                                                title="edit scenario">
-                                                <button class="btn btn-primary btn-sm"><i
-                                                        class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                                                <button class="btn btn-primary btn-sm">Edit
                                                 </button>
                                             </a>
                                         </td>
@@ -42,7 +41,7 @@
                                 </tbody>
                             </table>
                             <br>
-                            {{ $scenarios->links('pagination::bootstrap-4')  }}
+                            {{ $scenarios->links()  }}
                         </div>
                     </div>
                 </div>

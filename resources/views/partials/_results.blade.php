@@ -30,7 +30,7 @@
 
         <div class="card-body">
             <div class="row justify-content-center">
-                <div class="col-lg-9">
+                <div class="col-auto">
                     <p class="fw-bold">Gemaakt door: {{ $author->name }}</p>
                 </div>
                 <div class="col-auto">

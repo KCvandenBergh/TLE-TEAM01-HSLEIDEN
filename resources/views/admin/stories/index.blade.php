@@ -32,7 +32,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                                                {{ $stories->links('pagination::bootstrap-4')  }}
+                                                {{ $stories->links()  }}
                         </div>
                     </div>
                 </div>
