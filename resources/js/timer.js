@@ -4,12 +4,6 @@ window.onload = function () {
     // select the timer element
     let timer = document.getElementById('timer');
     timer.className = 'hidden';
-    timer.style.height = '0.1rem';
-    timer.style.position= 'absolute';
-    timer.style.left = '1rem';
-
-    timer.style.borderRadius= '0 5px 5px 0';
-    timer.style.paddingBottom = '0';
 
     let full = parseInt(scenarioJson.time);
 

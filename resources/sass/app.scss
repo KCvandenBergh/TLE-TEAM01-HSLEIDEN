@@ -19,7 +19,7 @@
     max-width: 80vw;
 }
 
-.card{
+.card {
     margin: 0 auto 20px;
     float: none;
     padding: 10px;
@@ -27,20 +27,20 @@
     max-width: 50vw;
 }
 
-.card-img{
+.card-img {
     overflow: hidden;
 }
 
-.card-header{
-    background-color: rgb(220,220,220, 0.9);
+.card-header {
+    background-color: rgb(220, 220, 220, 0.9);
     padding: 10px;
     color: black;
     text-align: center;
     border-radius: 0.6em;
 }
 
-.card-text{
-    background-color: rgb(220,220,220, 0.9);
+.card-text {
+    background-color: rgb(220, 220, 220, 0.9);
     padding: 10px;
     color: black;
     border-radius: 0.6em;
@@ -83,21 +83,29 @@ a.play:hover {
     color: white;
 }
 
-#searchBar{
+#searchBar {
     text-align: left;
     padding-bottom: 1em;
 }
 
-ul.list-group{
+#timer {
+    position: absolute;
+    left: 1rem;
+    padding-inline: 0;
+    border-radius: 0 10px 10px 0;
+    max-width: 95.5%;
+}
+
+ul.list-group {
     margin-top: 20%;
 }
 
-@media only screen and (max-width: 1759px){
-    .container-fluid{
+@media only screen and (max-width: 1759px) {
+    .container-fluid {
         height: 80vh;
     }
 
-    .card{
+    .card {
         height: 100%;
         margin: 0 auto 20px;
         overflow: auto;
@@ -108,17 +116,17 @@ ul.list-group{
         content-visibility: auto;
     }
 
-    .card-img{
+    .card-img {
         height: 100vh;
         object-fit: cover;
         overflow-x: hidden;
     }
 
-    a.play{
+    a.play {
         width: 50%;
     }
 
-    a.choices{
+    a.choices {
         width: 50%;
     }
 }
@@ -126,11 +134,11 @@ ul.list-group{
 // Responsive for mobile
 @media only screen and (max-width: 768px) {
 
-    .container-fluid{
+    .container-fluid {
         height: 80vh;
     }
 
-    .card{
+    .card {
         height: 100%;
         margin: 0 auto 20px;
         overflow: auto;
@@ -141,17 +149,17 @@ ul.list-group{
         content-visibility: auto;
     }
 
-    .card-img{
+    .card-img {
         height: 100vh;
         object-fit: cover;
         overflow-x: hidden;
     }
 
-    a.play{
+    a.play {
         width: 100%;
     }
 
-    a.choices{
+    a.choices {
         width: 100%;
     }
     #timer {
