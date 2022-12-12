@@ -1,9 +1,15 @@
+// noinspection JSUnresolvedVariable
+
 window.onload = function () {
     // select the timer element
     let timer = document.getElementById('timer');
     timer.className = 'hidden';
-    timer.style.width = "100%";
-    timer.style.backgroundColor = "green";
+    timer.style.height = '0.1rem';
+    timer.style.position= 'absolute';
+    timer.style.left = '1rem';
+
+    timer.style.borderRadius= '0 5px 5px 0';
+    timer.style.paddingBottom = '0';
 
     let full = parseInt(scenarioJson.time);
 
@@ -18,7 +24,7 @@ window.onload = function () {
     // if i isn't null run the timer
     if (i !== null) {
         // add value of i into page and make visible
-        timer.innerText = i.toString();
+        /*timer.innerText = i.toString();*/
         timer.className = 'card-text';
 
         let percentage = 100;
@@ -27,20 +33,8 @@ window.onload = function () {
         // function to update every second
         let intervalID = setInterval(function () {
             i--;
-            timer.innerText = i.toString();
+            /*timer.innerText = i.toString();*/
             percentage = (i / full) * 100;
-            /*timer.style.width = `${percentage}%`*/
-
-
-            /*if (percentage < 10) {
-                timer.style.backgroundColor = 'red';
-            } else if (percentage < 40) {
-                timer.style.backgroundColor = "orange";
-            } else if (percentage < 70) {
-                timer.style.backgroundColor = "yellow";
-            } else {
-                timer.style.backgroundColor = "green";
-            }*/
 
             // if i hits zero > stop timer > click default choice
             if (i <= 0) {
@@ -49,17 +43,20 @@ window.onload = function () {
             }
         }, 1000);
     }
-    timer.animate([{
-        transform: 'translateX(0%)',
-        backgroundColor: 'green'
+    timer.animate([
+        {
+        width: '100%',
+        backgroundColor: 'green',
     },
         {
-            transform: 'translateX(50%)',
-            backgroundColor: 'yellow'
+            offset: 0.5,
+            width: '50%',
+            backgroundColor: 'yellow',
+
         },
         {
-            transform: `translateX(100%)`,
-            backgroundColor: 'red'
+            width: '0',
+            backgroundColor: 'red',
         }], {duration: full*1000})
     // stop interval timer
     function stopTimer(intervalID) {
@@ -68,6 +65,7 @@ window.onload = function () {
 
     // click the given default choice
     function clickDefaultChoice(choices) {
+        timer.remove();
         // see if there is a given default choice, then set up the route for it
         if (scenarioJson.default_choice !== null && defaultChoice !== null) {
             let a = document.createElement("a");

@@ -25,10 +25,10 @@
             <div class="card-img-overlay">
                 <div class="card-header">
                     <h2 class="card-title">{{$scenario->story->title}}</h2>
+                    <div class="hidden" id="timer">
+                    </div>
                 </div>
                 <div class="card-body">
-                    <p class="hidden" id="timer">
-                    </p> <br>
                     <p class="card-text">{{$scenario->dialogue}}</p>
                 </div>
 
