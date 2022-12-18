@@ -104,15 +104,15 @@ class StoryController extends Controller
     {
         $categories = Category::all();
         $stories = Story::latest();
-        if (request('search')) {
-            $stories->where('title', 'like', '%' . \request('search') . '%')
-            ->orwhere('body', 'like', '%' . \request('search') . '%');
+
+        $search_text = $_GET['query'];
+            $stories = Story::where('title', 'like', '%' . \request('search') . '%')
+            ->orwhere('body', 'like', '%' . \request('search') . '%')->with('category');
+
+        return view('stories.search', compact('stories','categories'));
+    }
 
 
-    }
-        return view('stories.index', compact('stories','categories')
-        );
-    }
 
 
         /**
