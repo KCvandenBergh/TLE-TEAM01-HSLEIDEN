@@ -47,3 +47,15 @@ Route::get('/', [StoryController::class, 'search'])->name('home');
 
 
 
+Route::get('/', function () {
+    dd(request('search'));
+
+    return view('show', [
+        'story'->Post::latest()->get(),
+        'categories'-> Category::all()
+    ]);
+})->name('show');
+
+
+
+

@@ -2,9 +2,8 @@
 @section('content')
 
     <form action="/search" method="GET" role="search">
-        {{ csrf_field() }}
         <div class="input-group">
-            <input type="text" class="form-control" name="q"
+            <input type="text" class="form-control" name="search"
                    placeholder="search stories"> <span class="input-group-btn">
             <button type="submit" class="btn btn-default">
                 <span class="glyphicon glyphicon-search"></span>
@@ -29,9 +28,15 @@
                         <a href="{{route('stories.show',$story->id)}}">View</a>
                     </td>
                 </tr>
+            <tfoot>
+            <tr>
+                <input type = "text" class="form-control filter-input" placeholder="Search for ">
+            </tr>
+            </tfoot>
 
             @endforeach
         </table>
+
     </div>
 
 

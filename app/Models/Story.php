@@ -26,5 +26,6 @@ class Story extends Model
     {
         /*All Stories begin somewhere, in this case a specific Scenario*/
         return $this->hasOne(Scenario::class);
-    }
-}
+    }}
+
+
