@@ -1,10 +1,11 @@
 @extends('layouts.app')
 @section('content')
 
-    <form action="{{route('/search')}}" method="GET" role="search">
+    <form action="#" method="GET" role="search">
         <div class="input-group">
-            <input type="text" class="form-control" name="query"
-                   placeholder="search stories"> <span class="input-group-btn">
+            <input type="text" class="form-control" name="search"
+                   placeholder="search stories"> <span class="input-group-btn"
+            value="{{request('/search')}}">
             <button type="submit" class="btn btn-default">
                 <span class="glyphicon glyphicon-search"></span>
             </button>

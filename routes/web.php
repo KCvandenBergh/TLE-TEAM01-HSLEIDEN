@@ -49,14 +49,6 @@ Route::get('/search', '\App\Http\Controllers\StoryController@search');
 
 
 
-Route::get('/', function () {
-    dd(request('search'));
-
-    return view('show', [
-        'story'->Post::latest()->get(),
-        'categories'-> Category::all()
-    ]);
-})->name('show');
 
 
 
