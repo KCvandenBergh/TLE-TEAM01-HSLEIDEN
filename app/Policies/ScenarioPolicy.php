@@ -25,7 +25,7 @@ class ScenarioPolicy
      */
     public function viewAny(?User $user)
     {
-        return Response::allow();
+        return Response::denyAsNotFound();
     }
 
     /**
