@@ -28,11 +28,12 @@ class StoryController extends Controller
      */
     public function index(?User $user)
     {
-        if ($stories = Story::where('title', 'like', '%' . \request('search') . '%')
-            ->orwhere('description', 'like', '%' . \request('search') . '%')->with('category')->get());
+        return view('stories', [
+            'stories'->Story::latest()->filter()->get(),
+       'categories'-> Category::all()
+    ]);
+        }
 
-        return view('stories.index', compact('stories'));
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -99,14 +100,6 @@ class StoryController extends Controller
 
         $story->update($request->all());
         return redirect(route('stories.index'));
-    }
-
-    public function search()
-    {
-        $categories = Category::all();
-        $story = Story::latest();
-
-
     }
 
 

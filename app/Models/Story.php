@@ -16,6 +16,14 @@ class Story extends Model
         return $this->belongsToMany(Save::class);
     }
 
+    public function scopeFilter($query)
+    {
+        if ($query = Story::where('title', 'like', '%' . \request('search') . '%')
+            ->orwhere('description', 'like', '%' . \request('search') . '%')->with('category')->get());
+
+           return view('stories.index', compact('query'));
+    }
+
     public function scenarios()
     {
         /*A Story will have multiple Scenarios linked to it*/
@@ -26,6 +34,8 @@ class Story extends Model
     {
         /*All Stories begin somewhere, in this case a specific Scenario*/
         return $this->hasOne(Scenario::class);
-    }}
+    }
+
+}
 
 
