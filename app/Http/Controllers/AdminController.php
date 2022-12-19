@@ -14,14 +14,15 @@ class AdminController extends Controller
 
     public function index(User $user) {
         $this->authorize('create', Story::class);
-        $stories = Story::all();
+        $stories = Story::paginate(5);
 
         return view('admin.index', compact('stories'));
     }
 
     public function story(User $user, Story $story){
-        $this->authorize('update', Story::class);
-        $scenarios = Scenario::where('story_id', $story->id)->get();
+        $this->authorize('create', Story::class);
+        $scenarios = Scenario::paginate(3);
+
 //      $choices = Choice::all();
 //      $story = Story::find($id);
 

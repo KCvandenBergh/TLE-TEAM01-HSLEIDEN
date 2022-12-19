@@ -31,7 +31,7 @@ class ScenarioController extends Controller
      */
     public function index()
     {
-        $scenarios = Scenario::all();
+        $scenarios = Scenario::paginate(7);
 
         return view('scenarios.index', compact('scenarios'));
     }

@@ -8,8 +8,6 @@
 @extends('layouts.app')
 @section('content')
 
-    {{-- container to contain the scenario --}}
-    <div class="container-fluid">
         {{-- card for scenario --}}
         <div class="card">
             <img src="https://i.pinimg.com/originals/2b/93/e0/2b93e0b6ded8310c25c131bd8146409a.jpg" class="card-img"
@@ -82,5 +80,4 @@
                 </ul>
             </div>
         </div>
-    </div>
 @endsection
