@@ -29,8 +29,8 @@ class StoryController extends Controller
     public function index(?User $user)
     {
         return view('stories', [
-            'stories'->Story::latest()->filter(request(['search']))->get(),
-            'categories'-> Category::all()
+            'stories'=>Story::latest()->filter(request(['search','category']))->get(),
+            'categories'=> Category::all()
     ]);
         }
 

@@ -18,13 +18,13 @@ class Story extends Model
 
     public function scopeFilter($query, array $filters)
     {
-        if ($filters['search'] ?? false){
-            $query
-                = Story::where('title', 'like', '%' . \request('search') . '%')
-            ->orwhere('description', 'like', '%' . \request('search') . '%')->with('category')->get());
+        $query->when($filters['search'] ?? false, fn ($query, $search)=>
+                $query
+                ->where('title', 'like', '%' . $search . '%')
+                ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
 
-           return view('stories.index', compact('query'));
-           }
+        return view('stories.index', compact('query'));
+
     }
 
     public function scenarios()
