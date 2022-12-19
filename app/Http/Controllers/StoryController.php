@@ -15,7 +15,6 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
-use PhpParser\Node\Expr\Cast\Object_;
 
 class StoryController extends Controller
 {
@@ -34,7 +33,7 @@ class StoryController extends Controller
     {
         $stories = Story::all();
         $saves = null;
-        if(\Auth::check()){
+        if (\Auth::check()) {
             $saves = Auth::user()->saves;
         }
 
@@ -80,7 +79,7 @@ class StoryController extends Controller
     public function show(?User $user, Story $story)
     {
         $saves = null;
-        if(Auth::check()){
+        if (Auth::check()) {
             $saves = Auth::user()->saves->where('story_id', $story->id);
         }
 
@@ -96,7 +95,7 @@ class StoryController extends Controller
      */
     public function result(?User $user, Story $story)
     {
-        if(session()->has('choices')) {
+        if (session()->has('choices')) {
             // get choices from session
             $sessionChoices = session('choices');
             // turn those id to actual choices
@@ -110,8 +109,9 @@ class StoryController extends Controller
                 $scenarios[] = Scenario::find($choice->scenario_id);
             }
             // create an author
-            $author = new class {};
-            if(\Auth::check()){
+            $author = new class {
+            };
+            if (\Auth::check()) {
                 $author->name = \Auth::user()->name;
             } else {
                 $author->name = 'GAST';
@@ -131,7 +131,39 @@ class StoryController extends Controller
 
     public function edit(User $user, Story $story)
     {
-       /* $story = Story::find($id);*/
+        $choices = Choice::all();
+        $scenarios = Scenario::all();
+
+        $relevantScenarios = $scenarios->where('story', $story);
+        $relevantChoices = [];
+        foreach ($relevantScenarios as $relScen) {
+            foreach ($relScen->choices as $relChoice) {
+                $relevantChoices[] = $relChoice;
+            }
+            $relevantChoices = collect($relevantChoices);
+        }
+
+        $tree = new \stdClass();
+        $tree->story = $story;
+        /*$tree->relevantScenarios = $relevantScenarios;
+        $tree->relevantChoices = $relevantChoices;*/
+        $tree->structure['scenarios'] = $story->start_scenario;
+        $tree->structure['scenarios']['choices'] = $story->start_scenario->choices;
+        foreach($tree->structure['scenarios']['choices'] as $ch)
+        {
+            $tree->structure['scenarios']['choices']['scenarios'] = $relevantScenarios->where('id', $ch->scenario_id);
+            foreach($tree->structure['scenarios']['choices']['scenarios'] as $sc)
+            {
+                $tree->structure['scenarios']['choices']['scenarios']['choices'] = $sc->choices;
+                foreach($tree->structure['scenarios']['choices']['scenarios']['choices'] as $ch)
+                {
+                    $tree->structure['scenarios']['choices']['scenarios']['choices']['scenarios'] = $relevantScenarios->where('id', $ch->scenario_id);
+                }
+            }
+        }
+
+        print_r(json_encode($tree));
+        dd();
         return view('stories.edit', compact('story'));
     }
 
