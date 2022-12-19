@@ -16,12 +16,15 @@ class Story extends Model
         return $this->belongsToMany(Save::class);
     }
 
-    public function scopeFilter($query)
+    public function scopeFilter($query, array $filters)
     {
-        if ($query = Story::where('title', 'like', '%' . \request('search') . '%')
+        if ($filters['search'] ?? false){
+            $query
+                = Story::where('title', 'like', '%' . \request('search') . '%')
             ->orwhere('description', 'like', '%' . \request('search') . '%')->with('category')->get());
 
            return view('stories.index', compact('query'));
+           }
     }
 
     public function scenarios()
