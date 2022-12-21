@@ -132,6 +132,23 @@ a.dropdown-item:hover{
     background-color: #23114c;
 }
 
+// Decision Tree
+.test{
+    background-color: #fff;
+    margin: 0 auto 20px;
+    float: none;
+    position: center;
+    max-width: 50vw;
+    overflow-x: hidden;
+    padding: 5px;
+    max-height: 87vh;
+}
+
+.add-choice{
+    border: none;
+    background-color: lawngreen;
+}
+
 @media only screen and (max-width: 1642px){
 
     body{
