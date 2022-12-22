@@ -27,15 +27,18 @@
     {{--    </div>--}}
 
     <div class="test">
+        <form action="{{ route('stories.store') }}" method="post">
+            @csrf
+            <label>Casus Titel</label>
+            <input type="text" placeholder="Casus titel" name="title" id="title" class="form-control"/>
+            @error('title')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </form>
+    </div>
+
+    <div id="test">
         <div class="dialogue">
-            <form action="{{ route('stories.store') }}" method="post">
-                @csrf
-                <label>Casus Titel</label>
-                <input type="text" placeholder="Casus titel" name="title" id="title" class="form-control"/>
-                @error('title')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </form>
             <form action="{{ route('scenarios.store') }}" method="post">
             <label>Dialoog</label>
                 <input type="text" placeholder="Scenario dialoog" name="dialogue" id="dialogue" class="form-control"/>
@@ -43,17 +46,63 @@
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </form>
-        </div><br>
+        </div>
         <div class="choices">
             <form action="{{ route('choices.store')}}" method="post">
+                <fieldset class="input-set" id="choice-list" class="input-field">
                 @csrf
                 <label>Keuze</label>
-                <input type="text" placeholder="Keuze" name="name" id="name" class="form-control"/>
-                @error('name')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
+                    <div class="choices-input">
+                <input type="text" placeholder="Keuze" name="name" id="name" class="choices-input"/>
+                    <button class="btn-add-choice" onclick="addChoice()">+</button>
+                    </div>
+                </fieldset>
             </form>
-            <button class="add-choice" onclick="addChoice()">+</button>
+
         </div>
     </div>
+
+    <script>
+        const myForm = document.getElementById("choice-list");
+
+        function addChoice() {
+
+            const nef_wrapper = document.createElement("div");
+            const nef = document.createElement("input");
+            const btnAdd = document.createElement("button");
+            const btnDel = document.createElement("button");
+
+            nef_wrapper.classList.add("choices-input");
+
+            btnAdd.type = "button";
+            btnAdd.classList.add("btn-add-choice");
+            btnAdd.innerText = "+";
+            btnAdd.setAttribute("onclick", "addChoice()");
+
+            btnDel.type = "button";
+            btnDel.classList.add("btn-del-choice");
+            btnDel.innerText = "-";
+
+            nef.type = "choice";
+            nef.name = "choice_field";
+            nef.setAttribute("required", "");
+            nef.classList.add("input-field");
+
+            nef_wrapper.appendChild(nef);
+            nef_wrapper.appendChild(btnAdd);
+            nef_wrapper.appendChild(btnDel);
+
+            myForm.appendChild(nef_wrapper);
+            btnDel.addEventListener("click", removeChoice);
+
+            const node = document.getElementById("test");
+            const clone = node.cloneNode(true);
+            document.body.appendChild(clone);
+        }
+
+        function removeChoice(el) {
+            const field = el.target.parentElement;
+            field.remove();
+        }
+    </script>
 @endsection

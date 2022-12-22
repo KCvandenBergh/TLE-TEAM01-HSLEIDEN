@@ -138,16 +138,58 @@ a.dropdown-item:hover{
     margin: 0 auto 20px;
     float: none;
     position: center;
-    max-width: 50vw;
+    max-width: 30vw;
     overflow-x: hidden;
     padding: 5px;
     max-height: 87vh;
 }
 
-.add-choice{
-    border: none;
-    background-color: lawngreen;
+#test{
+    background-color: #fff;
+    margin: 0 auto 20px;
+    float: none;
+    position: center;
+    max-width: 30vw;
+    overflow-x: hidden;
+    padding: 5px;
+    max-height: 87vh;
 }
+
+
+
+.input-plus {
+    display: flex;
+}
+
+.inputs-set {
+    border: none;
+}
+.choices-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.btn-submit,
+.btn-add-choice,
+.btn-del-choice {
+    border: none;
+    padding: 8px 12px;
+}
+
+.btn-submit {
+    background-color: rgb(152, 247, 199);
+}
+
+.btn-add-choice{
+    border: none;
+    background-color: green;
+}
+
+.btn-del-choice {
+    background-color: red;
+}
+
 
 @media only screen and (max-width: 1642px){
 
