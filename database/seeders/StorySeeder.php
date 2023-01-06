@@ -34,6 +34,14 @@ class StorySeeder extends Seeder
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
+            //story 3
+            [
+                'title' => 'Prototype: Ondernemende Onyx',
+                'description' => 'Dit is het verhaal over de ondernemende Onyx.',
+                'is_visible' => 1,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
         ];
 
         // add entries into database.

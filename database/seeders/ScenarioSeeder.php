@@ -299,6 +299,296 @@ class ScenarioSeeder extends Seeder
                                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                             ],
+            //story 3
+
+                    //scenario 35
+                    [
+                        'dialogue' => "Ik sta op een afgelegen parkeerplaats te wachten op een onbekende jongen. Ik heb een zak kleding in mijn hand. Het is de kleding van mijn niffauw die in de bak zit. Een vriend van hem komt de kleding halen om die bij mijn mattie te brengen. Ik hoor een geluid...",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 36
+                    [
+                        'dialogue' => "Er komt een busje aangereden. Het ziet er een beetje verdacht uit. Ik wil geen problemen maar ik moet mijn mattie wel helpen. Hij en mijn andere neven zijn de enige familie die ik heb. Mijn ma is 1,5 jaar geleden dood gegaan en mijn pa was er nooit voor me. Al die pleeggezinnen waren maar niks. Mijn matties, die zijn mijn echte familie. Ik kan ze niet in de steek laten.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 37
+                    [
+                        'dialogue' => "Het busje komt als een gek achter me aangereden. Ik had gelijk, ik zit in de problemen.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 38
+                    [
+                        'dialogue' => "Ik blijf heel stil liggen en hoop dat niemand me ziet. Ineens word er een zak over mijn hoofd getrokken. Ik word hardhandig het busje in gesmeten en de deur gaat dicht. Ik zit in het donker.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 39
+                    [
+                        'dialogue' => "Er zitten 2 mannen in het busje. Ze worden woest en ze stappen allebei uit. Ze komen dreigend op me afgelopen.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 40
+                    [
+                        'dialogue' => "Ik bied mijn excuses aan voor de ruit en roep dat ik alleen kleding kom brengen. De mannen blijven op me af lopen en ik word in elkaar geslagen. Ze smijten me het busje in en ik zit opgesloten.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 41
+                    [
+                        'dialogue' => "Ik weet dat ik 2 tegen 1 nooit ga winnen dus ik probeer weg te rennen. De mannen komen als een gek achter me aan. Ze halen me onderuit en smijten me in het busje. Ik zit opgesloten.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 42
+                    [
+                        'dialogue' => "Ik vertrouw de boel niet en sla een van de mannen in zijn gezicht. De man slaat terug en er ontstaat een gevecht. 2 tegen 1, dat win ik nooit. Ik word opgetild en in het busje gesmeten. Ik zit opgesloten in het donker.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 43
+                    [
+                        'dialogue' => "Ik trek de deur open. Er stapt een man uit die direct dreigend op me af komt lopen.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 44
+                    [
+                        'dialogue' => "Ik roep dat ik geen problemen wil en alleen de kleding kom afleveren. De man blijft op me af lopen en ineens word ik van achter gegrepen. Er wordt een zak over mijn hoofd getrokken en ik word het busje in gesmeten. De deur gaat dicht en ik kan niet meer weg.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 45
+                    [
+                        'dialogue' => "Ik wil echt niet vechten. Ik probeer weg te komen, alleen er komt een tweede man uit het busje tevoorschijn die me onderuit haalt. Hij grijpt me vast en smijt me het busje in. Ik zit opgesloten.",
+                        'story_id' => 3,
+                        'is_end' => 0,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 46
+                    [
+                        'dialogue' => "Ik vertrouw de boel niet en sla de man in zijn gezicht. De man slaat terug en er ontstaat een gevecht. Ineens komt er een tweede man aangerend. Die kan ik nooit aan in mijn eentje. Wat nu?",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 47
+                    [
+                        'dialogue' => "Ik stop met slaan en de mannen dwingen me het busje in. Ik kan er weinig aan doen. 2 tegen 1 dat win ik nooit. Ik stap het busje in en de deur gaat op slot. Ik zit in het donker.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 48
+                    [
+                        'dialogue' => "Ik trek een sprintje maar word getackeld door een van de mannen. Ze grijpen me vast en smijten me het busje in. De deur gaat dicht en ik zit in het donker.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 49
+                    [
+                        'dialogue' => "Ik laat me niet kennen en ga het gevecht aan. Ik zal me nooit zomaar overgeven. Ik word overmeesterd door de 2 mannen en ze smijten me het busje in. De deur gaat dicht en ik zit opgesloten.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 50
+                    [
+                        'dialogue' => "Er zitten 2 mannen in het busje. Ze worden woest en ze stappen allebei uit. Ze komen dreigend op me afgelopen.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 51
+                    [
+                        'dialogue' => "Ik bied mijn excuses aan voor de ruit en roep dat ik alleen kleding kom brengen. De mannen blijven op me af lopen en ik word in elkaar geslagen. Ze smijten me het busje in en ik zit opgesloten.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 52
+                    [
+                        'dialogue' => "Ik weet dat ik 2 tegen 1 nooit ga winnen dus ik probeer weg te rennen. De mannen komen als een gek achter me aan. Ze halen me onderuit en smijten me in het busje. Ik zit opgesloten.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 53
+                    [
+                        'dialogue' => "Ik vertrouw de boel niet en sla een van de mannen in zijn gezicht. De man slaat terug en er ontstaat een gevecht. 2 tegen 1, dat win ik nooit. Ik word opgetild en in het busje gesmeten. Ik zit opgesloten in het donker.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 54
+                    [
+                        'dialogue' => "Het busje stopt voor mijn neus en de achterbak gaat open. Ik loop ernaartoe om de zak te droppen en ik wordt van achter gegrepen. Ik word het busje in geduwd door 2 mannen. De deur gaat op slot en ik zit in het donker. Shit, wat nu?",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 55
+                    [
+                        'dialogue' => "Ik zit al een paar uur in het busje opgesloten. Eindelijk zijn we gestopt. Ik hoor de deur aan de voorkant open gaan. Ze komen naar achter lopen, naar mij.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 56
+                    [
+                        'dialogue' => "De mannen doen de achterbak open en halen me eruit. Ik zie een kans om weg te komen. Ze letten even niet op. Ik haal mijn enkel open terwijl ik uit de achterbak klim, maar ik blijf rennen voor m'n leven!",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 57
+                    [
+                        'dialogue' => "Ik ben op een open weg aangekomen. Ik weet niet welke kant ik op moet. Ah fuck! Ik hoor de auto in de verte deze kant op rijden. Ik verstop me snel achter een vuilniscontainer. Wat moeten ze van me?",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 58
+                    [
+                        'dialogue' => "Die boys lopen me voorbij. Ik hoor ze weeer in de auto stappen en wegrijden. Gelukkig. Ik ren naar de hoofdweg en lift met iemand mee tot een tankstation. Ik steel in de auto deze vrouw haar telefoon.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 59
+                    [
+                        'dialogue' => "Ik wacht tot die boys me zien. Er stapt eentje uit. Ik sla hem met al mijn kracht tegen de grond. Hij is bewusteloos. De ander stapt nu ook uit. Ik gebruik m'n sleutel als boksbeugel en raak hem op z'n slaap... Ook hij gaat neer. De adrenaline raced door m'n aderen. Ik pak de telefoon van een van die boys en ren weg. Ik kom aan bij een tankstation.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 60
+                    [
+                        'dialogue' => "Ik hoor die boys uitstappen, Ze splitsen zich op. Een van ze komt mijn kant opgelopen. Ik zie een fietsketting liggen. Op het moment dat hij langs me loopt sla ik hem met de fietsketting. Hij raakt bewusteloos. Fuck! Ik moet weg hier. Ik pak z'n telefoon en ren weg. Tot ik bij een tankstation kom.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 61
+                    [
+                        'dialogue' => "Ik voel de adrenaline door m'n lichaam stromen. Ik moet zo snel mogelijk weg. Wat the fuck is dit man. Een fucking set up? Ik haal iedereen eraf die ermee te maken had a mattie! Ik kom bij een kruispunt aan en rij in alle emotie door rood. BAM!!!! Ik hoor een luide piep in m'n oor. Ik heb iemand aangereden. FUCK!",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 62
+                    [
+                        'dialogue' => "Het is een oudere man. Hij is half bewusteloos, maar de schade aan zijn auto en het busje vallen mee.  Ik raak in paniek en begin te huilen. Wat the fuck moet ik doen? Die arme man...",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 63
+                    [
+                        'dialogue' => "Met een bebloed hoofd en een manke poot ren ik  al een tijdje door steegjes en straten. Ik weet niet eens meer waar ik ben. Ik hoor in de verte een ambulance. Deze komt zeker voor die man. Ik voel me zo schuldig.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 64
+                    [
+                        'dialogue' => "Ik pak zijn telefoon, bel de ambulance en geef ze de locatie, maar blijf niet bij hem. Als die boys me pakken maken ze me sowieso dood. Ik vlucht zelf te voet verder. M'n hoofd bloed en ik loop mank, maar ik moet door. Ik wil m'n leven niet verliezen. Ik vlucht weg en neem z'n telefoon mee.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 65
+                    [
+                        'dialogue' => "Wat the fuck heb ik gedaan. Ik voel me zo slecht. Ik kan niet telang in deze bus blijven rijden man. Maar waar the fuck ga ik naartoe?",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 66
+                    [
+                        'dialogue' => "Ik ben bij het tankstation en bel m'n mattie via Snapchat. Hij neemt op en zegt dat hij me nu niet kan helpen omdat hij in Spanje zit. Hij zegt wel dat ik bij hem kan schuilen, Ik moet naar Spanje! Hoe kom ik daar zo snel mogelijk? Ik kan zelf niet naar huis... die boys komen er binnen no time achter waar ik woon.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 67
+                    [
+                        'dialogue' => "Ik wacht bij het tankstation op m'n neef. Hij doet lang man. Ik word fucking nerveus.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 68
+                    [
+                        'dialogue' => "Hij neemt op en zegt dat ik moet kalmeren. Hij heeft de spullen al gehaald en komt over 5 minuten aan op mijn locatie.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 69
+                    [
+                        'dialogue' => "Hij belt me op en geeft aan dat hij er is over 5 minuten met mijn spullen. Hij moet opschieten man.",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //scenario 70
+                    [
+                        'dialogue' => "Hij geeft aan dat het inderdaad het beste is dat ik vlucht. Hij gooit de telefoon van die boy in een sloot waar we langsreden. Verder geeft hij me cash geld mee en een nieuwe telefoon. Hij zet me af bij het vliegveld. Ik ben kapot man. Ik kleed me om, bedank hem, stap uit en loop het vliegveld in. Wtf was dit man? Ik heb zoveel vragen. Maar voor nu moet ik gewoon zo snel mogelijk weg. Op naar Spanje...",
+                        'story_id' => 3,
+                        'is_end' => 1,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
         ];
 
         // add entries into database.

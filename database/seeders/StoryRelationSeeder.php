@@ -26,5 +26,7 @@ class StoryRelationSeeder extends Seeder
         $this->linkStoryScenario(1, 1);
 
         $this->linkStoryScenario(2, 19);
+
+        $this->linkStoryScenario(3, 35);
     }
 }
