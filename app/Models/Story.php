@@ -23,9 +23,25 @@ class Story extends Model
                 ->where('title', 'like', '%' . $search . '%')
                 ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
 
-        return view('stories.index', compact('query'));
+        $query->when($filters['category'] ?? false, fn ($query, $category)=>
+               $query
+                ->whereExists(fn($query)=>
+                $query->from('categories')
+                    ->where('categories.id', 'stories.category_id')
+                    ->where('categories.slug', $category)
+                )
+                ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
+
+        //return view('stories.index', compact('query'));
+    }
+
+    public function category(){
+
+        return $this-> belongsTo(Category::class);
 
     }
+
+
 
     public function scenarios()
     {

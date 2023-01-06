@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('thema');
+            $table->string('slug');
         });
     }
 

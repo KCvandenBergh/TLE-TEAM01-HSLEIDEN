@@ -42,6 +42,7 @@ Route::get('/stories/{story}/scenarios/{scenario}', [ScenarioController::class, 
 
 //Route::get('/filter', '\App\Http\Controllers\StoryController@filter');
 
+
 //Search route.
 Route::get('/search', '\App\Http\Controllers\StoryController@search');
 Route::get('/', [StoryController::class, 'index'])->name('home');

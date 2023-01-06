@@ -11,7 +11,7 @@ class Category extends Model
     use HasFactory;
     protected $fillable = ['name'];
 
-    public function story():HasMany{
+    public function story(){
         return $this-> HasMany(Story::class);
     }
 

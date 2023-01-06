@@ -35,6 +35,7 @@
             </tr>
             </tfoot>
 
+
             @endforeach
         </table>
 
