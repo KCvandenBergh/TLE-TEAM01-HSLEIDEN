@@ -19,16 +19,12 @@ class Story extends Model
     public function scopeFilter($query, array $filters)
     {
         $query->when($filters['search'] ?? false, fn ($query, $search)=>
-                $query
-                ->where('title', 'like', '%' . $search . '%')
-                ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
+        $query->where('title', 'like', '%' . $search . '%')
+              ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
 
-        $query->when($filters['category'] ?? false, fn ($query, $category)=>
-               $query
-                ->whereExists(fn($query)=>
-                $query->from('categories')
-                    ->where('categories.id', 'stories.category_id')
-                    ->where('categories.slug', $category)
+        $query->when($filters['category'] ?? false, fn($query, $category) =>
+        $query->whereHas('category', fn ($query) =>
+        $query->where('slug', $category)
                 )
                 ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
 

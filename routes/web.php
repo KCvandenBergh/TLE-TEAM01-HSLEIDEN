@@ -41,7 +41,13 @@ Route::resource('choices', ChoiceController::class);
 Route::get('/stories/{story}/scenarios/{scenario}', [ScenarioController::class, 'show'])->name('scenario.show');
 
 //Route::get('/filter', '\App\Http\Controllers\StoryController@filter');
-
+Route::get('categories/{category:slug}', function (scopeFilter $category) {
+    return view('stories', [
+        'stories' => $category->stories,
+        'currentCategory' => $category,
+        'categories' => Category::all()
+    ]);
+})->name('category');
 
 //Search route.
 Route::get('/search', '\App\Http\Controllers\StoryController@search');

@@ -1,6 +1,18 @@
 @extends('layouts.app')
 @section('content')
 
+    <select class="form-select" aria-label="Disabled select example">
+        <option selected>Filter by category</option>
+        <option value="Verdovende Middelen">verdovende middelen</option>
+        <option value="Drugs">drugs</option>
+        <option value="Huiselijk Geweld">huiselijk geweld</option>
+        <option value="Seksueel Misbruik">seksueel misbruik</option>
+        <option value="Geweldpleging">geweldpleging</option>
+        <option value="Diefstal">diefstal</option>
+    </select>
+
+    
+
     <form action="#" method="GET" role="search">
         <div class="input-group">
             <input type="text" class="form-control" name="search"
