@@ -379,6 +379,257 @@ class ChoiceSeeder extends Seeder
                             'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                             'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                         ],
+
+
+            //story 3
+
+                    //choice 60
+                    [
+                        'name' => 'Ik kijk om me heen',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 61
+                    [
+                        'name' => 'De ramen van het busje zijn geblindeerd, dus ik kan niet naar binnen kijken. Ik vertrouw het niet. Ik pak de zak met kleding op en ren weg.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 62
+                    [
+                        'name' => 'Ik duik in de bosjes om het busje te ontlopen. Ik wil geen problemen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 63
+                    [
+                        'name' => 'Ik pak een steen op en gooi die door de ruit van het busje heen',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 64
+                    [
+                        'name' => 'Ik wil geen gezeik dus ik probeer duidelijk te maken dat ik alleen de kleding van mijn mattie kom brengen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 65
+                    [
+                        'name' => 'Dit ziet er niet goed uit voor mij. Ik begin te rennen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 66
+                    [
+                        'name' => 'Ik laat me niet zomaar intimideren. Ik sta mijn mannetje en bereid me voor om te vechten.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 67
+                    [
+                        'name' => 'Ik stop met lopen en wacht tot het busje dichterbij is. Ik stel me aan. Het is vast gewoon een mattie van mijn neef.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 68
+                    [
+                        'name' => 'Ik wil geen gezeik dus ik probeer duidelijk te maken dat ik alleen de kleding van mijn mattie kom brengen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 69
+                    [
+                        'name' => 'Dit ziet er niet goed uit voor mij. Ik begin te rennen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 70
+                    [
+                        'name' => 'Ik laat me niet zomaar intimideren. Ik sta mijn mannetje en bereid me voor om te vechten.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 71
+                    [
+                        'name' => 'Ik geef me over.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 72
+                    [
+                        'name' => '2 tegen 1 ga ik nooit winnen. Ik begin te rennen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 73
+                    [
+                        'name' => 'Ik geef niet op en vecht door. Dan maar 2 tegen 1',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 74
+                    [
+                        'name' => 'Ik pak een steen op en gooi die door de ruit van het busje heen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 75
+                    [
+                        'name' => 'Ik wil geen gezeik dus ik probeer duidelijk te maken dat ik alleen de kleding van mijn mattie kom brengen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 76
+                    [
+                        'name' => 'Dit ziet er niet goed uit voor mij. Ik begin te rennen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 77
+                    [
+                        'name' => 'Ik laat me niet zomaar intimideren. Ik sta mijn mannetje en bereid me voor om te vechten.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 78
+                    [
+                        'name' => 'Ik negeer mijn onderbuikgevoel. Ik ben toch geen watje. Ik blijf gewoon staan en wacht op het busje.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 79
+                    [
+                        'name' => 'Ik wacht in stilte tot het busje stopt.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 80
+                    [
+                        'name' => 'Ik ga klaar zitten. Misschien kan ik ontsnappen.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 81
+                    [
+                        'name' => 'Ik ren weg.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 82
+                    [
+                        'name' => 'Ik verstop me achter iemands auto',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 83
+                    [
+                        'name' => 'Ik bedank haar en stap uit',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 84
+                    [
+                        'name' => 'Fuck it, ik ga op straat staan en ga op de vuist.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 85
+                    [
+                        'name' => 'Uitgeput kom ik op adem en herinner ik me dat ik de telefoon heb...',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 86
+                    [
+                        'name' => 'Ik ren weg richting een andere straat.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 87
+                    [
+                        'name' => 'Uitgeput kom ik op adem en herinner ik me dat ik de telefoon heb...',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 88
+                    [
+                        'name' => 'Ik sla allebei de mannen neer en zorg dat ze niet meer achter me aan kunnen rennen. Ik stap de bus in en rij weg.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 89
+                    [
+                        'name' => 'Ik stap uit en loop naar de andere auto.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 90
+                    [
+                        'name' => 'Ik stap uit, er is geen tijd te verliezen. Ik zit nu nog dieper in de shit. Ik ren weg.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 91
+                    [
+                        'name' => 'Ik loop door tot ik bij een tankstation uitkom.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 92
+                    [
+                        'name' => 'Ik stap uit en check de oudere man...',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 93
+                    [
+                        'name' => 'Ik loop door tot ik bij een tankstation uitkom',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 94
+                    [
+                        'name' => 'Ik stap uit pak zijn telefoon, zet het busje in zijn achteruit en rij weg.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 95
+                    [
+                        'name' => 'Ik rij door tot een tankstation.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 96
+                    [
+                        'name' => 'Ik bel een van mijn niffauws om mijn spullen op te halen bij me osso en me te brengen naar het vliegveld',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 97
+                    [
+                        'name' => 'Ik bel hem.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 98
+                    [
+                        'name' => 'we rijden naar het vliegveld en ik vertel hem alles in de auto.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 99
+                    [
+                        'name' => 'Ik wacht het af.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    //choice 100
+                    [
+                        'name' => 'We rijden naar het vliegveld en ik vertel hem alles in de auto.',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+
         ];
 
         // add entries into database.
