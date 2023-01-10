@@ -124,7 +124,15 @@ a.play:hover {
     border: 1px solid red;
 }
 
-ul.list-group{
+#timer {
+    position: absolute;
+    left: 1rem;
+    padding-inline: 0;
+    border-radius: 0 10px 10px 0;
+    max-width: 95.5%;
+}
+
+ul.list-group {
     margin-top: 20%;
 }
 
@@ -228,5 +236,9 @@ a.dropdown-item:hover{
 
     a.nav-link{
         text-align: right;
+    }
+
+    #timer {
+        max-width: 84vw;
     }
 }
