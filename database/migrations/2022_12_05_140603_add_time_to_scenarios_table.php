@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('scenarios', function (Blueprint $table) {
-            $table->unsignedInteger('time')->nullable();
+            $table->unsignedInteger('time')->nullable()->default(null);
         });
     }
 
