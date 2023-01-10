@@ -7,6 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 use mysql_xdevapi\Table;
+use Illuminate\Support\Facades\DB;
 
 class CategorySeeder extends Seeder
 {
