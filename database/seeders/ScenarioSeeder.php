@@ -393,7 +393,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik vertrouw de boel niet en sla de man in zijn gezicht. De man slaat terug en er ontstaat een gevecht. Ineens komt er een tweede man aangerend. Die kan ik nooit aan in mijn eentje. Wat nu?",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -401,7 +401,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik stop met slaan en de mannen dwingen me het busje in. Ik kan er weinig aan doen. 2 tegen 1 dat win ik nooit. Ik stap het busje in en de deur gaat op slot. Ik zit in het donker.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -409,7 +409,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik trek een sprintje maar word getackeld door een van de mannen. Ze grijpen me vast en smijten me het busje in. De deur gaat dicht en ik zit in het donker.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -417,7 +417,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik laat me niet kennen en ga het gevecht aan. Ik zal me nooit zomaar overgeven. Ik word overmeesterd door de 2 mannen en ze smijten me het busje in. De deur gaat dicht en ik zit opgesloten.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -425,7 +425,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Er zitten 2 mannen in het busje. Ze worden woest en ze stappen allebei uit. Ze komen dreigend op me afgelopen.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -433,7 +433,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik bied mijn excuses aan voor de ruit en roep dat ik alleen kleding kom brengen. De mannen blijven op me af lopen en ik word in elkaar geslagen. Ze smijten me het busje in en ik zit opgesloten.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -441,7 +441,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik weet dat ik 2 tegen 1 nooit ga winnen dus ik probeer weg te rennen. De mannen komen als een gek achter me aan. Ze halen me onderuit en smijten me in het busje. Ik zit opgesloten.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -449,7 +449,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik vertrouw de boel niet en sla een van de mannen in zijn gezicht. De man slaat terug en er ontstaat een gevecht. 2 tegen 1, dat win ik nooit. Ik word opgetild en in het busje gesmeten. Ik zit opgesloten in het donker.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -457,7 +457,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Het busje stopt voor mijn neus en de achterbak gaat open. Ik loop ernaartoe om de zak te droppen en ik wordt van achter gegrepen. Ik word het busje in geduwd door 2 mannen. De deur gaat op slot en ik zit in het donker. Shit, wat nu?",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -465,7 +465,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik zit al een paar uur in het busje opgesloten. Eindelijk zijn we gestopt. Ik hoor de deur aan de voorkant open gaan. Ze komen naar achter lopen, naar mij.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -473,7 +473,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "De mannen doen de achterbak open en halen me eruit. Ik zie een kans om weg te komen. Ze letten even niet op. Ik haal mijn enkel open terwijl ik uit de achterbak klim, maar ik blijf rennen voor m'n leven!",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -481,7 +481,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik ben op een open weg aangekomen. Ik weet niet welke kant ik op moet. Ah fuck! Ik hoor de auto in de verte deze kant op rijden. Ik verstop me snel achter een vuilniscontainer. Wat moeten ze van me?",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -489,7 +489,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Die boys lopen me voorbij. Ik hoor ze weeer in de auto stappen en wegrijden. Gelukkig. Ik ren naar de hoofdweg en lift met iemand mee tot een tankstation. Ik steel in de auto deze vrouw haar telefoon.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -497,7 +497,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik wacht tot die boys me zien. Er stapt eentje uit. Ik sla hem met al mijn kracht tegen de grond. Hij is bewusteloos. De ander stapt nu ook uit. Ik gebruik m'n sleutel als boksbeugel en raak hem op z'n slaap... Ook hij gaat neer. De adrenaline raced door m'n aderen. Ik pak de telefoon van een van die boys en ren weg. Ik kom aan bij een tankstation.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -505,7 +505,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik hoor die boys uitstappen, Ze splitsen zich op. Een van ze komt mijn kant opgelopen. Ik zie een fietsketting liggen. Op het moment dat hij langs me loopt sla ik hem met de fietsketting. Hij raakt bewusteloos. Fuck! Ik moet weg hier. Ik pak z'n telefoon en ren weg. Tot ik bij een tankstation kom.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -513,7 +513,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik voel de adrenaline door m'n lichaam stromen. Ik moet zo snel mogelijk weg. Wat the fuck is dit man. Een fucking set up? Ik haal iedereen eraf die ermee te maken had a mattie! Ik kom bij een kruispunt aan en rij in alle emotie door rood. BAM!!!! Ik hoor een luide piep in m'n oor. Ik heb iemand aangereden. FUCK!",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -521,7 +521,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Het is een oudere man. Hij is half bewusteloos, maar de schade aan zijn auto en het busje vallen mee.  Ik raak in paniek en begin te huilen. Wat the fuck moet ik doen? Die arme man...",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -529,7 +529,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Met een bebloed hoofd en een manke poot ren ik  al een tijdje door steegjes en straten. Ik weet niet eens meer waar ik ben. Ik hoor in de verte een ambulance. Deze komt zeker voor die man. Ik voel me zo schuldig.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -537,7 +537,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik pak zijn telefoon, bel de ambulance en geef ze de locatie, maar blijf niet bij hem. Als die boys me pakken maken ze me sowieso dood. Ik vlucht zelf te voet verder. M'n hoofd bloed en ik loop mank, maar ik moet door. Ik wil m'n leven niet verliezen. Ik vlucht weg en neem z'n telefoon mee.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -545,7 +545,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Wat the fuck heb ik gedaan. Ik voel me zo slecht. Ik kan niet telang in deze bus blijven rijden man. Maar waar the fuck ga ik naartoe?",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -553,7 +553,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik ben bij het tankstation en bel m'n mattie via Snapchat. Hij neemt op en zegt dat hij me nu niet kan helpen omdat hij in Spanje zit. Hij zegt wel dat ik bij hem kan schuilen, Ik moet naar Spanje! Hoe kom ik daar zo snel mogelijk? Ik kan zelf niet naar huis... die boys komen er binnen no time achter waar ik woon.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -561,7 +561,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Ik wacht bij het tankstation op m'n neef. Hij doet lang man. Ik word fucking nerveus.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -569,7 +569,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Hij neemt op en zegt dat ik moet kalmeren. Hij heeft de spullen al gehaald en komt over 5 minuten aan op mijn locatie.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -577,7 +577,7 @@ class ScenarioSeeder extends Seeder
                     [
                         'dialogue' => "Hij belt me op en geeft aan dat hij er is over 5 minuten met mijn spullen. Hij moet opschieten man.",
                         'story_id' => 3,
-                        'is_end' => 1,
+                        'is_end' => 0,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
