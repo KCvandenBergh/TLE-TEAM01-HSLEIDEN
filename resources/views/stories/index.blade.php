@@ -1,17 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<form>
-    <select class="form-select" aria-label="Disabled select example">
-        <option selected>Filter by category</option>
-        <option value="{{request(1)}}">verdovende middelen</option>
-        <option value="{{request(2)}}">drugs</option>
-        <option value="{{request(3)}}">huiselijk geweld</option>
-        <option value="{{request(4)}}">seksueel misbruik</option>
-        <option value="{{request(5)}}">geweldpleging</option>
-        <option value="{{request(6)}}">diefstal</option>
-    </select>
-</form>
+
 
 
     <form action="#" method="GET" role="search">
@@ -21,11 +11,19 @@
 
 {{--            <span class="input-group-btn"--}}
 {{--                value="{{request('/search')}}">--}}
-{{--                <button type="submit" class="btn btn-default">--}}
+                 <button type="submit" class="btn btn-default">--}}
 {{--                    <span class="glyphicon glyphicon-search"></span>--}}
 {{--                </button>--}}
 {{--            </span>--}}
         </div>
+
+        <select class="form-select" name="category" aria-label="Disabled select example">
+            <option selected>filter by category</option>
+            @foreach($categories as $category)
+                <option value={{$category->id}}>{{$category->name}}</option>
+            @endforeach
+            <input type="submit" value="Submit">
+        </select>
     </form>
 
 
