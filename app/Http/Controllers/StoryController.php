@@ -29,12 +29,11 @@ class StoryController extends Controller
 
     public function index(?User $user)
     {
-        return view('stories.index', [
-            'stories'=>Story::latest()->filter(request(['search','category']))->get(),
-            'categories'=> Category::all()
-    ]);
-        }
+        $categories = Category::all();
+        $stories = Story::latest()->filter(request(['search','category']))->get();
 
+    return view('stories.index', compact('stories', 'categories'));
+    }
 
     /**
      * Show the form for creating a new resource.

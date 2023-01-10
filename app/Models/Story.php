@@ -21,7 +21,7 @@ class Story extends Model
         $query->when($filters['search'] ?? false, fn ($query, $search)=>
         $query->where('title', 'like', '%' . $search . '%')
               ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
-        
+
         $query->when($filters['category'] ?? false, fn($query, $category) =>
         $query->whereHas('category', fn ($query) =>
         $query->where('id', $category)));
