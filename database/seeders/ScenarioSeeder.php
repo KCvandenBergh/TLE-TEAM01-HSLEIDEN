@@ -182,6 +182,7 @@ class ScenarioSeeder extends Seeder
                                 'dialogue' => "De groep gaat inbreken in een huis, omdat ze spullen nodig hebben. Wat doe ik?",
                                 'story_id' => 2,
                                 'is_end' => 0,
+                                'time' => 30,
                                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                             ],
@@ -190,6 +191,7 @@ class ScenarioSeeder extends Seeder
                                 'dialogue' => "De politie komt achter de inbraak en ik word opgepakt als verdachte. Ze ondervragen me om erachter te komen of ik hier iets mee te maken heb. Wat nu?",
                                 'story_id' => 2,
                                 'is_end' => 0,
+                                'time' => 30,
                                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                             ],
@@ -206,6 +208,7 @@ class ScenarioSeeder extends Seeder
                                 'dialogue' => "De agenten houden me aan als verdachte om me te verhoren. Ik kan nog maar 2 kanten op nu…",
                                 'story_id' => 2,
                                 'is_end' => 0,
+                                'time' => 30,
                                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                             ],
@@ -222,6 +225,7 @@ class ScenarioSeeder extends Seeder
                                 'dialogue' => "Ik word 'geholpen' door jongerenwerkers in de wijk. Ze lopen elke dag rond in mijn wijk.",
                                 'story_id' => 2,
                                 'is_end' => 0,
+                                'time' => 30,
                                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                             ],
