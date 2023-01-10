@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
+use mysql_xdevapi\Table;
 
 class CategorySeeder extends Seeder
 {
@@ -15,36 +17,46 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $story = Category::factory()->create();
 
-        Category::create([
-            'name' => 'Verdovende Middelen',
-            'slug' => 'verdovende middelen'
-        ]);
+        $data = [
+            [
+                'name' => 'Verdovende Middelen',
+                'slug' => 'verdovende middelen',
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'name' => 'Drugs',
+                'slug' => 'drugs',
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'name' => 'Huiselijk Geweld',
+                'slug' => 'huiselijk geweld',
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'name' => 'Seksueel Misbruik',
+                'slug' => 'seksueel misbruik',
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'name' => 'Geweldpleging',
+                'slug' => 'geweldpleging',
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'name' => 'Diefstal',
+                'slug' => 'diefstal',
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+        ];
+            DB::table('categories')->insert($data);
 
-        Category::create([
-            'name' => 'Drugs',
-            'slug' => 'drugs'
-        ]);
-
-        Category::create([
-            'name' => 'Huiselijk Geweld',
-            'slug' => 'huiselijk geweld'
-        ]);
-
-        Category::create([
-            'name' => 'Seksueel Misbruik',
-            'slug' => 'seksueel misbruik'
-        ]);
-
-        Category::create([
-            'name' => 'Geweldpleging',
-            'slug' => 'geweldpleging'
-        ]);
-
-        Category::create([
-            'name' => 'Diefstal',
-            'slug' => 'diefstal'
-        ]);
     }
 }
