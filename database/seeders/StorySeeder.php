@@ -21,6 +21,8 @@ class StorySeeder extends Seeder
             [
                 'title' => 'Prototype: Kim/Ruben',
                 'description' => 'Dit is het verhaal uit ons Prototype.',
+                'category_id' => 1,
+                'slug' => 'Prototype-Kim-Ruben',
                 'is_visible' => 1,
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")

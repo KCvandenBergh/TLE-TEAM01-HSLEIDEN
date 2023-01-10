@@ -1,28 +1,30 @@
 @extends('layouts.app')
 @section('content')
 
-
+<form>
     <select class="form-select" aria-label="Disabled select example">
         <option selected>Filter by category</option>
-        <option value="{{request('Verdovende Middelen')}}">verdovende middelen</option>
-        <option value="{{request('Drugs')}}">drugs</option>
-        <option value="{{request('Huiselijk Geweld')}}">huiselijk geweld</option>
-        <option value="{{request('Seksueel Misbruik')}}">seksueel misbruik</option>
-        <option value="{{request('Geweldpleging')}}">geweldpleging</option>
-        <option value="{{request('Diefstal')}}">diefstal</option>
+        <option value="{{request(1)}}">verdovende middelen</option>
+        <option value="{{request(2)}}">drugs</option>
+        <option value="{{request(3)}}">huiselijk geweld</option>
+        <option value="{{request(4)}}">seksueel misbruik</option>
+        <option value="{{request(5)}}">geweldpleging</option>
+        <option value="{{request(6)}}">diefstal</option>
     </select>
-
+</form>
 
 
     <form action="#" method="GET" role="search">
         <div class="input-group">
             <input type="text" class="form-control" name="search"
-                   placeholder="search stories"> <span class="input-group-btn"
-            value="{{request('/search')}}">
-            <button type="submit" class="btn btn-default">
-                <span class="glyphicon glyphicon-search"></span>
-            </button>
-        </span>
+                   placeholder="search stories">
+
+{{--            <span class="input-group-btn"--}}
+{{--                value="{{request('/search')}}">--}}
+{{--                <button type="submit" class="btn btn-default">--}}
+{{--                    <span class="glyphicon glyphicon-search"></span>--}}
+{{--                </button>--}}
+{{--            </span>--}}
         </div>
     </form>
 
@@ -43,9 +45,9 @@
                     </td>
                 </tr>
             <tfoot>
-            <tr>
-                <input type = "text" class="form-control filter-input" placeholder="Search for ">
-            </tr>
+{{--            <tr>--}}
+{{--                <input type = "text" class="form-control filter-input" placeholder="Search for ">--}}
+{{--            </tr>--}}
             </tfoot>
 
 

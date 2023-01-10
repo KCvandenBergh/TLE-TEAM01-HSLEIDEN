@@ -24,9 +24,10 @@ class Story extends Model
 
         $query->when($filters['category'] ?? false, fn($query, $category) =>
         $query->whereHas('category', fn ($query) =>
-        $query->where('slug', $category)
-                )
-                ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
+        $query->where('slug', $category))
+            ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
+
+        //$stories = Story::where('category_id', $categoryId)->get();
 
         //return view('stories.index', compact('query'));
     }
