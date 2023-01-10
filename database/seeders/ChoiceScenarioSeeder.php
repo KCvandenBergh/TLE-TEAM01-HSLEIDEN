@@ -515,6 +515,12 @@ ChoiceScenarioSeeder extends Seeder
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
                     [
+                        'choice_id' => 61,
+                        'scenario_id' => 36,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
                         'choice_id' => 78,
                         'scenario_id' => 36,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
