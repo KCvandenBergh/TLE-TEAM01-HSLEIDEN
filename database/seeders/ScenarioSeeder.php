@@ -314,6 +314,7 @@ class ScenarioSeeder extends Seeder
                         'dialogue' => "Er komt een busje aangereden. Het ziet er een beetje verdacht uit. Ik wil geen problemen maar ik moet mijn mattie wel helpen. Hij en mijn andere neven zijn de enige familie die ik heb. Mijn ma is 1,5 jaar geleden dood gegaan en mijn pa was er nooit voor me. Al die pleeggezinnen waren maar niks. Mijn matties, die zijn mijn echte familie. Ik kan ze niet in de steek laten.",
                         'story_id' => 3,
                         'is_end' => 0,
+                        'time' => 30,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -322,6 +323,7 @@ class ScenarioSeeder extends Seeder
                         'dialogue' => "Het busje komt als een gek achter me aangereden. Ik had gelijk, ik zit in de problemen.",
                         'story_id' => 3,
                         'is_end' => 0,
+                        'time' => 30,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -338,6 +340,7 @@ class ScenarioSeeder extends Seeder
                         'dialogue' => "Er zitten 2 mannen in het busje. Ze worden woest en ze stappen allebei uit. Ze komen dreigend op me afgelopen.",
                         'story_id' => 3,
                         'is_end' => 0,
+                        'time' => 30,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -370,6 +373,7 @@ class ScenarioSeeder extends Seeder
                         'dialogue' => "Ik trek de deur open. Er stapt een man uit die direct dreigend op me af komt lopen.",
                         'story_id' => 3,
                         'is_end' => 0,
+                        'time' => 30,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -394,6 +398,7 @@ class ScenarioSeeder extends Seeder
                         'dialogue' => "Ik vertrouw de boel niet en sla de man in zijn gezicht. De man slaat terug en er ontstaat een gevecht. Ineens komt er een tweede man aangerend. Die kan ik nooit aan in mijn eentje. Wat nu?",
                         'story_id' => 3,
                         'is_end' => 0,
+                        'time' => 30,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -426,6 +431,7 @@ class ScenarioSeeder extends Seeder
                         'dialogue' => "Er zitten 2 mannen in het busje. Ze worden woest en ze stappen allebei uit. Ze komen dreigend op me afgelopen.",
                         'story_id' => 3,
                         'is_end' => 0,
+                        'time' => 30,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -474,6 +480,7 @@ class ScenarioSeeder extends Seeder
                         'dialogue' => "De mannen doen de achterbak open en halen me eruit. Ik zie een kans om weg te komen. Ze letten even niet op. Ik haal mijn enkel open terwijl ik uit de achterbak klim, maar ik blijf rennen voor m'n leven!",
                         'story_id' => 3,
                         'is_end' => 0,
+                        'time' => 30,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -482,6 +489,7 @@ class ScenarioSeeder extends Seeder
                         'dialogue' => "Ik ben op een open weg aangekomen. Ik weet niet welke kant ik op moet. Ah fuck! Ik hoor de auto in de verte deze kant op rijden. Ik verstop me snel achter een vuilniscontainer. Wat moeten ze van me?",
                         'story_id' => 3,
                         'is_end' => 0,
+                        'time' => 30,
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
