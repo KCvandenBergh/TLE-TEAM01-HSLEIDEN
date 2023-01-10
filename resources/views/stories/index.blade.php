@@ -11,7 +11,7 @@
 
 {{--            <span class="input-group-btn"--}}
 {{--                value="{{request('/search')}}">--}}
-                 <button type="submit" class="btn btn-default">--}}
+                 <button type="submit" class="btn btn-default">
 {{--                    <span class="glyphicon glyphicon-search"></span>--}}
 {{--                </button>--}}
 {{--            </span>--}}
