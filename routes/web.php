@@ -9,6 +9,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,4 +47,13 @@ Route::get('/download/{story}/results/{save?}', [PdfController::class, 'download
 
 //View scenario route.
 Route::get('/stories/{story}/scenarios/{scenario}/{madeChoice?}', [ScenarioController::class, 'show'])->name('scenario.show');
+
+
+
+
+
+
+
+
+
 

@@ -2,12 +2,23 @@
 @section('content')
 
         <div class="card">
-            <div class="input-group rounded">
+            <form action="#" method="GET" role="search">
                 <div class="input-group">
-                    <input type="search" class="form-control rounded" placeholder="Zoeken..." aria-label="Search" aria-describedby="search-addon" />
-                    <button type="button" class="btn btn-outline-primary">Zoek</button>
+                    <input type="text" class="form-control" name="search"
+                           placeholder="search stories">
+
+                    <button type="submit" class="btn btn-default">
+
                 </div>
-            </div>
+
+                <select class="form-select" name="category" aria-label="Disabled select example">
+                    <option selected>filter by category</option>
+                    @foreach($categories as $category)
+                        <option value={{$category->id}}>{{$category->name}}</option>
+                    @endforeach
+                    <input type="submit" value="Submit">
+                </select>
+            </form>
         </div>
         @foreach($stories as $story)
             <div class="card">
@@ -23,4 +34,7 @@
         @if(Auth::check())
             @include('partials._savesoverview')
         @endif
+
+
+
 @endsection
