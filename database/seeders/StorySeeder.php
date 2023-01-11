@@ -33,6 +33,8 @@ class StorySeeder extends Seeder
                         'title' => 'Redouane',
                         'description' => 'Dit is het verhaal over Redouane.',
                         'is_visible' => 1,
+                        'category_id' => 1,
+                        'slug' => 'Redouane',
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
@@ -41,6 +43,8 @@ class StorySeeder extends Seeder
                 'title' => 'Ondernemende Onyx',
                 'description' => 'Dit is het verhaal over de ondernemende Onyx.',
                 'is_visible' => 1,
+                'category_id' => 1,
+                'slug' => 'Ondernemende-Onyx',
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],

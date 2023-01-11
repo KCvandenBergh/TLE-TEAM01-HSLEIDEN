@@ -18,18 +18,17 @@ class Story extends Model
 
     public function scopeFilter($query, array $filters)
     {
-        $query->when($filters['search'] ?? false, fn ($query, $search)=>
-        $query->where('title', 'like', '%' . $search . '%')
-              ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
+        if (isSet($filters['search'])) {
+            $query->when($filters['search'] ?? false, fn($query, $search) =>
+            $query->where('title', 'like', '%' . $search . '%')
+                ->orwhere('description', 'like', '%' . $search . '%'));
+        }
+        if (isset($filters['category'])) {
+            $query->when($filters['category'] ?? false, fn($query, $category) =>
+            $query->whereHas('category', fn($query) => $query->where('id', $category)));
+        }
+        return $query;
 
-        $query->when($filters['category'] ?? false, fn($query, $category) =>
-        $query->whereHas('category', fn ($query) =>
-        $query->where('id', $category)));
-//            ->orwhere('description', 'like', '%' . $search . '%')->with('category')->get());
-
-         //$stories = Story::where('category_id', $categoryId)->get();
-
-        //return view('stories.index', compact('query'));
     }
 
     public function category(){
