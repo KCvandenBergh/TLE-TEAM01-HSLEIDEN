@@ -22,37 +22,31 @@ class CategorySeeder extends Seeder
         $data = [
             [
                 'name' => 'Verdovende Middelen',
-                'slug' => 'verdovende middelen',
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
                 'name' => 'Drugs',
-                'slug' => 'drugs',
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
                 'name' => 'Huiselijk Geweld',
-                'slug' => 'huiselijk geweld',
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
                 'name' => 'Seksueel Misbruik',
-                'slug' => 'seksueel misbruik',
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
                 'name' => 'Geweldpleging',
-                'slug' => 'geweldpleging',
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
             [
                 'name' => 'Diefstal',
-                'slug' => 'diefstal',
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Story extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'is_visible'];
+    protected $fillable = ['title', 'description', 'is_visible', 'category_id'];
 
     public function saves()
     {

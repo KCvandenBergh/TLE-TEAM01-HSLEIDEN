@@ -21,6 +21,12 @@
                 @error('is_visible')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
+                <select class="form-select" name="category_id" aria-label="Category select menu">
+                    <option value="" disabled selected>Selecteer een categorie</option>
+                    @foreach($categories as $category)
+                        <option value={{$category->id}}>{{$category->name}}</option>
+                    @endforeach
+                </select>
                 <button type="submit" value="Create" class="btn btn-primary">Create</button>
             </form>
         </div>

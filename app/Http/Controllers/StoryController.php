@@ -50,7 +50,8 @@ class StoryController extends Controller
      */
     public function create()
     {
-        return view('stories.create');
+        $categories = Category::all();
+        return view('stories.create', compact('categories'));
     }
 
     /**
@@ -64,7 +65,8 @@ class StoryController extends Controller
         $data = $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'is_visible' => 'required'
+            'is_visible' => 'required',
+            'category_id' => 'required'
         ]);
 
         Story::create($data);
@@ -134,8 +136,8 @@ class StoryController extends Controller
 
     public function edit(User $user, Story $story)
     {
-       /* $story = Story::find($id);*/
-        return view('stories.edit', compact('story'));
+        $categories = Category::all();
+        return view('stories.edit', compact('story', 'categories'));
     }
 
     /**

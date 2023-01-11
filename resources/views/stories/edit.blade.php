@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header">Edit Story</div>
         <div class="card-body">
-            <form action="{{ route('stories.update', $story->id) }}" method="post">
+            <form action="{{ route('stories.update', $story->id) }}" method="post" id="editForm">
                 @csrf
                 @method("PATCH")
                 <input type="hidden" id="id" value="{{ $story->id }}"/>
@@ -14,13 +14,16 @@
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <label>Description</label>
-                <input type="text" name="description" id="description" value="{{ $story->description }}"
-                       class="form-control"/>
+                <textarea class="form-control"
+                          form="editForm"
+                          name="description"
+                          placeholder="Voeg hier een Beschrijving voor dit verhaal toe">{{$story->description ?? old('description') }}</textarea>
+
                 @error('description')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <button type="submit" value="Update" class="btn btn-primary">Update</button>
             </form>
-        </div>
+                    </div>
     </div>
 @endsection
