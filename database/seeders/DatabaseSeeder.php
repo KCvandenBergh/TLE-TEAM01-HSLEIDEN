@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             ChoiceRelationSeeder::class,
             StoryRelationSeeder::class,
             CategorySeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

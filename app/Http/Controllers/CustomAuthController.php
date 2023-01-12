@@ -26,7 +26,7 @@ class CustomAuthController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:5|max:12'
+            'password' => 'required|min:8|max:128'
         ]);
         $user = new User();
         $user->name = $request->name;
@@ -42,7 +42,7 @@ class CustomAuthController extends Controller
     public function loginUser(Request $request){
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required|min:5|max:12'
+            'password' => 'required|min:8|max:128'
         ]);
         $user = user::where('email','=', $request->email)->first();
         if ($user){
