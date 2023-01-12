@@ -31,7 +31,7 @@ class ScenarioController extends Controller
      */
     public function index()
     {
-        $scenarios = Scenario::all();
+        $scenarios = Scenario::paginate(7);
 
         return view('scenarios.index', compact('scenarios'));
     }
@@ -103,8 +103,14 @@ class ScenarioController extends Controller
             } else {
                 return redirect(route('scenario.show', [$story, $story->start_scenario]));
             }
+            if($scenario->default_choice_id !== null) {
+                $defaultChoice = Choice::find($scenario->default_choice_id);
+            } else {
+                $defaultChoice = null;
+            }
 
-            return view('scenarios.show', compact('scenario'));
+
+            return view('scenarios.show', compact('scenario', 'defaultChoice'));
         } else {
             abort(404);
         }

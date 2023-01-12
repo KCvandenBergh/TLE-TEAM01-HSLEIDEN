@@ -28,4 +28,5 @@ class Choice extends Model
         /*Use {{ $choice->scenario_id }} instead*/
         return $this->belongsTo(Scenario::class);
     }
+
 }

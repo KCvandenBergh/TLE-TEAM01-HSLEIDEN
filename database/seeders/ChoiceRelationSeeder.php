@@ -83,6 +83,50 @@ class ChoiceRelationSeeder extends Seeder
             $this->linkChoiceScenario(57, 23);
             $this->linkChoiceScenario(58, 25);
             $this->linkChoiceScenario(59, 24);
+
+        //story 3
+            $this->linkChoiceScenario(60, 36);
+            $this->linkChoiceScenario(61, 37);
+            $this->linkChoiceScenario(62, 38);
+            $this->linkChoiceScenario(63, 39);
+            $this->linkChoiceScenario(64, 40);
+            $this->linkChoiceScenario(65, 41);
+            $this->linkChoiceScenario(66, 42);
+            $this->linkChoiceScenario(67, 43);
+            $this->linkChoiceScenario(68, 44);
+            $this->linkChoiceScenario(69, 45);
+            $this->linkChoiceScenario(70, 46);
+            $this->linkChoiceScenario(71, 47);
+            $this->linkChoiceScenario(72, 48);
+            $this->linkChoiceScenario(73, 49);
+            $this->linkChoiceScenario(74, 50);
+            $this->linkChoiceScenario(75, 51);
+            $this->linkChoiceScenario(76, 52);
+            $this->linkChoiceScenario(77, 53);
+            $this->linkChoiceScenario(78, 54);
+            $this->linkChoiceScenario(79, 55);
+            $this->linkChoiceScenario(80, 56);
+            $this->linkChoiceScenario(81, 57);
+            $this->linkChoiceScenario(82, 58);
+            $this->linkChoiceScenario(83, 66);
+            $this->linkChoiceScenario(84, 59);
+            $this->linkChoiceScenario(85, 66);
+            $this->linkChoiceScenario(86, 60);
+            $this->linkChoiceScenario(87, 66);
+            $this->linkChoiceScenario(88, 61);
+            $this->linkChoiceScenario(89, 62);
+            $this->linkChoiceScenario(90, 63);
+            $this->linkChoiceScenario(91, 66);
+            $this->linkChoiceScenario(92, 64);
+            $this->linkChoiceScenario(93, 66);
+            $this->linkChoiceScenario(94, 65);
+            $this->linkChoiceScenario(95, 66);
+            $this->linkChoiceScenario(96, 67);
+            $this->linkChoiceScenario(97, 68);
+            $this->linkChoiceScenario(98, 70);
+            $this->linkChoiceScenario(99, 69);
+            $this->linkChoiceScenario(100, 70);
+
     }
 
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChoiceController;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\SaveController;
 use App\Http\Controllers\ScenarioController;
 use App\Http\Controllers\StoryController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,9 +41,19 @@ Route::resource('stories', StoryController::class);
 Route::resource('choices', ChoiceController::class);
 Route::resource('saves', SaveController::class);
 
-//view results without saving to db, or as guest
+//view results.blade.php without saving to db, or as guest
 Route::get('/stories/{story}/results', [StoryController::class, 'result'])->name('stories.results');
+Route::get('/download/{story}/results/{save?}', [PdfController::class, 'download'])->name('download.pdf');
 
 //View scenario route.
 Route::get('/stories/{story}/scenarios/{scenario}/{madeChoice?}', [ScenarioController::class, 'show'])->name('scenario.show');
+
+
+
+
+
+
+
+
+
 

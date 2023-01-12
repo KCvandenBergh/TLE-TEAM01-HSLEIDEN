@@ -13,14 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('stories', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('category_id');
-            $table->string('slug')->unique();
-            $table->string('title');
-            $table->text('description');
-            $table->boolean('is_visible');
-            $table->timestamps();
+        Schema::table('scenarios', function (Blueprint $table) {
+            $table->unsignedInteger('time')->nullable()->default(null);
         });
     }
 
@@ -31,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stories');
+        Schema::table('scenarios', function (Blueprint $table) {
+            $table->dropColumn('time');
+        });
     }
 };

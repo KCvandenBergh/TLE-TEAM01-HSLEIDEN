@@ -60,7 +60,7 @@ class StoryPolicy
      * @param Story $story
      * @return Response|bool
      */
-    public function update(User $user, Story $story)
+    public function update(User $user)
     {
         return $user->is_admin
             ? Response::allow()

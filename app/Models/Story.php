@@ -16,6 +16,29 @@ class Story extends Model
         return $this->hasMany(Save::class);
     }
 
+    public function scopeFilter($query, array $filters)
+    {
+        if (isSet($filters['search'])) {
+            $query->when($filters['search'] ?? false, fn($query, $search) =>
+            $query->where('title', 'like', '%' . $search . '%')
+                ->orwhere('description', 'like', '%' . $search . '%'));
+        }
+        if (isset($filters['category'])) {
+            $query->when($filters['category'] ?? false, fn($query, $category) =>
+            $query->whereHas('category', fn($query) => $query->where('id', $category)));
+        }
+        return $query;
+
+    }
+
+    public function category(){
+
+        return $this-> belongsTo(Category::class);
+
+    }
+
+
+
     public function scenarios()
     {
         /*A Story will have multiple Scenarios linked to it*/
@@ -27,4 +50,7 @@ class Story extends Model
         /*All Stories begin somewhere, in this case a specific Scenario*/
         return $this->hasOne(Scenario::class);
     }
+
 }
+
+

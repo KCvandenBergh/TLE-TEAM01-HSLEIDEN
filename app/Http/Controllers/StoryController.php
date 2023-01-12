@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Choice;
 use App\Models\Save;
 use App\Models\Scenario;
+use App\Models\Category;
 use App\Models\Story;
 use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
@@ -32,13 +33,14 @@ class StoryController extends Controller
      */
     public function index(?User $user)
     {
-        $stories = Story::all();
+        $categories = Category::all();
+        $stories = Story::latest()->filter(request(['search','category']))->get();
         $saves = null;
         if(\Auth::check()){
             $saves = Auth::user()->saves;
         }
 
-        return view('stories.index', compact('stories', 'saves'));
+    return view('stories.index', compact('stories', 'categories', 'saves'));
     }
 
     /**
@@ -96,7 +98,7 @@ class StoryController extends Controller
      */
     public function result(?User $user, Story $story)
     {
-        if(session()->has('choices')) {
+        if (session()->has('choices')) {
             // get choices from session
             $sessionChoices = session('choices');
             // turn those id to actual choices
@@ -110,8 +112,9 @@ class StoryController extends Controller
                 $scenarios[] = Scenario::find($choice->scenario_id);
             }
             // create an author
-            $author = new class {};
-            if(\Auth::check()){
+            $author = new class {
+            };
+            if (\Auth::check()) {
                 $author->name = \Auth::user()->name;
             } else {
                 $author->name = 'GAST';

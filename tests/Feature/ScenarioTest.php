@@ -35,12 +35,10 @@ class ScenarioTest extends TestCase
             {
                foreach ($scenario->choices as $choice)
                {
-                   /*choice->id 1 & 2 are special cases. 1) download save, 2) back to startscreen */
-                   /*choice->id 3 and beyond should link to existing scenarios */
-                   if($choice->id >= 3)
+                   if(!$scenario->is_end)
                    {
                        logger(route('scenario.show', [$story, $choice->scenario_id]));
-                       $response = $this->get(route('scenario.show', [$story, $choice->scenario_id]));
+                       $response = $this->withSession(['choices' => [$choice->id], 'story_id' => $story->id])->get(route('scenario.show', [$story, $choice->scenario_id, 10]));
                        $response->assertStatus(200);
                    }
                }

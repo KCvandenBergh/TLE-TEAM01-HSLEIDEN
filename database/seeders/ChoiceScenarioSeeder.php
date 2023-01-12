@@ -499,6 +499,333 @@ ChoiceScenarioSeeder extends Seeder
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
 
+
+            //story 3
+
+                    [
+                        'choice_id' => 60,
+                        'scenario_id' => 35,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 74,
+                        'scenario_id' => 36,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 61,
+                        'scenario_id' => 36,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 78,
+                        'scenario_id' => 36,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 62,
+                        'scenario_id' => 37,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 63,
+                        'scenario_id' => 37,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 67,
+                        'scenario_id' => 37,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 79,
+                        'scenario_id' => 38,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 64,
+                        'scenario_id' => 39,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 65,
+                        'scenario_id' => 39,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 66,
+                        'scenario_id' => 39,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 79,
+                        'scenario_id' => 40,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 79,
+                        'scenario_id' => 41,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 79,
+                        'scenario_id' => 42,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 68,
+                        'scenario_id' => 43,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 69,
+                        'scenario_id' => 43,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 70,
+                        'scenario_id' => 43,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 79,
+                        'scenario_id' => 44,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 79,
+                        'scenario_id' => 45,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 71,
+                        'scenario_id' => 46,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 72,
+                        'scenario_id' => 46,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 73,
+                        'scenario_id' => 46,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 79,
+                        'scenario_id' => 47,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 79,
+                        'scenario_id' => 48,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+                    [
+                        'choice_id' => 79,
+                        'scenario_id' => 49,
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
+            [
+                'choice_id' => 75,
+                'scenario_id' => 50,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 76,
+                'scenario_id' => 50,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 77,
+                'scenario_id' => 50,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 79,
+                'scenario_id' => 51,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 79,
+                'scenario_id' => 52,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 79,
+                'scenario_id' => 53,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 79,
+                'scenario_id' => 54,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+
+
+
+
+            [
+                'choice_id' => 80,
+                'scenario_id' => 55,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 81,
+                'scenario_id' => 56,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 88,
+                'scenario_id' => 56,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 82,
+                'scenario_id' => 57,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 84,
+                'scenario_id' => 57,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 86,
+                'scenario_id' => 57,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 83,
+                'scenario_id' => 58,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 85,
+                'scenario_id' => 59,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 87,
+                'scenario_id' => 60,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 89,
+                'scenario_id' => 61,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 90,
+                'scenario_id' => 62,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 92,
+                'scenario_id' => 62,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 94,
+                'scenario_id' => 62,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 91,
+                'scenario_id' => 63,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 93,
+                'scenario_id' => 64,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 95,
+                'scenario_id' => 65,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 96,
+                'scenario_id' => 66,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 97,
+                'scenario_id' => 67,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 99,
+                'scenario_id' => 67,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 98,
+                'scenario_id' => 68,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+            [
+                'choice_id' => 100,
+                'scenario_id' => 69,
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ],
+
+
         ];
         DB::table('choice_scenario')->insert($data);
     }
