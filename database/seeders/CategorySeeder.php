@@ -56,6 +56,12 @@ class CategorySeeder extends Seeder
                 'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                 'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
             ],
+            [
+                'name' => 'Ontvoering',
+                'slug' => 'ontvoering',
+                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+            ]
         ];
             DB::table('categories')->insert($data);
 
