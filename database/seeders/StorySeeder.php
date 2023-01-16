@@ -23,7 +23,7 @@ class StorySeeder extends Seeder
                         'title' => 'Kim/Ruben',
                         'description' => 'In dit verhaal speel je een jongen met een ingewikkeld leven. Hij woont op zichzelf en heeft alleen zijn vriendin en beste vriend als steun. Je loopt de kamer binnen en ziet je beste vriendin boven op je vriendin liggen… Wat zou jij doen?',
                         'is_visible' => 1,
-                        'category_id' => 1,
+                        'category_id' => 4,
                         'slug' => 'Kim-Ruben',
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
@@ -33,7 +33,7 @@ class StorySeeder extends Seeder
                         'title' => 'Redouane',
                         'description' => 'In dit verhaal speel je een jongen die met zijn matties op de straat leeft. Zijn matties zijn zijn enige familie, maar wat doe je als ze je vragen om samen met hen de wet te overtreden?',
                         'is_visible' => 1,
-                        'category_id' => 1,
+                        'category_id' => 6,
                         'slug' => 'Redouane',
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
@@ -43,7 +43,7 @@ class StorySeeder extends Seeder
                         'title' => 'Ondernemende Onyx',
                         'description' => 'In dit verhaal speel je een jongen zonder familie. De enige familie die hij nog over heeft zijn zijn niffauws. Hij heeft alles voor ze over maar als hij zelf in een situatie komt waar hij in gevaar wordt gebracht wordt het moeilijk. Wat zou jij doen?',
                         'is_visible' => 1,
-                        'category_id' => 1,
+                        'category_id' => 7,
                         'slug' => 'Ondernemende-Onyx',
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
