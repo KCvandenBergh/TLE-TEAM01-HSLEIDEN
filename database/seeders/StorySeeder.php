@@ -21,7 +21,7 @@ class StorySeeder extends Seeder
             //story 1
                     [
                         'title' => 'Kim/Ruben',
-                        'description' => 'In dit verhaal speel je een jongen met een ingewikkeld leven. Hij woont op zichzelf en heeft alleen zijn vriendin en beste vriend als steun en toeverlaat. Je loopt de kamer binnen en ziet je beste vriendin boven op je vriendin liggen… Wat zou jij doen?',
+                        'description' => 'In dit verhaal speel je een jongen met een ingewikkeld leven. Hij woont op zichzelf en heeft alleen zijn vriendin en beste vriend als steun. Je loopt de kamer binnen en ziet je beste vriendin boven op je vriendin liggen… Wat zou jij doen?',
                         'is_visible' => 1,
                         'category_id' => 1,
                         'slug' => 'Kim-Ruben',
