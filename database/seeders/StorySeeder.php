@@ -23,7 +23,7 @@ class StorySeeder extends Seeder
                         'title' => 'Kim/Ruben',
                         'description' => 'Dit is het verhaal over Ruben en Kim.',
                         'is_visible' => 1,
-                        'category_id' => 1,
+                        'category_id' => 4,
                         'slug' => 'Kim-Ruben',
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
@@ -33,21 +33,21 @@ class StorySeeder extends Seeder
                         'title' => 'Redouane',
                         'description' => 'Dit is het verhaal over Redouane.',
                         'is_visible' => 1,
-                        'category_id' => 1,
+                        'category_id' => 6,
                         'slug' => 'Redouane',
                         'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
                         'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
                     ],
             //story 3
-            [
-                'title' => 'Ondernemende Onyx',
-                'description' => 'Dit is het verhaal over de ondernemende Onyx.',
-                'is_visible' => 1,
-                'category_id' => 1,
-                'slug' => 'Ondernemende-Onyx',
-                'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
-                'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
-            ],
+                    [
+                        'title' => 'Ondernemende Onyx',
+                        'description' => 'Dit is het verhaal over de ondernemende Onyx.',
+                        'is_visible' => 1,
+                        'category_id' => 7,
+                        'slug' => 'Ondernemende-Onyx',
+                        'created_at' => Carbon::now()->format("Y-m-d H:i:s"),
+                        'updated_at' => Carbon::now()->format("Y-m-d H:i:s")
+                    ],
         ];
 
         // add entries into database.
