@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('scenarios', function (Blueprint $table) {
-            $table->foreignId('story_id')->nullable()->after('id')->constrained()->nullOnDelete();
+            $table->foreignId('story_id')->nullable()->after('id')->constrained()->cascadeOnDelete();
         });
     }
 

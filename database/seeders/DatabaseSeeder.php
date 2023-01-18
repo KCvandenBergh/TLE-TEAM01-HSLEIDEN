@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
             ChoiceScenarioSeeder::class,
             ChoiceRelationSeeder::class,
             StoryRelationSeeder::class,
+            CategorySeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

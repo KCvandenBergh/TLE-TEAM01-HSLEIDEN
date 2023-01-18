@@ -1,0 +1,10 @@
+[
+    {
+        "name": "server-1",
+        "ip": "188.166.88.107",
+        "port": "22",
+        "beforeHooks": "echo $GITHUB_SHA",
+        "afterHooks": "",
+        "path": "/var/www/html"
+    }
+]

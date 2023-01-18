@@ -9,6 +9,8 @@ class Save extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['story_id', 'user_id', 'choices'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -16,11 +18,11 @@ class Save extends Model
 
     public function story()
     {
-        return $this->hasOne(Story::class);
+        return $this->belongsTo(Story::class);
     }
 
     public function choices()
     {
-        return $this->hasMany(Choice::class);
+        return $this->belongsToMany(Choice::class)->withTimestamps();
     }
 }
